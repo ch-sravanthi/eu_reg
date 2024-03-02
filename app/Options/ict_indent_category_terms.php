@@ -1,0 +1,26 @@
+<?php
+	return [
+		'literature' => 'Literature',
+		'food__1r' => '1Res Food',	
+		'tutor_honorarium__1r' => '1Res Tutor',			
+		'food__2r' => '2Res Food',	
+		'tutor_honorarium__2r' => '2Res Tutor',			
+		'food__3r' => '3Res Food',	
+		'tutor_honorarium__3r' => '3Res Tutor',			
+		'hep' => 'HEP',	
+		'hep_s' => 'HEP Seeds',
+		'graduation' => 'Graduation',
+		'honorarium__1r' => '1Res Students Scholarship',	
+		'honorarium__2r' => '2Res Students Scholarship',	
+		'honorarium__3r' => '3Res Students Scholarship',	
+		'honorarium__1f_1m' => '1F 1st-Mon Students Scholarship',
+		'honorarium__1f_2m' => '1F 2nd-Mon Students Scholarship',
+		'honorarium__1f_3m' => '1F 3rd-Mon Student Scholarships',
+		'honorarium__2f_1m' => '2F 1st-Mon Student Scholarships',
+		'honorarium__2f_2m' => '2F 2nd-Mon Student Scholarships',
+		'honorarium__2f_3m' => '2F 3rd-Mon Student Scholarships',
+		'honorarium__3f_1m' => '3F 1st-Mon Student Scholarships',
+		'honorarium__3f_2m' => '3F 2nd-Mon Student Scholarships',
+		'honorarium__3f_3m' => '3F 3rd-Mon Student Scholarships',
+	];
+	

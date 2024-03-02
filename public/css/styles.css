@@ -1,0 +1,388 @@
+	
+		html,body{
+			min-height: 100%;
+			font-family: 'Open Sans', sans-serif;
+			background: #ddd;
+		}
+		@page {
+		  size: auto;
+		}
+		.main-navbar .nav-link{
+			color: #fff!important;
+		}
+		.content-wrapper {
+			margin: 30px;
+			border-radius: 5px;
+			background: #fff;
+			font-size: 0.9em;
+		}
+		
+		.content {
+			padding: 20px;
+		}
+		.titlebar .navbar-brand {
+			color: #000;
+		}
+		
+		
+		
+		.table-wrapper{
+			overflow: auto;
+			overflow-y: hidden;
+		}
+			
+			
+		th, td {
+			vertical-align: middle!important;
+		}
+		
+		.avatar{
+			
+			display: inline-block;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+			padding: 23px;
+			border-radius: 23px;   
+		}
+		.form .row{
+			padding: 7px 0px;
+		}
+		.form .row .label{
+			font-weight: 600;
+		}
+		.form .row .error{
+			padding: 5px 0px;
+			color: #dc3545!important;
+			font-size: 0.8em;
+			font-weight1: 600;
+		}
+		.form-view .row:not(:last-child){
+			border-bottom: 1px dotted #ddd;
+		}
+		
+		
+		.file-uploader{
+			height: 300px;
+			background: #efefef;
+			border-radius: 5px;
+		}		
+		.image {
+			width: 200px;
+			height: 200px;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+			
+		.thumbnail {
+			width: 60px;
+			height: 60px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			border-radius: 30px;
+		}
+		.section {
+			padding: 10px;
+			margin: 0px 7px;
+			margin-bottom: 15px;
+			border: 1px solid #efefef;
+			border-radius: 5px;
+		}
+		
+		.dashboard-block{
+			padding-bottom: 50px;
+		}
+		table.dashboard-table th:not(:first-child),
+		table.dashboard-table td
+		{
+			text-align: center;
+		}
+
+		table.dashboard-table td{
+			cursor: pointer;
+		}
+		
+		table .hyperlink-td{
+			padding:0;
+		}
+		table .hyperlink-td a{
+			text-decoration: none;
+			color: inherit;
+		}
+		table .hyperlink-td  div{
+			padding: 10px;
+			width: 100%;
+			height: 100%;
+		}
+		
+		
+		.cards .card{
+			color: #fff;
+			text-align: center;
+		}
+		.cards a{
+			text-decoration: none;
+		}
+		.cards .card-wrapper:nth-child(1) .card{
+			background: #6200ee;
+		}
+		.cards .card-wrapper:nth-child(2) .card{
+			background: #ff0266;
+		}
+		.cards .card-wrapper:nth-child(3) .card{
+			background: #09af00;
+		}
+		.cards .card-wrapper:nth-child(4) .card{
+			background: #d602ee;
+		}
+		.cards .card-wrapper:nth-child(5) .card{
+			background: #03dac5;
+		}
+		.cards .card-wrapper:nth-child(6) .card{
+			background: #e54304;
+		}
+		
+		.navbar-nav .color:nth-child(1){
+			background: #6200ee;
+		}
+		.navbar-nav .color:nth-child(2){
+			background: #ff0266;
+		}
+		.navbar-nav .color:nth-child(3){
+			background: #09af00;
+		}
+		.navbar-nav .color:nth-child(4){
+			background: #d602ee;
+		}
+		.navbar-nav .color:nth-child(5){
+			background: #03dac5;
+		}
+		.navbar-nav .color:nth-child(6){
+			background: #e54304;
+		}
+		/* Table Row Check Boxes */
+			.row-check{
+				cursor: pointer;
+				user-select: none;
+			}
+			tr.row-check td:first-child{
+				width: 40px;
+			}
+			.checked .icon-checked{
+				display: block;
+			}			
+			.unchecked .icon-checked{
+				display: none;
+			}
+		/*  End Table Row Check Boxes*/
+		
+		
+			.dashboard-table-wrapper{
+			  overflow:auto;
+			  max-height:300px;
+			}
+
+	.stages .stage{		
+		width: 200px;
+		padding: 10px;
+		margin: 10px;
+		border: 1px solid #ddd;
+		border-radius: 3px;
+		display: inline-block;
+		font-size: 0.9em;
+	}
+	
+	.stages .completed{
+		background: #00ff0020;
+	}
+	
+	.stages .pending, td.pending, table.pb-table .inactive, tr.pending td{
+		background: #ff000020;
+	}
+	
+	.form-multi-cols div{
+		padding: 10px 10px;
+	}
+	.form-multi-cols .error{
+		color: red;
+	}
+	.navigation:hover {
+		cursor: pointer;
+	}
+
+	@media print
+	{
+		.noprint {display:none;}
+		
+		table.small-padding td{
+			padding: 5px;
+		}
+		table.small-padding th{
+			padding: 10px 5px;
+		}
+		.table-bordered td, .table-bordered th{
+			border: 1px solid #000!important;
+		}
+
+		.bg-theme{
+			color: #000!important;
+		}
+		.table-wrapper{
+			overflow: visible;
+			overflow-y: visible;
+		}
+	
+	}
+	.pagebreak { page-break-before: always; } /* page-break-after works, as well */
+	.breakNow {  page-break-after:always; }
+	table th.xl, td.xl{
+		width: 230px!important;
+		min-width: 230px!important;
+		
+	}
+	table th.m, td.m{
+		width: 170px!important;
+		min-width: 170px!important;
+		
+	}
+	
+	table th.l, td.l{
+		width: 130px!important;
+		min-width: 130px!important;
+		
+	}
+	table th.sm, td.sm{
+		width: 100px!important;
+		min-width: 100px!important;
+		
+	}
+	
+	table tr.exception{
+		background: #ff000050;
+	}
+	
+	td.mycolor{
+		background-color:#E3F2DD;
+	}
+	th.total, tr.total{
+		background-color:#EEEEEE;
+	}
+
+
+
+/* Card */	
+	.card-transperent{
+		background: none;
+		border: none;
+	}
+	
+	.card-sm{
+		width: 500px;
+	}
+	
+	/* Inputs */
+	input.input-lg {
+		padding: 20px;
+	}
+	
+	/* Padding */
+	.pad-xl{
+		padding: 30px;
+	}
+	.pad-m{
+		padding: 7px;
+	}
+	
+	/* Logo */
+	.logo-wrapper{
+		display: inline-block;
+		background: #fff;
+		padding: 5px;
+		border-radius: 10px;
+	}
+	.logo-wrapper-circle{
+		background: #fff;
+		padding: 20px;
+		border-radius: 50%;
+	}
+	.logo {
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
+	.logo-small{		
+		width: 30px;
+		height: 30px;
+	}
+	.logo-large{		
+		width: 100px;
+		height: 100px;
+	}
+	
+	
+	/* Login */
+	.login-btn{
+		width: 49%;
+	}
+	.login-btn:nth-child(2) {
+		margin-right:auto;
+		float: right;
+	}
+
+	
+	@media only screen and (min-width: 768px) {
+		/* tablets and desktop */
+	}
+
+	@media only screen and (max-width: 767px) {
+		
+		/* Padding */
+		.pad-xl{
+			padding: 15px;
+		}
+		.pad-m{
+			padding: 5px;
+		}
+	
+		/* Card */		
+		.card-sm{
+			width: 90%;
+		}
+	
+		/* phones */
+		.logo-large{		
+			width: 60px;
+			height: 60px;
+		}
+		.input-group-addon, .input-group-btn, .input-group .form-control {
+			display: block;
+			margin-bottom: 10px;
+			clear: both;
+		}
+		.input-group {
+			display: block;
+		}
+	}
+
+	@media only screen and (max-width: 767px) and (orientation: portrait) {
+		/* portrait phones */
+	}
+	.promotion {
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+	
+		textarea.expand {
+			height: 2em;
+			padding: 3px;
+			transition: all 0.5s ease;
+		}
+
+		textarea.expand:focus {
+			height: 5em;
+		}
+		

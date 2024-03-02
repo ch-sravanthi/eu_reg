@@ -1,0 +1,15 @@
+.pb-imageviewer .modal-body{
+	background: #eee;
+	overflow:hidden;
+}
+
+.pb-img-viewer{
+	min-height: 400px;
+	background-size	: contain;
+	background-position	: center;
+	background-repeat: no-repeat;
+}
+
+.img-viewer-inactive-buttons .btn{
+	opacity: 0.5;
+}
