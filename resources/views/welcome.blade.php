@@ -14,7 +14,8 @@
 		<div class="container">
 			<div class=" container row mb-1">
 				<div class="col-lg-2">
-					<b class = "text-dark"></b> 
+					<b class = "text-dark">Jobs Posted </b>
+					<div class="badge bg-info"> {{ $blogs->total() }} </div></a>
 				</div>
 				
 				<div class="col-lg-10 text-right mb-2">
