@@ -23,9 +23,8 @@
 			
 			<div class="d-flex h4 text-sucess">
 					{!! EasyForm::viewInput('blog_title', $blog->label('blog_title'), $blog->blog_title) !!}</h5>
-					
 			</div>
-			<div class="d-flex h5 text-warning">			
+			<div class="d-flex h5 text-black">			
 					{!! EasyForm::viewSelect('category', $blog->label('category'), $blog->category, AppHelper::options('categories')) !!}
 			</div>
 			<div class="row text-black ">
@@ -36,6 +35,18 @@
 					</div>
 			<div class="row text-black ">
 					{!! EasyForm::viewInput('description', $blog->label('description'), $blog->description) !!}
+			</div>
+			
+			<div class="row h5 text-black ">
+					{!! EasyForm::viewInput('person_name', $blog->label('person_name'), $blog->person_name) !!}
+			</div>
+			
+			<div class="row h5 text-black ">
+					{!! EasyForm::viewInput('person_mobile', $blog->label('person_mobile'), $blog->person_mobile) !!}
+			</div>
+			
+			<div class="row h5 text-black ">
+					{!! EasyForm::viewInput('person_email', $blog->label('person_email'), $blog->person_email) !!}
 			</div>
 			
 			<div class="row h5 text-success ">
