@@ -16,62 +16,80 @@
 
 @section('content')	
 
-
 	<div class="form form-view">
-			{!! EasyForm::setNoRows() !!}
-			{!! EasyForm::setColSizes(3,3) !!}
-			
-			<div class="d-flex h4 text-sucess">
-					{!! EasyForm::viewInput('blog_title', $blog->label('blog_title'), $blog->blog_title) !!}</h5>
-			</div>
-			<div class="d-flex h5 text-black">			
-					{!! EasyForm::viewSelect('category', $blog->label('category'), $blog->category, AppHelper::options('categories')) !!}
-			</div>
-			<div class="row text-black ">
-					{!! EasyForm::viewInput('location', $blog->label('location'), $blog->location) !!}
-					</div>
-			<div class="row text-black ">
-					{!! EasyForm::viewInput('last_date', $blog->label('last_date'), $blog->last_date) !!}
-					</div>
-			<div class="row text-black ">
-					{!! EasyForm::viewInput('description', $blog->label('description'), $blog->description) !!}
-			</div>
-			
-			<div class="row h5 text-black ">
-					{!! EasyForm::viewInput('person_name', $blog->label('person_name'), $blog->person_name) !!}
-			</div>
-			
-			<div class="row h5 text-black ">
-					{!! EasyForm::viewInput('person_mobile', $blog->label('person_mobile'), $blog->person_mobile) !!}
-			</div>
-			
-			<div class="row h5 text-black ">
-					{!! EasyForm::viewInput('person_email', $blog->label('person_email'), $blog->person_email) !!}
-			</div>
-			
-			<div class="row h5 text-success ">
-					{!! EasyForm::viewInput('created_at', 'Posted On', $blog->created_at) !!}
-			</div>
-			
-			
-			<div class="col-md-12">
-				<div class="row">
-					<div class="label col-sm-8 ">
-						Job Information Attachments
-					</div>
-					<?php //var_dump($blog->image_1);die();?>
-					<div class="col-sm-10 ">
+		<div class="table-wrapper">
+			<fieldset class="section">
+				<table class="table table-bordered m-0">
+					<tr>
+						<th>{{ $blog->label('blog_title') }}</th>	
+						<td>{{ $blog->blog_title }}</td>
+							
+						<th>{{ $blog->label('category') }}</th>	
+						<td>{{ $blog->category }}</td>
+					</tr>
+					
+					<tr>
+						<th>{{ $blog->label('location') }}</th>	
+						<td>{{ $blog->location }}</td>
+							
+						<th>{{ $blog->label('last_date') }}</th>	
+						<td>{{ $blog->last_date }}</td>
+					</tr>
+					
+					<tr>
+						<th>{{ $blog->label('description') }}</th>	
+						<td colspan=3>{{ $blog->description }}</td>
+					</tr>
+					
+					<tr>
+						<th>Posted On</th>	
+						<td>{{ $blog->created_at }}</td>
 						
+						<th>{{ $blog->label('person_name') }}</th>	
+						<td>{{ $blog->person_name }}</td>
+					</tr>
+					
+					<tr>
+						<th>{{ $blog->label('person_mobile') }}</th>	
+						<td>{{ $blog->person_mobile }}</td>
+						
+						<th>{{ $blog->label('person_email') }}</th>	
+						<td>{{ $blog->person_email }}</td>
+					</tr>
+					
+					<tr>
+						<th>{{ $blog->label('status') }}</th>	
+						<td colspan=3>{{ $blog->status }}</td>
+					</tr>
+				</table>
+			</fieldset> 
+		</div>
+			
+		<div class="table-wrapper">
+			<fieldset class="section">
+				<table class="table table-bordered m-0">
+					<tr>
+						<th  colspan=4>
+						Job Information Attachments</th>
+					</tr>
+					<tr>
+						<td  colspan=3>
 						@if($blog->image_1)
 							<img src="{{ url('viewfile/'.$blog->image_1) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
 						@endif
+						</td>
+					</tr>
+					<tr>
+						<td  colspan=3>
 						@if($blog->image_1)
 							<img  src="{{ url('viewfile/'.$blog->image_2) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
 						@endif
-					</div>
-					
-				</div>
-			</div>
+						</td>
+					</tr>
+				</table>
+			</fieldset> 
+		</div>
+	</div>
 @endsection
 
 	
