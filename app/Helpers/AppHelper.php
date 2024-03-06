@@ -12,16 +12,16 @@ class AppHelper
 	public static function otpEmail($email) {
 		$code = self::otpCode();
 		session(['otp' => $code]);
-		self::sendEmail('Dear User, Your OTP for accessing the SEVA- partnersbuddy is '. $code.' .This OTP is valid for 15 mins.',  $email);
+		self::sendEmail('Dear User, Your OTP for accessing the UESI-TS- portal is '. $code.' .This OTP is valid for 15 mins.',  $email);
 		
 	}
 	public static function otpMobile($mobile, $login=false, $email='') {
 		$code = self::otpCode();
 		session(['otp' => $code]);
-		self::sendSms('Dear User, Your OTP for accessing the SEVA- partnersbuddy is '. $code.' .This OTP is valid for 15 mins.',  $mobile);
+		self::sendSms('Dear User, Your OTP for accessing the UESI-TS- portal is '. $code.' .This OTP is valid for 15 mins.',  $mobile);
 		if($login)
 		{
-			self::sendEmail('Dear User, Your OTP for accessing the SEVA- partnersbuddy is '. $code.' .This OTP is valid for 15 mins.',  $email);
+			self::sendEmail('Dear User, Your OTP for accessing the UESI-TS- portal is '. $code.' .This OTP is valid for 15 mins.',  $email);
 		}
 	}
 	public static function otpCode() {
@@ -44,7 +44,7 @@ class AppHelper
 
         $username = "Sblctf"; //use your sms api username
         $pass = "Fasblct"; //enter your password
-        $senderid = "SEVABH";//BTOYOU use your sms api sender id
+        $senderid = "UESI-TSBH";//BTOYOU use your sms api sender id
         $priority = "ndnd";//BTOYOU use your sms api sender id
         $stype = "normal";//BTOYOU use your sms api sender id
         $sms_url = "http://bhashsms.com/api/sendmsg.php?user=$username&pass=$pass&sender=$senderid&phone=$dest_mobileno&text=$sms&priority=$priority&stype=$stype";

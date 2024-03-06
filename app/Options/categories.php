@@ -1,7 +1,8 @@
 <?php
-return [
-	'FNA' => 'FNA',
-	'IT' => 'IT',
-	'Speaking Assignment' => 'Speaking Assignment',
-	'General Donation-B' => 'General Donation-B',
-];
+	return [
+		'General' => 'General',
+		'IT-Sowft Ware' => 'IT-Sowft Ware',
+		'Pharma-Medical' => 'Pharma-Medical',
+		'Teaching' => 'Teaching',
+		'Non IT' => 'Non IT',
+	];

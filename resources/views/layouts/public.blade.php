@@ -1,9 +1,10 @@
 @include('layouts.header')
 	 <style>
     html,body{
-		background: #642B73;
-		background: -webkit-linear-gradient(to top, #C6426E, #642B73); 
-		background: linear-gradient(to top, #C6426E, #642B73);
+		background: #041461;
+		background: -webkit-linear-gradient(to top, #041461, #0757aa); 
+		background: linear-gradient(to top, #041461, #0757aa);
+		
     }
 	</style>
 	@yield('content')

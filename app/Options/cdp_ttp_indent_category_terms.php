@@ -1,5 +1,0 @@
-<?php
-	return [
-		'ttp' => 'TTP',		
-	];
-	

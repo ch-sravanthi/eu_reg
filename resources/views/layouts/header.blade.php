@@ -51,11 +51,11 @@
 			transition: 0.3s;
 		}
 		.navbar, input[type=submit],.btn {			
-			background: linear-gradient(to bottom, #61045F, #AA076B); 
+			background: linear-gradient(to bottom, #182b89, #146bc5); 
 			
 		}
 		input[type=submit]:hover,.btn:hover {
-			background: linear-gradient(to right, #AA07AB, #61045F); 
+			background: linear-gradient(to right, #146bc5, #182b89); 
 		
 		}
 		input[type=submit],.btn {			
@@ -96,7 +96,7 @@
 			font-weight: bold;
 			margin-bottom: 1em;
 			display: inline-block!important;
-			border-bottom: 1px solid #AA076B;
+			border-bottom: 1px solid #7e1046;
 		}
 		
 		.error{

@@ -19,8 +19,9 @@ class CreateUsersTable extends Migration
             $table->string('name')->nullable();
             $table->string('email')->nullable();
             $table->string('mobile')->nullable();
-            $table->datetime('email_verified_at')->nullable();
-            $table->datetime('mobile_verified_at')->nullable();
+            $table->string('password')->nullable();
+            $table->string('role')->nullable();
+			$table->string('status')->default('active')->nullable();
             $table->integer('created_by')->unsigned()->nullable(); 
             $table->integer('updated_by')->unsigned()->nullable(); 
             $table->timestamps();
