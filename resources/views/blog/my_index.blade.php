@@ -25,6 +25,7 @@
 								<button class = "btn btn-primary btn-sm mr-2">Filter</button>
 					&nbsp;
 					<a class = "btn btn-sm btn-primary mr-2" href = "{{ route('blog.my_index') }}">Reset</a>&nbsp;
+					<a class="btn btn-sm btn-primary mr-2" href="{{url('blog/create')}}"> <i class="bi bi-plus-circle"></i> Post</a>	
 					
 				{!! Form::close() !!}	
 				</div>
