@@ -9,15 +9,13 @@
 @endsection
 
 @section('content')
-	<div class="card card-body text-center m-3">
-		
-		<div class="container">
-			<div class=" container row mb-1">
+	<div class="container">
+		<div class="card card-body ">
+			<div class="table-responsive">
 				<div class="col-lg-2">
-					<b class = "text-dark">Jobs Posted </b>
-					<div class="badge bg-info"> {{ $blogs->total() }} </div></a>
+					<b class = "text-dark"> </b> 
 				</div>
-				
+					
 				<div class="col-lg-10 text-right mb-2">
 					{!! Form::open(['method' => 'get', 'class' => 'd-flex']) !!}
 					
@@ -31,7 +29,7 @@
 					<a class = "btn btn-sm btn-primary mr-2" href = "{{ route('welcome') }}">Reset</a>&nbsp;
 					<a class="btn btn-sm btn-primary mr-2" href="{{url('blog/create')}}"> <i class="bi bi-plus-circle"></i> Post</a>			
 					
-				{!! Form::close() !!}	
+					{!! Form::close() !!}	
 				</div>
 			</div>
 			
