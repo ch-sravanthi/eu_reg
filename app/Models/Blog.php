@@ -39,10 +39,10 @@ class Blog extends AppModel{
 	
     public $nicenames =  [
 
-			'blog_title' => 'Title of the Job',						
+			'blog_title' => 'Job Title',						
 			'category' => 'Job Category',						
 			'location' => 'Job Location',						
-			'last_date' => 'Last Date',						
+			'last_date' => 'Last Date to Apply',						
 			'description' => 'Job Description',						
 			'image_1' => 'Attachment - 1',
 			'image_2' => 'Attachment - 2',
@@ -55,10 +55,10 @@ class Blog extends AppModel{
 	public function niceNames()
 	{
 		return[
-			'blog_title' => 'Title of the Job',						
+			'blog_title' => 'Job Title',						
 			'category' => 'Job Category',						
 			'location' => 'Job Location',						
-			'last_date' => 'Last Date',						
+			'last_date' => 'Last Date to Apply',						
 			'description' => 'Job Description',						
 			'image_1' => 'Attachment - 1',
 			'image_2' => 'Attachment - 2',
