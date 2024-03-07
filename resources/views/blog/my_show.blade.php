@@ -53,7 +53,7 @@
 						<th>Person Mobile No</th>	
 						<td>{{ $blog->person_mobile }}</td>
 						
-						<th>Person E-mail</th>	
+						<th>Person Email ID </th>	
 						<td>{{ $blog->person_email }}</td>
 					</tr>
 					

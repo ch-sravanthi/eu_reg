@@ -46,9 +46,9 @@ class Blog extends AppModel{
 			'description' => 'Job Description',						
 			'image_1' => 'Attachment - 1',
 			'image_2' => 'Attachment - 2',
-			'person_name' => 'Your Full Name',
-			'person_mobile' => 'Your Cell Number',
-			'person_email' => 'Your Email-id',
+			'person_name' => 'Full Name',
+			'person_mobile' => 'Cell Number',
+			'person_email' => 'Email ID ',
 			'status' => 'Status',
         ];
 		
@@ -62,9 +62,9 @@ class Blog extends AppModel{
 			'description' => 'Job Description',						
 			'image_1' => 'Attachment - 1',
 			'image_2' => 'Attachment - 2',
-			'person_name' => 'Your Full Name',
-			'person_mobile' => 'Your Cell Number',
-			'person_email' => 'Your Email-id',
+			'person_name' => 'Full Name',
+			'person_mobile' => 'Cell Number',
+			'person_email' => 'Email ID ',
 			'status' => 'Status',
 		];
 	}
