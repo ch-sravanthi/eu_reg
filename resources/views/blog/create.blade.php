@@ -82,8 +82,8 @@
 						</div>
 						
 						<div class="col-lg-6 mb-2">
-							<label>{{ $blog->nicenames['description'] }} </label>
-								{{ Form::textarea('description', old('description', $blog->description), ['rows' => 5,'placeholder' => 'Post Description'],['class' => 'form-control' ]) }}
+							<label>  </label>
+								{{ Form::textarea('description', old('description', $blog->description), ['rows' => 5,'placeholder' => 'Job Description'],['class' => 'form-control' ]) }}
 									@if($errors->has('description'))
 										<div class="text-danger">{{ $errors->first('description') }}</div>
 									@endif
