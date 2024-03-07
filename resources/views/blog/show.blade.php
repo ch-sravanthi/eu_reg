@@ -59,7 +59,7 @@
 				<table class="table table-bordered m-0">
 					<tr>
 						<th  colspan=4>
-						Job Information Attachments</th>
+						Job Information Attachments :<text class="text-muted small"> (if any)</text></th>
 					</tr>
 					<tr>
 						<td  colspan=3>
