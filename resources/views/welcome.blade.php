@@ -13,13 +13,13 @@
 		<div class="card card-body ">
 			<div class="table-responsive">
 				<div class="col-lg-2">
-					<b class = "text-dark"> </b> 
+					<b class = "text-dark">Job Information </b><div class="badge bg-info"> {{ $blog->total() }} </div></a>
 				</div>
 					
 				<div class="col-lg-10 text-right mb-2">
 					{!! Form::open(['method' => 'get', 'class' => 'd-flex']) !!}
 					
-					<?php $options =  ['General' => 'General', 'IT-Sowft Ware' => 'IT-Sowft Ware', 'Pharma-Medical' => 'Pharma-Medical', 'Teaching' => 'Teaching', 'Non IT' => 'Non IT',];?>
+					<?php $options =  ['General' => 'General', 'IT-Sowft Ware' => 'IT-Sowftware', 'Pharma-Medical' => 'Pharma-Medical', 'Teaching' => 'Teaching','Walk-In' => 'Walk-In', 'Non IT' => 'Non IT',];?>
 					{!! Form::text('blog_title', request()->blog_title, ['class' => ' mr-2', 'placeholder' => 'Job Title']) !!}&nbsp;
 					{!! Form::text('description', request()->description, ['class' => ' mr-2', 'placeholder' => 'Job Description']) !!} &nbsp;
 						
