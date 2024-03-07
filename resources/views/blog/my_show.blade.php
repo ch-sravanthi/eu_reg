@@ -45,15 +45,15 @@
 						<th>Posted On</th>	
 						<td>{{ $blog->created_at }}</td>
 						
-						<th>{{ $blog->label('person_name') }}</th>	
+						<th>Person Name</th>	
 						<td>{{ $blog->person_name }}</td>
 					</tr>
 					
 					<tr>
-						<th>{{ $blog->label('person_mobile') }}</th>	
+						<th>Person Mobile No</th>	
 						<td>{{ $blog->person_mobile }}</td>
 						
-						<th>{{ $blog->label('person_email') }}</th>	
+						<th>Person E-mail</th>	
 						<td>{{ $blog->person_email }}</td>
 					</tr>
 					
