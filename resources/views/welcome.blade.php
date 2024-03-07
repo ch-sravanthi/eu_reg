@@ -19,25 +19,25 @@
 				</div>&nbsp;
 					
 				<div style="overflow-x:auto;">	
-				{!! Form::open(['method' => 'get', 'class' => 'd-flex']) !!}
-				
-				<?php $options =  ['General' => 'General',
-								   'IT - Software' => 'IT - Software',
-									'Pharma-Medical' => 'Pharma-Medical',
-									'Teaching' => 'Teaching',
-									'Non IT' => 'Non IT',
-									'Walk-In' => 'Walk-In',];?>
-				{!! Form::text('blog_title', request()->blog_title, ['class' => ' mr-2', 'placeholder' => 'Title']) !!}&nbsp;
-				{!! Form::text('description', request()->description, ['class' => ' mr-2', 'placeholder' => 'Description']) !!} &nbsp;
+					{!! Form::open(['method' => 'get', 'class' => 'd-flex']) !!}
 					
-				{!! Form::select('category', $options, request()->category, ['class' => ' mr-2', 'placeholder' => 'Select Category']) !!}&nbsp;
-				<button class = "btn btn-primary btn-sm mr-2">Search</button>
-				&nbsp;
-				<a class = "btn btn-sm btn-primary mr-2" href = "{{ route('welcome') }}">Reset</a>&nbsp;
+					<?php $options =  ['General' => 'General',
+									   'IT - Software' => 'IT - Software',
+										'Pharma-Medical' => 'Pharma-Medical',
+										'Teaching' => 'Teaching',
+										'Non IT' => 'Non IT',
+										'Walk-In' => 'Walk-In',];?>
+					{!! Form::text('blog_title', request()->blog_title, ['class' => ' mr-2', 'placeholder' => 'Title']) !!}&nbsp;
+					{!! Form::text('description', request()->description, ['class' => ' mr-2', 'placeholder' => 'Description']) !!} &nbsp;
 						
-				{!! Form::close() !!}	
-			</div>
-		&nbsp;
+					{!! Form::select('category', $options, request()->category, ['class' => ' mr-2', 'placeholder' => 'Select Category']) !!}&nbsp;
+					<button class = "btn btn-primary btn-sm mr-2">Search</button>
+					&nbsp;
+					<a class = "btn btn-sm btn-primary mr-2" href = "{{ route('welcome') }}">Reset</a>&nbsp;
+							
+					{!! Form::close() !!}	
+				</div>
+				&nbsp;
 				<div class="table-responsive">
 					<table class="table table-striped table-hover table-bordered">
 						<thead>

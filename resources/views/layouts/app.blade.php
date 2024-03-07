@@ -3,12 +3,19 @@
 	
 	<style>
 		html,body,.page{
-			font-size: 17px;
+			font-size: 16px;
 			background-color: #ddd;
 			padding-top: 30px;
 		}
 		nav a{
 			color: #fff!important;
+		}
+		 .btn
+		 {
+			width: auto;
+		}   
+		input{
+			width: 100px;
 		}
 	</style>
 	

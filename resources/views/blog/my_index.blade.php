@@ -9,33 +9,32 @@
 @section('content')	
 	<div class="container">
 		<div class="card card-body ">
-			<div class="table-responsive">
-				<div class="col-lg-2">
-					<b class = "text-dark">Jobs Posted </b><div class="badge bg-info"> {{ $blogs->total() }} </div></a>
-				</div>
+				<div class="float-right">
+					<b class = "text-dark">Jobs Posted </b>
+					<div class="badge bg-info"> {{ $blogs->total() }} </div>
+						<a class="btn btn-sm btn-primary mr-2" href="{{url('blog/create')}}"> <i class="bi bi-plus-circle"></i>Post a Job</a>
+				</div>&nbsp;
 					
-				<div class="col-lg-10 text-right mb-2">
+				<div style="overflow-x:auto;">	
 					{!! Form::open(['method' => 'get', 'class' => 'd-flex']) !!}
 					
 					<?php $options =  ['General' => 'General',
-										'IT - Software' => 'IT - Software',
+									   'IT - Software' => 'IT - Software',
 										'Pharma-Medical' => 'Pharma-Medical',
 										'Teaching' => 'Teaching',
 										'Non IT' => 'Non IT',
 										'Walk-In' => 'Walk-In',];?>
 					{!! Form::text('blog_title', request()->blog_title, ['class' => ' mr-2', 'placeholder' => 'Title']) !!}&nbsp;
-					{!! Form::text('description', request()->description, ['class' => ' mr-2', 'placeholder' => 'Job Description']) !!} &nbsp;
+					{!! Form::text('description', request()->description, ['class' => ' mr-2', 'placeholder' => 'Description']) !!} &nbsp;
 						
 					{!! Form::select('category', $options, request()->category, ['class' => ' mr-2', 'placeholder' => 'Select Category']) !!}&nbsp;
-								<button class = "btn btn-primary btn-sm mr-2">Search</button>
+					<button class = "btn btn-primary btn-sm mr-2">Search</button>
 					&nbsp;
-					<a class = "btn btn-sm btn-primary mr-2" href = "{{ route('blog.my_index') }}">Reset</a>&nbsp;
-					<a class="btn btn-sm btn-primary mr-2" href="{{url('blog/create')}}"> <i class="bi bi-plus-circle"></i>Post a Job</a>	
-					
-				{!! Form::close() !!}	
+					<a class = "btn btn-sm btn-primary mr-2" href = "{{ route('welcome') }}">Reset</a>&nbsp;
+							
+					{!! Form::close() !!}	
 				</div>
-			</div>
-		</div>
+				&nbsp;
 				
 		<div class="card card-body table-wrapper">
 			<div class="table-responsive">
@@ -84,6 +83,7 @@
 				@endforeach
 				</table>
 			
+				</div>
 			</div>
 		</div>
 	</div>
