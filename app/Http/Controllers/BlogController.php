@@ -95,6 +95,7 @@ class BlogController extends Controller
 					
 		$blog->fill($request->all());
 		$blog->status = $request->status;
+		$blog->category = $request->category;
 		//var_dump(Auth::user());die();
 		$blog->updated_by = Auth::user()->id;		
 		

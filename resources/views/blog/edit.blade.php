@@ -28,8 +28,11 @@
 							<th>{{ $blog->label('blog_title') }}</th>	
 							<td>{{ $blog->blog_title }}</td>
 								
-							<th>{{ $blog->label('category') }}</th>	
-							<td>{{ $blog->category }}</td>
+							<th>{{ $blog->label('category') }}
+							
+							
+							</th>	
+							<td>{!! EasyForm::select('category', '', old('category', $blog->category), AppHelper::options('categories')) !!}</td>
 						</tr>
 						
 						<tr>
