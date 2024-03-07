@@ -1,13 +1,21 @@
 @include('layouts.header')
 	<style>
 		html,body,.page{
-			font-size: 17px;
+			font-size: 16px;
 			background-color: #ddd;
 			padding-top: 30px;
 		}
 		nav a{
 			color: #fff!important;
 		}
+		 .btn
+		 {
+			width: auto;
+		}   
+		input{
+			width: 100px;
+		}
+		
 	</style>
 	
 	<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#fff; border-bottom: 2px solid #678bbd11; font-weight: 500;">
