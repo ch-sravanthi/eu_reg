@@ -26,7 +26,7 @@
 					{!! Form::text('description', request()->description, ['class' => ' mr-2', 'placeholder' => 'Job Description']) !!} &nbsp;
 						
 					{!! Form::select('category', $options, request()->category, ['class' => ' mr-2', 'placeholder' => 'Select Category']) !!}&nbsp;
-								<button class = "btn btn-primary btn-sm mr-2">Filter</button>
+								<button class = "btn btn-primary btn-sm mr-2">Search</button>
 					&nbsp;
 					<a class = "btn btn-sm btn-primary mr-2" href = "{{ route('welcome') }}">Reset</a>&nbsp;
 					<a class="btn btn-sm btn-primary mr-2" href="{{url('blog/create')}}"> <i class="bi bi-plus-circle"></i> Post</a>			
