@@ -31,7 +31,7 @@
 			Note: * Mark as Mandatory.
 		</div>
 			<?php $categories = AppHelper::options('categories');?>
-			<div class="card mb-3">
+			<div class="">
 				<div class="card-header">
 					<h6> Please Enter Job Details :</h6>
 					<div class="row">
@@ -93,7 +93,7 @@
 			</div>
 			
 			
-			<div class="card mb-3">
+			<div class="">
 				<div class="card-header">
 					<h6>Please Enter Your Details :</h6>
 					<div class="row">
