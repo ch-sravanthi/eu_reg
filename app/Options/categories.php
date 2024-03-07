@@ -1,7 +1,7 @@
 <?php
 	return [
 		'General' => 'General',
-		'IT-Sowft Ware' => 'IT-Sowft Ware',
+		'IT - Software' => 'IT - Software',
 		'Pharma-Medical' => 'Pharma-Medical',
 		'Teaching' => 'Teaching',
 		'Non IT' => 'Non IT',
