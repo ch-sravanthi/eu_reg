@@ -33,7 +33,7 @@
 			<?php $categories = AppHelper::options('categories');?>
 			<div class="card mb-3">
 				<div class="card-header">
-					<h6> Please Enter Job Details</h6>
+					<h6> Please Enter Job Details :</h6>
 					<div class="row">
 			
 						<div class="col-lg-6 mb-2">
@@ -95,7 +95,7 @@
 			
 			<div class="card mb-3">
 				<div class="card-header">
-					<h6>Please Enter Your Details</h6>
+					<h6>Please Enter Your Details :</h6>
 					<div class="row">
 						<div class="col-lg-4 mb-2">
 							<label>{{ $blog->nicenames['person_name'] }} *</label>
