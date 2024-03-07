@@ -20,7 +20,7 @@
 				<div class="col-lg-10 text-right mb-2">
 					{!! Form::open(['method' => 'get', 'class' => 'd-flex']) !!}
 					
-					<?php $options =  ['General' => 'General', 'IT-Sowft Ware' => 'IT-Sowftware', 'Pharma-Medical' => 'Pharma-Medical', 'Teaching' => 'Teaching','Walk-In' => 'Walk-In', 'Non IT' => 'Non IT',];?>
+					<?php $options =  ['General' => 'General', 'IT-Sowftware' => 'IT-Sowftware', 'Pharma-Medical' => 'Pharma-Medical', 'Teaching' => 'Teaching','Walk-In' => 'Walk-In', 'Non IT' => 'Non IT',];?>
 					{!! Form::text('blog_title', request()->blog_title, ['class' => ' mr-2', 'placeholder' => 'Job Title']) !!}&nbsp;
 					{!! Form::text('description', request()->description, ['class' => ' mr-2', 'placeholder' => 'Job Description']) !!} &nbsp;
 						
