@@ -27,7 +27,7 @@
 								<button class = "btn btn-primary btn-sm mr-2">Search</button>
 					&nbsp;
 					<a class = "btn btn-sm btn-primary mr-2" href = "{{ route('welcome') }}">Reset</a>&nbsp;
-					<a class="btn btn-sm btn-primary mr-2" href="{{url('blog/create')}}"> <i class="bi bi-plus-circle"></i> Post</a>			
+					<a class="btn btn-sm btn-primary mr-2" href="{{url('blog/create')}}"> <i class="bi bi-plus-circle"></i> Post a Job</a>			
 					
 					{!! Form::close() !!}	
 				</div>
