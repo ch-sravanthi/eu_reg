@@ -75,7 +75,7 @@
 		}
 		input[type=submit],.btn {
 			border: none;
-			padding: 0.25em 1.5em;
+		//	padding: 0.25em 1.5em;
 			color: #fff;
 			border-radius: 0.25em;
 		}

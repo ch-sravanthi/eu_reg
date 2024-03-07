@@ -9,11 +9,12 @@
 @endsection
 
 @section('content')
+
 	<div class="container">
 		<div class="card card-body ">
 			<div class="table-responsive">
 				<div class="col-lg-2">
-					<b class = "text-dark">Job Information </b><div class="badge bg-info"> {{ $blogs->total() }} </div></a>
+					<b class = "text-dark">Jobs Posted </b><div class="badge bg-info"> {{ $blogs->total() }} </div></a>
 				</div>
 					
 				<div class="col-lg-10 text-right mb-2">
@@ -27,7 +28,7 @@
 								<button class = "btn btn-primary btn-sm mr-2">Search</button>
 					&nbsp;
 					<a class = "btn btn-sm btn-primary mr-2" href = "{{ route('welcome') }}">Reset</a>&nbsp;
-					<a class="btn btn-sm btn-primary mr-2" href="{{url('blog/create')}}"> <i class="bi bi-plus-circle"></i> Post a Job</a>			
+					<a class="btn btn-sm btn-primary mr-2" href="{{url('blog/create')}}"> <i class="bi bi-plus-circle"></i>Post a Job</a>			
 					
 					{!! Form::close() !!}	
 				</div>
