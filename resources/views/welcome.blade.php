@@ -13,7 +13,7 @@
 		<div class="card card-body ">
 			<div class="table-responsive">
 				<div class="col-lg-2">
-					<b class = "text-dark">Job Information </b><div class="badge bg-info"> {{ $blog->total() }} </div></a>
+					<b class = "text-dark">Job Information </b><div class="badge bg-info"> {{ $blogs->total() }} </div></a>
 				</div>
 					
 				<div class="col-lg-10 text-right mb-2">
