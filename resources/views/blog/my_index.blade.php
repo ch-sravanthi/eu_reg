@@ -8,17 +8,17 @@
 @endsection
 @section('content')	
 	<div class="container">
-		<div class="card card-body ">
-				<div class="float-right">
+		<div class="row">
+			<div class="col-lg-4 mb-3">
 					<b class = "text-dark">Jobs Posted </b>
 					<div class="badge bg-info"> {{ $blogs->total() }} </div>
-						<a class="btn btn-sm btn-primary mr-2" href="{{url('blog/create')}}"> <i class="bi bi-plus-circle"></i>Post a Job</a>
-				</div>&nbsp;
-					
-				<div style="overflow-x:auto;">	
+						<a class="btn btn-sm btn-warning mr-2" href="{{url('blog/create')}}"> <i class="bi bi-plus-circle"></i>Post a Job</a>
+			</div>	
+			<div class="col-lg-8 mb-3">
+				<div class="d-lg-flex justify-content-end" style="width: 100%; overflow-x: auto;">
 					{!! Form::open(['method' => 'get', 'class' => 'd-flex']) !!}
 					
-					<?php $options =  ['General' => 'General',
+						<?php $options =  ['General' => 'General',
 									   'IT - Software' => 'IT - Software',
 										'Pharma-Medical' => 'Pharma-Medical',
 										'Teaching' => 'Teaching',
@@ -33,7 +33,9 @@
 					<a class = "btn btn-sm btn-primary mr-2" href = "{{ route('welcome') }}">Reset</a>&nbsp;
 							
 					{!! Form::close() !!}	
+					</div>
 				</div>
+		</div>
 				&nbsp;
 				
 		<div class="card card-body table-wrapper">
@@ -86,7 +88,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
 				
 	<script>
 		function deleteRow(route) {
