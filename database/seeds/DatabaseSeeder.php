@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
     {
        
         DB::table('users')->insert([
-            'name' => 'Admin',
+            'name' => 'Sravanthi',
             'email' => 'it.chsravanthi@gmail.com',
 			'mobile' => '9666642328',
             'password' => Hash::make('u@siPort@l'),
@@ -29,9 +29,9 @@ class DatabaseSeeder extends Seeder
             'status' => 'Active',
         ]);
 		DB::table('users')->insert([
-            'name' => 'Admin',
-            'email' => 'chsravanthi.blessinfotech@gmail.com ',
-			'mobile' => '9666642328',
+            'name' => 'IT Cell Admin',
+            'email' => 'tsuesi.it@gmail.com',
+			'mobile' => '7702471313',
             'password' => Hash::make('Admin@24'),
             'role' => 'Admin',
             'status' => 'Active',
