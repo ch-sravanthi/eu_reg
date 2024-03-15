@@ -86,6 +86,9 @@ class BlogController extends Controller
 	}
 	
 	public function edit($id) {
+		if(!Auth::user()) {
+			return redirect()->back()->with(['error' => 'You do not have access']);
+		}
 		$blog = Blog::findOrFail($id);
 		return view('blog.edit', ['blog' => $blog]);
 	}
