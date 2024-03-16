@@ -77,7 +77,7 @@
 							<a href="{{ url('blog/edit/'.$blog->id) }}"class="btn btn-sm btn-primary" ><i class = "bi bi-pen"></i></a>
 						
 							<?php $route = url('blog/delete/'.$blog->id)?>
-							<a href="#" onclick="deleteRow('{{ $route }}')" class="btn btn-danger"><i class="bi bi-trash"></i></a>
+							<a href="#" onclick="deleteRow('{{ $route }}')" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></a>
 						
 						</td>
 					</tr>
