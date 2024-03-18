@@ -64,7 +64,7 @@
 								<td> 
 									<a href="{{ url('blog/show/'.$blog->id) }}">
 										{{ $blog->blog_title }} </a>
-										<?php $excerpt = AppHelper::excerpt($blog->description,35)?>
+										<?php $excerpt = AppHelper::excerpt($blog->description,45)?>
 											<div title="{{ $excerpt != $blog->description ? $blog->description : '' }}" style="font-size:12px;">
 												{{ $excerpt }}
 											</div>
