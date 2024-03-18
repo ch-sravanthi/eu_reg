@@ -24,17 +24,9 @@ class BlogController extends Controller
         $category= $request->category;
       
 		$query = Blog::query();
-		
-		$query->when($titleFilter,function($a) use($titleFilter)		{
-			$a->where('blog_title','like',"%$titleFilter%");
-		});
-		$query->when($category,function($a) use($category)		{
-			$a->where('category','like',"%$category%");
-		});
-		
-		$query->when($description,function($a) use($description){
-			$a->where('description','like',"%$description%");
-		});
+		if ($request->blog_title) $query->where('blog_title', 'like', "%{$request->blog_title}%");
+		if ($request->category) $query->where('category', 'like', "%{$request->category}%");
+		if ($request->description) $query->where('description', 'like', "%{$request->description}%");
 					
 		$blogs =$query->orderBy('updated_at', 'desc')->paginate($paginate);
 		
