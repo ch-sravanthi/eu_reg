@@ -32,7 +32,7 @@
 						<i class="bi bi-search"></i>
 					</button>
 					&nbsp;
-					<a class = "btn btn-sm btn-primary mr-2" href = "{{ route('welcome') }}">Reset</a>&nbsp;
+					<a class = "btn btn-sm btn-primary mr-2" href = "{{ route('blog.my_index') }}">Reset</a>&nbsp;
 							
 					{!! Form::close() !!}	
 					</div>
