@@ -31,7 +31,9 @@
 					{!! Form::text('description', request()->description, ['class' => ' mr-2', 'placeholder' => 'Description']) !!} &nbsp;
 						
 					{!! Form::select('category', $options, request()->category, ['class' => ' mr-2', 'placeholder' => 'Select Category']) !!}&nbsp;
-					<button class = "btn btn-primary btn-sm mr-2">Search</button>
+					<button  class="btn btn-primary btn-sm mr-2">
+						<i class="bi bi-search"></i>
+					</button>
 					&nbsp;
 					<a class = "btn btn-sm btn-primary mr-2" href = "{{ route('welcome') }}">Reset</a>&nbsp;
 							
