@@ -19,9 +19,6 @@ class BlogController extends Controller
     {
 		$blog =new Blog;
 		$paginate =10;
-        $titleFilter= $request->blog_title;
-        $description= $request->description;
-        $category= $request->category;
       
 		$query = Blog::query();
 		if ($request->blog_title) $query->where('blog_title', 'like', "%{$request->blog_title}%");
