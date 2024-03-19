@@ -69,11 +69,11 @@
 			<fieldset class="section">
 				<table class="table table-bordered m-0">
 					<tr>
-						<th  colspan=4>
+						<th colspan=4>
 						Job Information Attachments :<text class="text-muted small"> (if any)</text></th>
 					</tr>
 					<tr>
-						<td  colspan=3>
+						<td colspan=3>
 						@if($blog->image_1)
 							<img src="{{ url('viewfile/'.$blog->image_1) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
 						@endif
