@@ -21,9 +21,13 @@ class BlogController extends Controller
 		$paginate =10;
       
 		$query = Blog::query();
-		if ($request->blog_title) $query->where('blog_title', 'like', "%{$request->blog_title}%");
-		if ($request->category) $query->where('category', 'like', "%{$request->category}%");
-		if ($request->description) $query->where('description', 'like', "%{$request->description}%");
+		if ($request->search) {
+			$query->where(function($q) use($request){
+				$q->orwhere('blog_title', 'like', "%{$request->search}%");
+				$q->orwhere('category', 'like', "%{$request->search}%");
+				$q->orwhere('description', 'like', "%{$request->search}%");	
+			});
+		}
 					
 		$blogs =$query->orderBy('updated_at', 'desc')->paginate($paginate);
 		

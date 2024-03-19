@@ -17,28 +17,17 @@
 			<div class="col-lg-8 mb-3">
 				<div class="d-lg-flex justify-content-end" style="width: 100%; overflow-x: auto;">
 					{!! Form::open(['method' => 'get', 'class' => 'd-flex']) !!}
-					
-						<?php $options =  ['General' => 'General',
-									   'IT - Software' => 'IT - Software',
-										'Pharma-Medical' => 'Pharma-Medical',
-										'Teaching' => 'Teaching',
-										'Non IT' => 'Non IT',
-										'Walk-In' => 'Walk-In',];?>
-					{!! Form::text('blog_title', request()->blog_title, ['class' => ' mr-2', 'placeholder' => 'Title']) !!}&nbsp;
-					{!! Form::text('description', request()->description, ['class' => ' mr-2', 'placeholder' => 'Description']) !!} &nbsp;
-						
-					{!! Form::select('category', $options, request()->category, ['class' => ' mr-2', 'placeholder' => 'Select Category']) !!}&nbsp;
-					<button  class="btn btn-primary btn-sm mr-2">
-						<i class="bi bi-search"></i>
-					</button>
-					&nbsp;
-					<a class = "btn btn-sm btn-primary mr-2" href = "{{ route('blog.my_index') }}">Reset</a>&nbsp;
-							
-					{!! Form::close() !!}	
+						{!! Form::text('search', request()->search, ['class' => ' mr-4', 'placeholder' => 'Title / Description']) !!}&nbsp;
+						<button  class="btn btn-primary btn-sm mr-2">
+							<i class="bi bi-search"></i>
+						</button>&nbsp;
+						<a class = "btn btn-sm btn-primary mr-2" href = "{{ route('blog.my_index') }}">Reset</a>&nbsp;
+				
+					{!! Form::close() !!}	&nbsp;
 					</div>
-				</div>
+			</div>
 		</div>
-				&nbsp;
+		&nbsp;
 				
 		<div class="card card-body table-wrapper">
 			<div class="table-responsive">
@@ -68,14 +57,14 @@
 							<a href="{{ url('blog/my_show/'.$blog->id) }}">
 								{{ $blog->blog_title }}
 							</a>
-							<?php $excerpt = AppHelper::excerpt($blog->description,45)?>
+							<?php $excerpt = AppHelper::excerpt($blog->description,55)?>
 								<div title="{{ $excerpt != $blog->description ? $blog->description : '' }}" style="font-size:12px;">
 									{{ $excerpt }}
 								</div>
 						</td>
 						
 						<td>{{ $blog->category }}</td>
-						<td>{{ $blog->created_at }}</td>
+						<td style="font-size:13px;">{{ $blog->created_at }} <br/>by {{ $blog->person_name }}</td>
 						<td>{{ $blog->status }}</td>
 						<td>
 						<?php //var_dump(Auth::user());die();?>
@@ -90,10 +79,9 @@
 					
 				@endforeach
 				</table>
-			
-				</div>
 			</div>
 		</div>
+	</div>
 				
 	<script>
 		function deleteRow(route) {
