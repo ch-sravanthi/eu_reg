@@ -58,7 +58,7 @@
 							@if($blog->image_1)
 								<img src="{{ url('viewfile/'.$blog->image_1) }}" style="background-image: url();width:30%; height:auto;border:1px solid #F8F8F8;"/>
 							@else
-								<img src="{{ asset('/images/default.png')}}" style="background-image: url();width:30%; height:auto;border:1px solid #F8F8F8;"/>
+								<img src="{{ asset('/images/default.png')}}" style="background-image: url();width:40%; height:auto;border:1px solid #F8F8F8;"/>
 							@endif
 						</td>
 						<td> 
