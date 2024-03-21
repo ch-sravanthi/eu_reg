@@ -20,7 +20,7 @@
 			<div class="col-lg-8 mb-3">
 				<div class="d-lg-flex justify-content-end" style="width: 100%; overflow-x: auto;">
 					{!! Form::open(['method' => 'get', 'class' => 'd-flex']) !!}
-						{!! Form::text('search', request()->search, ['class' => ' mr-4', 'placeholder' => 'Title / Description/ Any']) !!}&nbsp;
+						{!! Form::text('search', request()->search, ['class' => ' mr-4', 'placeholder' => 'Title/Description/Any']) !!}&nbsp;
 						<button  class="btn btn-primary btn-sm mr-2">
 							<i class="bi bi-search"></i>
 						</button>&nbsp;
