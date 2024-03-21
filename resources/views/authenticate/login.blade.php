@@ -5,7 +5,7 @@
 		{!! Form::open(['url' => route('authenticate.authenticate'), 'class' => 'w-100 p-5']) !!}
 		<div class="card shadow ">
 			<div class="card-body">
-				<h5 class="mb-3">Welcome to Login!</h5>
+				<h5 class="mb-3">Admin Panel!</h5>
 				   <div class="mb-3">
 						<div class="pb-4">
 							{!! Form::email('email', old('email', ''), ['class' => 'form-control', 'placeholder' => 'Email']) !!}
