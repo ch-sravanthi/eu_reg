@@ -37,7 +37,7 @@
 					<a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownFavorites" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 					 
 						@if(Auth::user())
-							Welcome {{ ucwords(Auth::user()->name) }}
+							 {{ ucwords(Auth::user()->name) }}
 						@endif
 					</a>
 					<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownFavorites" style="background-color:grey; ">
