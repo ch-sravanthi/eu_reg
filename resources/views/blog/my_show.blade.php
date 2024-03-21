@@ -16,6 +16,7 @@
 
 @section('content')	
 
+<div class="table-responsive">
 	<div class="form form-view">
 		<div class="table-wrapper">
 			<fieldset class="section">
@@ -92,6 +93,7 @@
 			</fieldset> 
 		</div>
 	</div>
+</div>
 @endsection
 
 	
