@@ -35,7 +35,8 @@
 					<thead>
 						 <tr>
 							<th>Sno</th>
-							<th>Job Title</th>
+							<th style="width:20%;">Details</th>
+							<th style="width:20%;">Job Title </th>
 							<th>Job Category</th>
 							<th>Posted On</th>
 							<th>Status</th>
@@ -53,6 +54,13 @@
 					?>
 					<tr>
 						<th>{{ $s++ }}</th>
+						<td>	
+							@if($blog->image_1)
+								<img src="{{ url('viewfile/'.$blog->image_1) }}" style="background-image: url();width:30%; height:auto;border:1px solid #F8F8F8;"/>
+							@else
+								<img src="{{ asset('/images/default.png')}}" style="background-image: url();width:30%; height:auto;border:1px solid #F8F8F8;"/>
+							@endif
+						</td>
 						<td> 
 							<a href="{{ url('blog/my_show/'.$blog->id) }}">
 								{{ $blog->blog_title }}

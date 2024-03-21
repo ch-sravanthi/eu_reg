@@ -15,7 +15,7 @@
 			width: auto;
 		}   
 		input{
-			width: 150px;
+			width: 200px;
 		}
 	</style>
 	

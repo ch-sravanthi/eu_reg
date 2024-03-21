@@ -20,7 +20,7 @@
 			<div class="col-lg-8 mb-3">
 				<div class="d-lg-flex justify-content-end" style="width: 100%; overflow-x: auto;">
 					{!! Form::open(['method' => 'get', 'class' => 'd-flex']) !!}
-						{!! Form::text('search', request()->search, ['class' => ' mr-4', 'placeholder' => 'Title / Description']) !!}&nbsp;
+						{!! Form::text('search', request()->search, ['class' => ' mr-4', 'placeholder' => 'Title / Description/ Any']) !!}&nbsp;
 						<button  class="btn btn-primary btn-sm mr-2">
 							<i class="bi bi-search"></i>
 						</button>&nbsp;
@@ -35,8 +35,8 @@
 				<thead>
 					 <tr>
 						<th>S.No</th>
-						<th>Details</th>
-						<th>Job Title</th>
+						<th style="width:20%;">Details</th>
+						<th style="width:20%;">Job Title </th>
 						<th>Job Category</th>
 						<th>Location</th>
 						<th>Posted On</th>
@@ -48,7 +48,11 @@
 					<tr>
 						<th>{{ $s++ }}</th>
 						<td>	
-							<img src="{{ url('viewfile/'.$blog->image_1) }}" style="background-image: url();width:100px; height:auto;border:1px solid #F8F8F8;"/>
+							@if($blog->image_1)
+								<img src="{{ url('viewfile/'.$blog->image_1) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
+							@else
+								<img src="{{ asset('/images/default.png')}}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
+							@endif
 						</td>
 						<td> 
 							<a href="{{ url('blog/show/'.$blog->id) }}">
@@ -60,7 +64,7 @@
 						</td>
 						<td>{{ $blog->category }}</td>
 						<td>{{ $blog->location}}</td>
-						<td>{{ $blog->created_at}}</td>
+						<td>{{ $blog->created_at}} <br/>by {{ $blog->person_name }}</td>
 					</tr>
 				@endforeach
 			</table>
