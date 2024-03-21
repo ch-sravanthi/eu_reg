@@ -20,7 +20,7 @@
 	<div class="col-lg-12  text-danger" style="font-weight:600;">
 		<u>Note: </u>This is for information only, Please Verify before you Proceed, We are not Liable for any Information Posted on this Portal.
 	</div><br>
-
+<div class="table-responsive">
 	<div class="form form-view">
 		<div class="table-wrapper">
 			<fieldset class="section">
@@ -81,6 +81,7 @@
 			</fieldset> 
 		</div>
 	</div>
+</div>
 			
 		
 @endsection

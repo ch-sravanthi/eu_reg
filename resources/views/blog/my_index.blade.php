@@ -53,15 +53,15 @@
 					
 					?>
 					<tr>
-						<th>{{ $s++ }}</th>
-						<td>	
+						<th style="text-align:center;">{{ $s++ }}</th>
+						<td style="text-align:center;">		
 							@if($blog->image_1)
-								<img src="{{ url('viewfile/'.$blog->image_1) }}" style="background-image: url();width:30%; height:auto;border:1px solid #F8F8F8;"/>
+								<img src="{{ url('viewfile/'.$blog->image_1) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
 							@else
-								<img src="{{ asset('/images/default.png')}}" style="background-image: url();width:40%; height:auto;border:1px solid #F8F8F8;"/>
+								<img src="{{ asset('/images/default.png')}}" style="background-image: url();width:70%; height:auto;border:1px solid #F8F8F8;"/>
 							@endif
 						</td>
-						<td> 
+						<td style="text-align:justify-content-end;"> 
 							<a href="{{ url('blog/my_show/'.$blog->id) }}">
 								{{ $blog->blog_title }}
 							</a>
@@ -71,9 +71,9 @@
 								</div>
 						</td>
 						
-						<td>{{ $blog->category }}</td>
-						<td style="font-size:13px;">{{ $blog->created_at }} <br/>by {{ $blog->person_name }}</td>
-						<td>{{ $blog->status }}</td>
+						<td style="text-align:center;">{{ $blog->category }}</td>
+						<td style="text-align:center;font-size:13px;">{{ $blog->created_at }} <br/>by {{ $blog->person_name }}</td>
+						<td style="text-align:center;">{{ $blog->status }}</td>
 						<td>
 						<?php //var_dump(Auth::user());die();?>
 						
