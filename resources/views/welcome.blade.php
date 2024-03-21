@@ -32,8 +32,8 @@
 		
 		<div class="table-responsive">
 			<table class="table table-striped table-hover table-bordered">
-				<thead>
-					 <tr>
+				<thead >
+					 <tr style="text-align:center;">
 						<th>S.No</th>
 						<th style="width:20%;">Details</th>
 						<th style="width:20%;">Job Title </th>
@@ -46,15 +46,15 @@
 				@foreach($blogs as $blog)
 				<?php $opt = AppHelper::options('categories'); 	?>
 					<tr>
-						<th>{{ $s++ }}</th>
-						<td>	
+						<th style="text-align:center;">{{ $s++ }}</th>
+						<td style="text-align:center;">	
 							@if($blog->image_1)
 								<img src="{{ url('viewfile/'.$blog->image_1) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
 							@else
 								<img src="{{ asset('/images/default.png')}}" style="background-image: url();width:70%; height:auto;border:1px solid #F8F8F8;"/>
 							@endif
 						</td>
-						<td> 
+						<td style="text-align:justify-content-end;"> 
 							<a href="{{ url('blog/show/'.$blog->id) }}">
 								{{ $blog->blog_title }} </a>
 								<?php $excerpt = AppHelper::excerpt($blog->description,55)?>
@@ -62,9 +62,9 @@
 										{{ $excerpt }}
 									</div>
 						</td>
-						<td>{{ $blog->category }}</td>
-						<td>{{ $blog->location}}</td>
-						<td>{{ $blog->created_at}} <br/>by {{ $blog->person_name }}</td>
+						<td style="text-align:center;">{{ $blog->category }}</td>
+						<td style="text-align:center;">{{ $blog->location}}</td>
+						<td style="text-align:center;">{{ $blog->created_at}} <br/>by {{ $blog->person_name }}</td>
 					</tr>
 				@endforeach
 			</table>
