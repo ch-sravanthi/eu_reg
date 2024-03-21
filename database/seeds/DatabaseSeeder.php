@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
             'status' => 'Active',
         ]);
 		DB::table('users')->insert([
-            'name' => 'IT Cell Admin',
+            'name' => 'Admin',
             'email' => 'tsuesi.it@gmail.com',
 			'mobile' => '7702471313',
             'password' => Hash::make('Admin@24'),
