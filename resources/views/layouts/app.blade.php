@@ -21,7 +21,7 @@
 	
 	<nav class="navbar navbar-expand-lg navbar-light" style="background-color:grey; border-bottom: 2px solid #678bbd11; font-weight: 500;">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="{{ route('welcome') }}"><img class="rounded" src="{{ asset('images/logo.png') }}" height="40"></a>
+			<a class="navbar-brand" href="{{ route('blog.my_index') }}"><img class="rounded" src="{{ asset('images/logo.png') }}" height="40"></a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>

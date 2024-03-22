@@ -26,6 +26,7 @@ class BlogController extends Controller
 				$q->orwhere('blog_title', 'like', "%{$request->search}%");
 				$q->orwhere('category', 'like', "%{$request->search}%");
 				$q->orwhere('description', 'like', "%{$request->search}%");	
+				$q->orwhere('location', 'like', "%{$request->search}%");	
 			});
 		}
 					
