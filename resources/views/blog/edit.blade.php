@@ -28,16 +28,13 @@
 							<th>{{ $blog->label('blog_title') }}</th>	
 							<td>{{ $blog->blog_title }}</td>
 								
-							<th>{{ $blog->label('category') }}
-							
-							
-							</th>	
+							<th>{{ $blog->label('category') }}</th>	
 							<td>{!! EasyForm::select('category', '', old('category', $blog->category), AppHelper::options('categories')) !!}</td>
 						</tr>
 						
 						<tr>
 							<th>{{ $blog->label('location') }}</th>	
-							<td>{{ $blog->location }}</td>
+							<td>{{ Form::text('location', old('location', $blog->location), ['class' => 'form-control' ]) }}</td>
 								
 							<th>{{ $blog->label('last_date') }}</th>	
 							<td>{{ $blog->last_date }}</td>
@@ -45,7 +42,8 @@
 						
 						<tr>
 							<th>{{ $blog->label('description') }}</th>	
-							<td colspan=3>{{ $blog->description }}</td>
+							<td colspan=3>
+								{{ Form::textarea('description', old('description', $blog->description), ['rows' => 5,'placeholder' => 'Job Description'],['class' => 'form-control' ]) }}</td>
 						</tr>
 						
 						<tr>

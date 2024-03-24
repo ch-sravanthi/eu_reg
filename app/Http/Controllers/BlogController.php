@@ -93,6 +93,8 @@ class BlogController extends Controller
 		$blog->fill($request->all());
 		$blog->status = $request->status;
 		$blog->category = $request->category;
+		$blog->description = $request->description;
+		$blog->location = $request->location;
 		//var_dump(Auth::user());die();
 		$blog->updated_by = Auth::user()->id;		
 		
