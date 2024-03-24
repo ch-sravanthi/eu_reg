@@ -32,7 +32,7 @@ class BlogController extends Controller
 					
 		$blogs =$query->orderBy('updated_at', 'desc')->paginate($paginate);
 		
-		return view('blog/my_index',compact(['blogs'],['blog'],['blogs']));
+		return view('blog/my_index',compact(['blogs'],['blog']));
     }
 	public function create($id = null)
     {

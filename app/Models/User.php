@@ -52,12 +52,12 @@ class User extends Model implements
 		];
 	}	
 	public $nicenames =  [
-		'name' => 'Name',
-		'email' => 'Email Id',
-		'mobile' => 'Mobile Number',
-		'role' => 'Role',
+		'name' => 'User Name',
+		'email' => 'User Email Id',
+		'mobile' => 'User Mobile Number',
+		'role' => 'User Role',
 		'password' => 'Password',
-		'status' => 'Status',
+		'status' => 'User Status',
 	];
 
 	
