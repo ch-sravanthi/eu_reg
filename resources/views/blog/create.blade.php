@@ -69,7 +69,7 @@
 							<label>{{ $blog->nicenames['image_1'] }} (if any images like jpeg, jpg, png)</label>
 								{!! Form::file('image_1', ['class' => 'form-control']) !!}
 								@if ($errors->has('image_1'))
-								<div class="text-danger">{{ $errors->blog('image_1') }}</div>
+								<div class="text-danger">{{ $errors->first('image_1') }}</div>
 									@endif
 						</div>
 						
@@ -77,7 +77,7 @@
 							<label>{{ $blog->nicenames['image_2'] }} (if any images like jpeg, jpg, png)</label>
 								{!! Form::file('image_2', ['class' => 'form-control']) !!}
 								@if ($errors->has('image_2'))
-								<div class="text-danger">{{ $errors->blog('image_2') }}</div>
+								<div class="text-danger">{{ $errors->first('image_2') }}</div>
 									@endif
 						</div>
 						
