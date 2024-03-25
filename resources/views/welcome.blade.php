@@ -53,6 +53,9 @@
 							@else
 								<img src="{{ asset('/images/default.png')}}" style="background-image: url();width:70%; height:auto;border:1px solid #F8F8F8;"/>
 							@endif
+							@if($blog->image_2)<br>
+								<br><img src="{{ url('viewfile/'.$blog->image_2) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
+							@endif
 						</td>
 						<td style="text-align:justify-content-end;"> 
 							<a href="{{ url('blog/show/'.$blog->id) }}">
