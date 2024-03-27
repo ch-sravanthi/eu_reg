@@ -44,6 +44,19 @@ Route::post('user/save/{id?}', 'App\Http\Controllers\UserController@save')->name
 Route::get('user/delete/{id}', 'App\Http\Controllers\UserController@delete')->name('user.delete');
 Route::get('user/show/{id}', 'App\Http\Controllers\UserController@show')->name('user.show');
 
+// Job Notification
+
+Route::get('notification/create', 'App\Http\Controllers\NotificationController@create')->name('notification.create');
+Route::post('notification/save/{id?}', 'App\Http\Controllers\NotificationController@save')->name('notification.save');
+Route::get('notification/index', 'App\Http\Controllers\NotificationController@index')->name('notification.index');
+Route::get('notification/show/{id}', 'App\Http\Controllers\NotificationController@show')->name('notification.show');
+Route::get('notification/delete/{id}', 'App\Http\Controllers\NotificationController@delete')->name('notification.delete');
+Route::get('notification/edit/{id}', 'App\Http\Controllers\NotificationController@edit')->name('notification.edit');
+Route::post('notification/update/{id}', 'App\Http\Controllers\NotificationController@update')->name('notification.update');	
+Route::get('notification/my_index', 'App\Http\Controllers\NotificationController@my_index')->name('notification.my_index');
+
+
+
 //Login form
 Route::get('login', 'App\Http\Controllers\AuthenticateController@login')->name('authenticate.login');
 Route::post('/authenticate/authenticate', 'App\Http\Controllers\AuthenticateController@authenticate')->name('authenticate.authenticate');
