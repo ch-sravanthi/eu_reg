@@ -10,6 +10,9 @@ class Notification extends AppModel{
     protected $fillable = [
         'description',
         'image_1',
+		'person_name',
+        'person_mobile',
+        'person_email',
 
     ];
 	public function rules()
