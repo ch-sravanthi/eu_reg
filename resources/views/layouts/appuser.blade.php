@@ -29,11 +29,11 @@
 					<li class="nav-item">
 						<a class="nav-link active" aria-current="page" href="#">Welcome To UESI TS Job Portal</a>
 					</li>	
-				<!--<li class="nav-item">
+					<li class="nav-item">
 						<a class="nav-link active" aria-current="page" href="{{ route('welcome') }}"> <i class="bi bi-newspaper"></i> Jobs</a>
 					</li><li class="nav-item">
 						<a class="nav-link active" aria-current="page" href="{{url('notification/index')}}"> <i class="bi bi-bell-fill"></i>  Notifications</a>
-					</li>-->
+					</li>
 				</ul>&nbsp;
 				
 			</div>
