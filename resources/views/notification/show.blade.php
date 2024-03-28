@@ -37,7 +37,7 @@
 					
 					<tr>
 						<th>Posted On</th>	
-						<td>{{ $notification->created_at }}&nbsp;by {{ $notification->person_name }}</td>
+						<td>{!! date('d M Y', strtotime($notification->created_at)) !!}&nbsp;by {{ $notification->person_name }}</td>
 					</tr>
 				</table>
 			</fieldset> 

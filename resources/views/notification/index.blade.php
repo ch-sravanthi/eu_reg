@@ -50,7 +50,7 @@
 						
 							<?php echo nl2br($notification->description); ?>
 						</td>
-						<td style="text-align:center;">{{ $notification->created_at}} <br/>by {{ $notification->person_name }}</td>
+						<td style="text-align:center;">{!! date('d M Y', strtotime($notification->created_at)) !!} <br/>by {{ $notification->person_name }}</td>
 					</tr>
 				@endforeach
 				</tbody>	

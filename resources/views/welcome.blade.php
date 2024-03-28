@@ -67,7 +67,7 @@
 						</td>
 						<td style="text-align:center;">{{ $blog->category }}</td>
 						<td style="text-align:center;">{{ $blog->location}}</td>
-						<td style="text-align:center;">{{ AppHelper::date($blog->created_at) }} <br/>by {{ $blog->person_name }}</td>
+						<td style="text-align:center;">{!! date('d M Y', strtotime($blog->created_at)) !!} <br/>by {{ $blog->person_name }}</td>
 					</tr>
 				@endforeach
 			</table>

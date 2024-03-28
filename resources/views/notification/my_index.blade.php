@@ -38,8 +38,8 @@
 							<th>Notification Description </th>
 							<th>Posted On</th>
 							<th>Status</th>
-							<th>Action</th>
-							<th></th>
+							<th colspan=2>Action</th>
+							
 						 </tr>
 					</thead>
 				<tbody>
@@ -57,7 +57,7 @@
 							<?php echo nl2br($notification->description); ?>
 						</td>
 						
-						<td style="font-size:12px;">{{ $notification->created_at }} <br/>by {{ $notification->person_name }}</td>
+						<td style="font-size:12px;">{!! date('d M Y', strtotime($notification->created_at)) !!} <br/>by {{ $notification->person_name }}</td>
 						<td>{{ $notification->status }}</td>
 						<td>
 						<?php //var_dump(Auth::user());die();?>

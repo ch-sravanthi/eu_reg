@@ -44,7 +44,7 @@
 					
 					<tr>
 						<th>Posted On</th>	
-						<td>{{ AppHelper::date($blog->created_at) }}</td>
+						<td>{!! date('d M Y', strtotime($blog->created_at)) !!}</td>
 						
 						<th>Person Name</th>	
 						<td>{{ $blog->person_name }}</td>
