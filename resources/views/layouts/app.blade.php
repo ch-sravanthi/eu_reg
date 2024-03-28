@@ -45,6 +45,19 @@
 			</ul>
 			
 			<ul class="navbar-nav  mb-lg-0 ml-1">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="{{url('blog/create')}}"><i class="bi bi-plus-circle"></i> Post a Job </a>
+				</li>
+			</ul>
+			
+			<ul class="navbar-nav  mb-lg-0 ml-1">			
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="{{url('notification/create')}}"><i class="bi bi-plus-circle"></i> Post a Notification </a>
+				</li>
+			</ul>	
+					
+			
+			<ul class="navbar-nav  mb-lg-0 ml-1">
 				<li class="nav-item dropdown">
 					<a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownFavorites" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 					 
