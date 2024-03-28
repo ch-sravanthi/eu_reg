@@ -1,8 +1,4 @@
-@if(Auth::user())
-	@extends('layouts.app')
-@else
-	@extends('layouts.appuser')
-@endif
+@extends('layouts.app')
 
 @section('title')	
 	<a href="#">Job Details</a> 
