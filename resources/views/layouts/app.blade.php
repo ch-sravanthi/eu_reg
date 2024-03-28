@@ -21,7 +21,7 @@
 	
 	<nav class="navbar navbar-expand-lg navbar-light" style="background-color:grey; border-bottom: 2px solid #678bbd11; font-weight: 500;">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="{{ route('blog.my_index') }}"><img class="rounded" src="{{ asset('images/logo.png') }}" height="40"></a>
+			<a class="navbar-brand" href="https://uesits.com/"><img class="rounded" src="{{ asset('images/logo.png') }}" height="40"></a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -29,9 +29,21 @@
 			<ul class="navbar-nav me-auto mb-2 mb-lg-0 d-sm-none d-md-block">
 				<li class="nav-item" style="color:#fff;">
 					<a class="nav-link active" aria-current="page" href="#" > Welcome To UESI TS Job Portal </a>
+				</li>
+			</ul>
+			
+			<ul class="navbar-nav  mb-lg-0 ml-1">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="{{url('blog/my_index')}}"> <i class="bi bi-newspaper"></i> Jobs</a>
 				</li>	
 			</ul>
-	  
+			
+			<ul class="navbar-nav  mb-lg-0 ml-1">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="{{url('notification/my_index')}}"> <i class="bi bi-bell-fill"></i>  Notifications</a>
+				</li>	
+			</ul>
+			
 			<ul class="navbar-nav  mb-lg-0 ml-1">
 				<li class="nav-item dropdown">
 					<a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownFavorites" role="button" data-bs-toggle="dropdown" aria-expanded="false">

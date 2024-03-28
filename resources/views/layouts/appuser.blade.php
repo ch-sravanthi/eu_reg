@@ -20,7 +20,7 @@
 	
 	<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#fff; border-bottom: 2px solid #678bbd11; font-weight: 500;">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="{{ route('welcome') }}"><img class="rounded" src="{{ asset('images/logo.png') }}" height="40"></a>
+			<a class="navbar-brand" href="https://uesits.com/"><img class="rounded" src="{{ asset('images/logo.png') }}" height="40"></a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -29,8 +29,15 @@
 					<li class="nav-item">
 						<a class="nav-link active" aria-current="page" href="#">Welcome To UESI TS Job Portal</a>
 					</li>	
-				</ul>
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="{{ route('welcome') }}"> <i class="bi bi-newspaper"></i> Jobs</a>
+					</li><li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="{{url('notification/index')}}"> <i class="bi bi-bell-fill"></i>  Notifications</a>
+					</li>
+				</ul>&nbsp;
+				
 			</div>
+			
 	</nav>
 	@hasSection('content')
 		<div class="container my-4">

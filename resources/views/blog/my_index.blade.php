@@ -72,7 +72,7 @@
 						</td>
 						
 						<td style="text-align:center;">{{ $blog->category }}</td>
-						<td style="text-align:center;font-size:13px;">{{ $blog->created_at }} <br/>by {{ $blog->person_name }}</td>
+						<td style="text-align:center;font-size:13px;">{{ AppHelper::date($blog->created_at) }} <br/>by {{ $blog->person_name }}</td>
 						<td style="text-align:center;">{{ $blog->status }}</td>
 						<td>
 						<?php //var_dump(Auth::user());die();?>

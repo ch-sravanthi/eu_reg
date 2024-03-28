@@ -48,7 +48,7 @@
 					
 					<tr>
 						<th>Posted On</th>	
-						<td colspan=3>{{ $blog->created_at }}&nbsp;by {{ $blog->person_name }}</td>
+						<td colspan=3>{{ AppHelper::date($blog->created_at) }}&nbsp;by {{ $blog->person_name }}</td>
 					</tr>
 				</table>
 			</fieldset> 
