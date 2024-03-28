@@ -12,7 +12,7 @@
 			<div class="col-lg-4 mb-3">
 					<b class = "text-dark">Jobs Posted </b>
 					<div class="badge bg-info"> {{ $blogs->total() }} </div>
-						<a class="btn btn-sm btn-warning mr-2" href="{{url('blog/create')}}"> <i class="bi bi-plus-circle"></i>Post a Job</a>
+						
 			</div>	
 			<div class="col-lg-8 mb-3">
 				<div class="d-lg-flex justify-content-end" style="width: 100%; overflow-x: auto;">
