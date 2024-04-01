@@ -20,9 +20,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4 mb-3">
-					<b class = "text-dark">Notifications Posted </b>
-					<div class="badge bg-info"> {{ $notifications->total() }} </div>
-						
+				<b class = "text-dark">Notifications Posted </b>
+				<div class="badge bg-info"> {{ $notifications->total() }} </div>
 			</div>	
 			<div class="col-lg-8 mb-3">
 				<div class="d-lg-flex justify-content-end" style="width: 100%; overflow-x: auto;">
@@ -37,34 +36,35 @@
 			</div>
 		</div>
 		
-		<div class="table-responsive">
-			<table class="table table-striped table-hover table-bordered">
-				<thead >
-					 <tr style="text-align:center;">
-						
-						<th style="width:90%;">Notification Details </th>
-						<th>Posted On</th>
-					 </tr>
-				</thead>
-				<?php $s=1;?>
-				<tbody>	
-				@foreach($notifications as $notification)
-					<tr>
-						<td>	
-							@if($notification->image_1)
-								<img src="{{ url('viewfile/'.$notification->image_1) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
-							@endif
-						<br/>
-							
-						{!! hyperlinks($notification->description) !!}
-						</td>
-						<td style="text-align:center;">{!! date('d M Y', strtotime($notification->created_at)) !!} <br/>by {{ $notification->person_name }}</td>
-					</tr>
-				@endforeach
-				</tbody>	
-			</table>
-			{{ $notifications->withQueryString()->links() }}
+		<div class="card">
+			 <div class="card-header">
+				Notification Details 
+			</div>
 		</div>
+
+		@foreach($notifications as $notification) 
+			<div class="row row-cols-1 row-cols-md-3 g-4">
+				<div class="col-md-12">
+				   <div class="card mb-3">
+					<div class="card-body">
+						<tr>
+							<td>	
+								@if($notification->image_1)
+									<img src="{{ url('viewfile/'.$notification->image_1) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
+								@endif
+								<br/>
+								{!! hyperlinks($notification->description) !!}
+							</td><br/><br/>
+							
+							<p style="color:grey;font-size:14px;">{!! date('d M Y', strtotime($notification->created_at)) !!} 
+							by {{ $notification->person_name }}</p>
+						</tr>
+					
+					</div>
+				  </div>
+				</div>
+			</div>
+		@endforeach
 	</div>
-		
+	{{ $notifications->withQueryString()->links() }}
 @endsection
