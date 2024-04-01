@@ -9,14 +9,12 @@
 @endsection
 
 @section('content')
-	<?php
-	
-  function hyperlinks($text) {
-    $v = preg_replace('@(http)?(s)?(://)?(([a-zA-Z])([-\w]+\.)+([^\s\.]+[^\s]*)+[^,.\s])@', '<a target="ref" href="http$2://$4">$1$2$3$4</a>', $text);
-	
-	return nl2br($v);
-}
-	?>
+<?php
+	function hyperlinks($text) {
+		$v = preg_replace('@(http)?(s)?(://)?(([a-zA-Z])([-\w]+\.)+([^\s\.]+[^\s]*)+[^,.\s])@', '<a target="ref" href="http$2://$4">$1$2$3$4</a>', $text);
+		return nl2br($v);
+	}
+?>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4 mb-3">
