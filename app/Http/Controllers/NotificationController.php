@@ -52,7 +52,7 @@ class NotificationController extends Controller
 		}
 		
 		$notification->save();
-		return redirect()->back()->with('success', 'Job Details Added Successfully');
+		return redirect()->back()->with('success', 'Notification Details Added Successfully');
     }
 	
 	public function delete($id)
