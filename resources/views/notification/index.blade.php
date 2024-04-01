@@ -47,7 +47,7 @@
 							@if($notification->image_1)
 								<img src="{{ url('viewfile/'.$notification->image_1) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
 							@endif
-						
+						<br/>
 							<?php echo nl2br($notification->description); ?>
 						</td>
 						<td style="text-align:center;">{!! date('d M Y', strtotime($notification->created_at)) !!} <br/>by {{ $notification->person_name }}</td>
