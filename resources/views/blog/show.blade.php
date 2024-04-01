@@ -6,12 +6,7 @@
 
 @section('navs')	
 	
-	<nav aria-label="breadcrumb">
-	  <ol class="breadcrumb">
-		<li class="breadcrumb-item"><a href="{{ route('welcome') }}">Home</a></li>
-		<li class="breadcrumb-item active" aria-current="page">Job Information</li>
-	  </ol>
-	</nav>
+	
 @endsection
 
 @section('content')	
