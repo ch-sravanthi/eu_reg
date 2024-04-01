@@ -50,10 +50,16 @@
 								<a style=" font-size:22px; font-weight:500;text-transform:uppercase;" href="{{ url('blog/show/'.$blog->id) }}">
 								{{ $blog->blog_title }} </a>
 							</th>
-							<p style="text-align:right;"><i class="bi bi-stack"></i> {{ $blog->category }}</p>
-							@if($blog->location)
-							<p style="text-align:right;"> <i class="bi bi-geo-alt"></i> {{ $blog->location}}</p>
+							<div class="row">
+							<div class="col-sm-3"><i class="bi bi-stack"></i> {{ $blog->category }}</div>
+							@if($blog->last_date)
+								
+							 <div class="col-sm-4"><i class="bi bi-calendar3"></i> {{ $blog->label('last_date') }} : {{ $blog->last_date}}</div>
 							@endif
+							@if($blog->location)
+							 <div class="col-sm-5"><i class="bi bi-geo-alt"></i> {{ $blog->location}}</div>
+							@endif
+							</div><br/>
 							<td>	
 								@if($blog->image_1)
 								<img src="{{ url('viewfile/'.$blog->image_1) }}" style="background-image: url();width:40%; height:auto;border:1px solid #F8F8F8;"/>
