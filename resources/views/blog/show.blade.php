@@ -16,6 +16,12 @@
 
 @section('content')	
 
+<?php
+	function hyperlinks($text) {
+		$v = preg_replace('@(http)?(s)?(://)?(([a-zA-Z])([-\w]+\.)+([^\s\.]+[^\s]*)+[^,.\s])@', '<a target="ref" href="http$2://$4">$1$2$3$4</a>', $text);
+		return nl2br($v);
+	}
+?>
 
 	<div class="col-lg-12  text-danger" style="font-weight:600;">
 		<u>Note: </u>This is for information only, Please Verify before you Proceed, We are not Liable for any Information Posted on this Portal.
@@ -43,7 +49,7 @@
 					
 					<tr>
 						<th>{{ $blog->label('description') }}</th>	
-						<td colspan=3>{{ $blog->description }}</td>
+						<td colspan=3>{!! hyperlinks($blog->description) !!}</td>
 					</tr>
 					
 					<tr>
