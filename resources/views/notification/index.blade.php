@@ -38,7 +38,7 @@
 		</div>
 		
 		<div class="table-responsive">
-			<table class="table table-striped table-hover table-bordered">
+			<table class="table table table-bordered">
 				<thead >
 					 <tr style="text-align:center;">
 						
