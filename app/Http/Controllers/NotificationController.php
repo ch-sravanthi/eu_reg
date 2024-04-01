@@ -18,7 +18,7 @@ class NotificationController extends Controller
 	public function index(Request $request)
     {
 		$notification = new Notification;
-		$paginate = 10;
+		$paginate = 20;
       
 		$query = notification::query();
 		if ($request->search) {
@@ -95,7 +95,7 @@ class NotificationController extends Controller
 	public function my_index(Request $request)
     {
 		$notification = new Notification;
-		$paginate = 10;
+		$paginate = 20;
       
 		$query = notification::query();
 		if ($request->search) {

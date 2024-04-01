@@ -9,14 +9,19 @@
 @endsection
 
 @section('content')
-
+<?php
+	function hyperlinks($text) {
+		$v = preg_replace('@(http)?(s)?(://)?(([a-zA-Z])([-\w]+\.)+([^\s\.]+[^\s]*)+[^,.\s])@', '<a target="ref" href="http$2://$4">$1$2$3$4</a>', $text);
+		return nl2br($v);
+	}
+?>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4 mb-3">
-					<b class = "text-dark">Jobs Posted </b>
-					<div class="badge bg-info"> {{ $blogs->total() }} </div>
-						
+				<b class = "text-dark">Jobs Posted </b>
+				<div class="badge bg-info"> {{ $blogs->total() }} </div>
 			</div>	
+			
 			<div class="col-lg-8 mb-3">
 				<div class="d-lg-flex justify-content-end" style="width: 100%; overflow-x: auto;">
 					{!! Form::open(['method' => 'get', 'class' => 'd-flex']) !!}
@@ -29,48 +34,52 @@
 				</div>
 			</div>
 		</div>
-		
+		<div class="card">
+			 <div class="card-header">
+				Job Details 
+			</div>
+		</div>
 		<div class="table-responsive">
-			<table class="table table-striped table-hover table-bordered">
-				<thead >
-					 <tr style="text-align:center;">
-						<th>S.No</th>
-						<th style="width:20%;">Details</th>
-						<th style="width:20%;">Job Title </th>
-						<th>Job Category</th>
-						<th>Location</th>
-						<th>Posted On</th>
-					 </tr>
-				</thead>
-				<?php $s=1;?>
-				@foreach($blogs as $blog)
-				<?php $opt = AppHelper::options('categories'); 	?>
-					<tr>
-						<th style="text-align:center;">{{ $s++ }}</th>
-						<td style="text-align:center;">	
-							@if($blog->image_1)
-								<img src="{{ url('viewfile/'.$blog->image_1) }}" style="background-image: url();width:100%; height:auto;border:1px solid #F8F8F8;"/>
-							@else
-								<img src="{{ asset('/images/default.png')}}" style="background-image: url();width:100%; height:auto;border:1px solid #F8F8F8;"/>
-							@endif
-							@if($blog->image_2)<br>
-								<br><img src="{{ url('viewfile/'.$blog->image_2) }}" style="background-image: url();width:100%; height:auto;border:1px solid #F8F8F8;"/>
-							@endif
-						</td>
-						<td style="text-align:justify-content-end;"> 
-							<a href="{{ url('blog/show/'.$blog->id) }}">
+			@foreach($blogs as $blog) 
+			<div class="row row-cols-1 row-cols-md-3 g-4">
+				<div class="col-md-12">
+				   <div class="card mb-3">
+					<div class="card-body">
+						<tr>
+							<th>
+								<a style=" font-size:22px; font-weight:500;text-transform:uppercase;" href="{{ url('blog/show/'.$blog->id) }}">
 								{{ $blog->blog_title }} </a>
-								<?php $excerpt = AppHelper::excerpt($blog->description,55)?>
-									<div title="{{ $excerpt != $blog->description ? $blog->description : '' }}" style="font-size:12px;">
-										{{ $excerpt }}
-									</div>
-						</td>
-						<td style="text-align:center;">{{ $blog->category }}</td>
-						<td style="text-align:center;">{{ $blog->location}}</td>
-						<td style="text-align:center;">{!! date('d M Y', strtotime($blog->created_at)) !!} <br/>by {{ $blog->person_name }}</td>
-					</tr>
-				@endforeach
-			</table>
+							</th>
+							<p style="text-align:right;"><i class="bi bi-stack"></i> {{ $blog->category }}</p>
+							@if($blog->location)
+							<p style="text-align:right;"> <i class="bi bi-geo-alt"></i> {{ $blog->location}}</p>
+							@endif
+							<td>	
+								@if($blog->image_1)
+								<img src="{{ url('viewfile/'.$blog->image_1) }}" style="background-image: url();width:40%; height:auto;border:1px solid #F8F8F8;"/>
+								@else
+									<img src="{{ asset('/images/default.png')}}" style="background-image: url();width:30%; height:auto;border:1px solid #F8F8F8;"/>
+								@endif
+								@if($blog->image_2)<br>
+									<br><img src="{{ url('viewfile/'.$blog->image_2) }}" style="background-image: url();width:40%; height:auto;border:1px solid #F8F8F8;"/>
+								@endif
+								<br/><br/>
+								@if($blog->description)
+								<i class="bi bi-chat-left-text"></i>
+								{!! hyperlinks($blog->description) !!}
+								@endif
+							</td><br/><br/>
+							
+							<p style="color:grey;font-size:14px;"> <i class="bi bi-person-circle"></i> By {{ $blog->person_name }} at {!! date('d M Y', strtotime($blog->created_at)) !!} 
+							</p>
+						</tr>
+					
+					</div>
+				  </div>
+				</div>
+			</div>
+		@endforeach
+		
 			{{ $blogs->withQueryString()->links() }}
 		</div>
 	</div>

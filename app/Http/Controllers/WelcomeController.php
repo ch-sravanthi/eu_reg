@@ -19,7 +19,7 @@ class WelcomeController extends Controller
 	public function index(Request $request)
     { 
 		$blog =new Blog;
-		$paginate = 10;
+		$paginate = 20;
       
 		$query = Blog::query();
 		

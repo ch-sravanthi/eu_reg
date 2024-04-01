@@ -18,7 +18,7 @@ class BlogController extends Controller
 	public function myindex(Request $request)
     {
 		$blog =new Blog;
-		$paginate =10;
+		$paginate =30;
       
 		$query = Blog::query();
 		if ($request->search) {
