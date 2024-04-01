@@ -9,7 +9,14 @@
 @endsection
 
 @section('content')
+	<?php
 	
+  function hyperlinks($text) {
+    $v = preg_replace('@(http)?(s)?(://)?(([a-zA-Z])([-\w]+\.)+([^\s\.]+[^\s]*)+[^,.\s])@', '<a target="ref" href="http$2://$4">$1$2$3$4</a>', $text);
+	
+	return nl2br($v);
+}
+	?>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4 mb-3">
@@ -48,7 +55,8 @@
 								<img src="{{ url('viewfile/'.$notification->image_1) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
 							@endif
 						<br/>
-							<?php echo nl2br($notification->description); ?>
+							
+						{!! hyperlinks($notification->description) !!}
 						</td>
 						<td style="text-align:center;">{!! date('d M Y', strtotime($notification->created_at)) !!} <br/>by {{ $notification->person_name }}</td>
 					</tr>

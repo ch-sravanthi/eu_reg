@@ -15,6 +15,14 @@
 @endsection
 
 @section('content')	
+<?php
+	
+  function hyperlinks($text) {
+    $v = preg_replace('@(http)?(s)?(://)?(([a-zA-Z])([-\w]+\.)+([^\s\.]+[^\s]*)+[^,.\s])@', '<a target="ref" href="http$2://$4">$1$2$3$4</a>', $text);
+	
+	return nl2br($v);
+}
+	?>
 
 	<div class="col-lg-12  text-danger" style="font-weight:600;">
 		<u>Note: </u>This is for information only, Please Verify before you Proceed, We are not Liable for any Information Posted on this Portal.
@@ -26,7 +34,8 @@
 				<table class="table table-bordered m-0">
 					
 					<tr>
-						<td colspan=3><?php echo nl2br($notification->description); <br/>?>
+						<td>
+						{!! hyperlinks($notification->description) !!} <br/>
 						@if($notification->image_1)
 							<img src="{{ url('viewfile/'.$notification->image_1) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
 						@endif
