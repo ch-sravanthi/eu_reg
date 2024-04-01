@@ -28,7 +28,12 @@
 					
 					<tr>
 						<th>{{ $notification->label('description') }}</th>	
-						<td colspan=3>{{ $notification->description }}</td>
+						<td colspan=3>{{ $notification->description }}
+						<br>
+						@if($notification->image_1)
+							<img src="{{ url('viewfile/'.$notification->image_1) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
+						@endif
+						</td>
 					</tr>
 					
 					<tr>
@@ -55,26 +60,7 @@
 			</fieldset> 
 		</div>
 			
-		<div class="table-wrapper">
-			<fieldset class="section">
-				<table class="table table-bordered m-0">
-					<tr>
-						<th colspan=4>
-						Job Information Attachments :<text class="text-muted small"> (if any)</text></th>
-					</tr>
-					<tr>
-						<td colspan=3>
-						@if($notification->image_1)
-							<img src="{{ url('viewfile/'.$notification->image_1) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
-						@else
-							<img src="{{ asset('/images/default.png')}}" style="background-image: url();width:20%; height:auto;border:1px solid #F8F8F8;"/>
-						@endif
-						</td>
-					</tr>
-					
-				</table>
-			</fieldset> 
-		</div>
+		
 	</div>
 </div>
 @endsection

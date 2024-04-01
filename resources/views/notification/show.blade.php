@@ -26,9 +26,7 @@
 				<table class="table table-bordered m-0">
 					
 					<tr>
-						<td colspan=3><?php echo nl2br($notification->description); ?>
-
-
+						<td colspan=3><?php echo nl2br($notification->description); <br/>?>
 						@if($notification->image_1)
 							<img src="{{ url('viewfile/'.$notification->image_1) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
 						@endif
