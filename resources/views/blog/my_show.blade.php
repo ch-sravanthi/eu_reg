@@ -6,15 +6,17 @@
 
 @section('navs')	
 	
-	<nav aria-label="breadcrumb">
-	  <ol class="breadcrumb">
-		<li class="breadcrumb-item"><a href="{{ url('blog/my_index') }}">Home</a></li>
-		<li class="breadcrumb-item active" aria-current="page">Job Information</li>
-	  </ol>
-	</nav>
+	
 @endsection
 
 @section('content')	
+
+<?php
+	function hyperlinks($text) {
+		$v = preg_replace('@(http)?(s)?(://)?(([a-zA-Z])([-\w]+\.)+([^\s\.]+[^\s]*)+[^,.\s])@', '<a target="ref" href="http$2://$4">$1$2$3$4</a>', $text);
+		return nl2br($v);
+	}
+?>
 
 <div class="table-responsive">
 	<div class="form form-view">
@@ -39,7 +41,7 @@
 					
 					<tr>
 						<th>{{ $blog->label('description') }}</th>	
-						<td colspan=3>{{ $blog->description }}</td>
+						<td colspan=3>{!! hyperlinks($blog->description) !!}</td>
 					</tr>
 					
 					<tr>
