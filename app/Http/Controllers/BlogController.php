@@ -17,6 +17,9 @@ class BlogController extends Controller
 	
 	public function myindex(Request $request)
     {
+		if(!Auth::user()) {
+			return redirect()->back()->with(['error' => 'You do not have access']);
+		}
 		$blog =new Blog;
 		$paginate =30;
       

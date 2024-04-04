@@ -94,6 +94,9 @@ class NotificationController extends Controller
 	}
 	public function my_index(Request $request)
     {
+		if(!Auth::user()) {
+			return redirect()->back()->with(['error' => 'You do not have access']);
+		}
 		$notification = new Notification;
 		$paginate = 20;
       
