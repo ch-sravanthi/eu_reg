@@ -17,6 +17,9 @@
 		input{
 			width: 165px;
 		}
+		.navbar-light .navbar-toggler{
+			border-color:#fff;
+		}
 	</style>
 	
 	<nav class="navbar navbar-expand-lg navbar-light" style="background-color:grey; border-bottom: 2px solid #678bbd11; font-weight: 500;">
@@ -46,6 +49,12 @@
 			
 			<ul class="navbar-nav  mb-lg-0 ml-1">
 				<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="{{ url('more_link/my_index')}}"> <i class="bi bi-link"></i>   View More Jobs</a>
+					</li>	
+			</ul>
+			
+			<ul class="navbar-nav  mb-lg-0 ml-1">
+				<li class="nav-item">
 					<a class="nav-link active" aria-current="page" href="{{url('blog/create')}}"><i class="bi bi-plus-circle"></i> Post a Job </a>
 				</li>
 			</ul>
@@ -53,6 +62,12 @@
 			<ul class="navbar-nav  mb-lg-0 ml-1">			
 				<li class="nav-item">
 					<a class="nav-link active" aria-current="page" href="{{url('notification/create')}}"><i class="bi bi-plus-circle"></i> Post a Notification </a>
+				</li>
+			</ul>	
+			
+			<ul class="navbar-nav  mb-lg-0 ml-1">			
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="{{url('more_link/create')}}"><i class="bi bi-plus-circle"></i> Links </a>
 				</li>
 			</ul>	
 					

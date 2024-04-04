@@ -20,7 +20,7 @@ class NotificationController extends Controller
 		$notification = new Notification;
 		$paginate = 20;
       
-		$query = notification::query();
+		$query = Notification::query();
 		if ($request->search) {
 			$query->where(function($q) use($request){
 				$q->orwhere('description', 'like', "%{$request->search}%");	
