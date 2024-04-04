@@ -7,7 +7,7 @@
 @section('navs')	
 	<nav aria-label="breadcrumb">
 	  <ol class="breadcrumb">
-		<li class="breadcrumb-item"><a href="{{ route('more_link.index') }}">Home</a></li>
+		<li class="breadcrumb-item"><a href="{{ route('more_link.my_index') }}">Home</a></li>
 		<li class="breadcrumb-item active" aria-current="page">Verify Notification Details </li>
 	  </ol>
 	</nav>
