@@ -29,21 +29,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="table-wrapper">
-				<fieldset class="section">
-					<table class="table table-bordered m-0">
-						{!! EasyForm::select('status', $more_link->label('status'), old('status', $more_link->status), AppHelper::options('blog_status'))!!}
-							@if($errors->has('status'))
-								<div class="text-danger">{{ $errors->first('status') }}</div>
-							@endif
-					</table>
-				</fieldset> 
-			</div>
+			
 		</div>
 	</div>
 	
 	<div class="text-center">
-		<button type="submit" class="btn btn-outline-secondary">Verify Notification</button>
+		<button type="submit" class="btn btn-outline-secondary">Verify URLS's</button>
 	</div>	
 	{{Form::close()}}				
 </div>
