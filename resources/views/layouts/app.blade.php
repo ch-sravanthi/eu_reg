@@ -43,7 +43,7 @@
 			
 			<ul class="navbar-nav  mb-lg-0 ml-1">
 				<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="{{url('notification/my_index')}}"> <i class="bi bi-bell-fill"></i>  Notifications</a>
+					<a class="nav-link active" aria-current="page" href="{{url('notification/my_index')}}"> <i class="bi bi-bell-fill"></i> Notifications</a>
 				</li>	
 			</ul>
 			
@@ -51,7 +51,7 @@
 				<li class="nav-item">
 						<a class="nav-link active" aria-current="page" href="{{ url('more_link/my_index')}}"> <i class="bi bi-link"></i> More Jobs</a>
 					</li>	
-			</ul>
+			</ul>&nbsp;&nbsp;&nbsp;&nbsp;
 			
 			<ul class="navbar-nav  mb-lg-0 ml-1">
 				<li class="nav-item">
@@ -67,7 +67,7 @@
 			
 			<ul class="navbar-nav  mb-lg-0 ml-1">			
 				<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="{{url('more_link/create')}}"><i class="bi bi-plus-circle"></i> Links </a>
+					<a class="nav-link active" aria-current="page" href="{{url('more_link/create')}}"><i class="bi bi-plus-circle"></i> Job Links </a>
 				</li>
 			</ul>	
 					

@@ -35,21 +35,21 @@
 				
 				<ul class="navbar-nav  mb-lg-0 ml-1">				
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{{ route('welcome') }}"> <i class="bi bi-newspaper"></i> Jobs  </a>
+						<a class="nav-link active" aria-current="page" href="{{ route('welcome') }}"> <i class="bi bi-newspaper"></i> Jobs</a>
 					</li>
 				</ul>
 				
 				<ul class="navbar-nav  mb-lg-0 ml-1">		
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{{ url('notification/index')}}"> <i class="bi bi-bell-fill"></i>  Notifications</a>
+						<a class="nav-link active" aria-current="page" href="{{ url('notification/index')}}"> <i class="bi bi-bell-fill"></i> Notifications</a>
 					</li>
 				</ul>
 				
 				<ul class="navbar-nav  mb-lg-0 ml-1">		
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{{ url('more_link/index')}}"> <i class="bi bi-link"></i> More Jobs</a>
+						<a class="nav-link active" aria-current="page" href="{{ url('more_link/index')}}"> <i class="bi bi-link"></i> Job Links</a>
 					</li>
-				</ul>
+				</ul>&nbsp;&nbsp;&nbsp;&nbsp;
 				
 				<ul class="navbar-nav  mb-lg-0 ml-1">					
 					<li class="nav-item">
