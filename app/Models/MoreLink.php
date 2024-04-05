@@ -24,7 +24,7 @@ class MoreLink extends AppModel{
 	
     public $nicenames =  [
 						
-			'link_url' => 'Link URL',						
+			'link_url' => 'URLs',						
 			
         ];
 		
@@ -32,7 +32,7 @@ class MoreLink extends AppModel{
 	{
 		return[
 								
-			'link_url' => 'Link URL',	
+			'link_url' => 'URLs',	
 			'status' => 'Status',
 		];
 	}

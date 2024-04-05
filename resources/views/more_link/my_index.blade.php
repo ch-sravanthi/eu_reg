@@ -18,7 +18,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4 mb-3">
-				<b class = "text-dark">Links </b>
+				<b class = "text-dark">Website URL's </b>
 				<div class="badge bg-info"> {{ $more_links->total() }} </div>
 			</div>	
 			<div class="col-lg-8 mb-3">
@@ -41,7 +41,7 @@
 				<table class="table table-striped table-hover table-bordered">
 					<thead>
 						 <tr>
-							<th>More Jobs</th>
+							<th>More Jobs & Education Details</th>
 							<th></th>
 						 </tr>
 					</thead>
