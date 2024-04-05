@@ -41,7 +41,7 @@
 				<table class="table table-striped table-hover table-bordered">
 					<thead>
 						 <tr>
-							<th>More Jobs - More Jobs & Education Resources</th>
+							<th>More Jobs & Education Resources</th>
 							<th></th>
 						 </tr>
 					</thead>

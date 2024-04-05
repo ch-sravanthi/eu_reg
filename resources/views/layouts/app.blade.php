@@ -49,7 +49,7 @@
 			
 			<ul class="navbar-nav  mb-lg-0 ml-1">
 				<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{{ url('more_link/my_index')}}"> <i class="bi bi-link"></i> More Jobs</a>
+						<a class="nav-link active" aria-current="page" href="{{ url('more_link/my_index')}}"> <i class="bi bi-link"></i> Job Links</a>
 					</li>	
 			</ul>&nbsp;&nbsp;&nbsp;&nbsp;
 			
@@ -67,7 +67,7 @@
 			
 			<ul class="navbar-nav  mb-lg-0 ml-1">			
 				<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="{{url('more_link/create')}}"><i class="bi bi-plus-circle"></i> Job Links </a>
+					<a class="nav-link active" aria-current="page" href="{{url('more_link/create')}}"><i class="bi bi-plus-circle"></i> Post Job Links </a>
 				</li>
 			</ul>	
 					
