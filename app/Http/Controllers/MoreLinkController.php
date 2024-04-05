@@ -26,7 +26,7 @@ class MoreLinkController extends Controller
 				$q->orwhere('link_url', 'like', "%{$request->search}%");	
 			});
 		}
-		$query->where('status','active');
+		$query->where('status','Verified');
 					
 		$more_links = $query->orderBy('updated_at', 'desc')->paginate($paginate);
 		
@@ -76,8 +76,8 @@ class MoreLinkController extends Controller
 	public function update(Request $request, $id) {
 		$more_link = MoreLink::findOrFail($id);		
 		$more_link->fill($request->all());
-		
 		$more_link->link_url = $request->link_url;
+		$more_link->status = $request->status;
 		//var_dump(Auth::user());die();
 		$more_link->updated_by = Auth::user()->id;		
 		$more_link->save();
