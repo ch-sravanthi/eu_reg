@@ -6,8 +6,12 @@
 
 @section('navs')	
 	<nav aria-label="breadcrumb">
-	  <ol class="breadcrumb">
-		<li class="breadcrumb-item"><a href="{{ route('welcome') }}">Home</a></li>
+		<ol class="breadcrumb">
+		@if(Auth::user())
+			<li class="breadcrumb-item"><a href="{{ route('blog.my_index') }}">Home</a></li>
+		@else
+			<li class="breadcrumb-item"><a href="{{ route('welcome') }}">Home</a></li>
+		@endif
 		<li class="breadcrumb-item active" aria-current="page">Submit Job Information</li>
 	  </ol>
 	</nav>

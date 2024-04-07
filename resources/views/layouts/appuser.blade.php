@@ -62,8 +62,31 @@
 						<a class="nav-link active" aria-current="page" href="{{url('notification/create')}}"><i class="bi bi-plus-circle"></i> Post a Notification </a>
 					</li>
 					
-				</ul>&nbsp;
-				
+				</ul>
+				@if(Auth::user())
+				<ul class="navbar-nav  mb-lg-0 ml-1">			
+					<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="{{url('more_link/create')}}"><i class="bi bi-plus-circle"></i> Post Job Links </a>
+					</li>
+				</ul>
+				@endif				
+			&nbsp;
+			@if(Auth::user())	
+			<ul class="navbar-nav  mb-lg-0 ml-1">
+				<li class="nav-item dropdown">
+					<a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownFavorites" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					 
+						@if(Auth::user())
+							 {{ ucwords(Auth::user()->name) }}
+						@endif
+					</a>
+					<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownFavorites" style="background-color:grey; ">
+
+						<li><a class="dropdown-item" href="{{route('authenticate.logout')}}" style="background-color:red; " >Logout</a></li>
+					</ul>
+				</li>
+			</ul>
+			@endif			
 			</div>
 			
 	</nav>

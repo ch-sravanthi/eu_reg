@@ -47,7 +47,7 @@ class MoreLinkController extends Controller
 		if ($validator->fails()) { //var_dump($validator->messages()); die();
 			return Redirect::back()
 				->withInput()
-				->withErrors($validator);
+				->with(['error' => 'Please Enter the valid Website Url / Link']);
 		}
 		$more_link->fill($request->all());
 		
