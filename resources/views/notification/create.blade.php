@@ -41,11 +41,7 @@
 					<div class="row">
 			
 						<div class="col-lg-6 mb-2">
-							<label>  </label>
-								{{ Form::textarea('description', old('description', $notification->description), ['rows' => 5,'cols' => 25,'placeholder' => 'Notification Description'],['class' => 'form-control' ]) }}
-									@if($errors->has('description'))
-										<div class="text-danger">{{ $errors->first('description') }}</div>
-									@endif
+							{!! EasyForm::textarea('description', '', old('description', $notification->description), ['rows' => 5,'placeholder' => 'Notification Description'])!!}
 						</div>
 						
 						<div class="col-lg-6 mb-2">
