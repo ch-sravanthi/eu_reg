@@ -17,7 +17,7 @@ class MoreLink extends AppModel{
 			
 		return [
 			
-			'link_url' => 'required',
+			'link_url' =>"required|url"
 			
 		];
 	}
