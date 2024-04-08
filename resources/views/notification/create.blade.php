@@ -42,7 +42,7 @@
 			
 						<div class="col-lg-6 mb-2 ">
 							<label>  </label>
-								{{ Form::textarea('description', old('description', $notification->description), ['rows' => 5,'cols' => 40,'placeholder' => 'Notification Description'],['class' => 'form-control' ]) }}
+								{{ Form::textarea('description', old('description', $notification->description), ['rows' => 5,'cols' => 20,'placeholder' => 'Notification Description'],['class' => 'form-control' ]) }}
 									@if($errors->has('description'))
 										<div class="text-danger">{{ $errors->first('description') }}</div>
 									@endif
