@@ -41,6 +41,7 @@
 					<div class="row">
 			
 						<div class="col-lg-6 mb-2">
+							<label>{{ $notification->nicenames['description'] }}</label>
 							{!! EasyForm::textarea('description', '', old('description', $notification->description), ['rows' => 5,'placeholder' => 'Notification Description'])!!}
 						</div>
 						

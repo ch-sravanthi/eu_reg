@@ -86,6 +86,7 @@
 						</div>
 						
 						<div class="col-lg-6 mb-2">
+							<label>{{ $blog->nicenames['description'] }}</label>
 							{!! EasyForm::textarea('description', '', old('description', $blog->description), ['rows' => 5,'placeholder' => 'Job Description'])!!}
 						</div>
 						
