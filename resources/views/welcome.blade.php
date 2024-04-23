@@ -40,9 +40,9 @@
 			</div>
 		</div><br>
 		<div class="table-responsive">
-			@foreach($blogs as $blog) 
 			<div class="row row-cols-1 row-cols-md-3 g-4">
-				<div class="col-md-12">
+			@foreach($blogs as $blog) 
+				<div class="col-md-6">
 				   <div class="card mb-3" style="border-radius:4%;  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2)">
 					<div class="card-body">
 						<tr>
@@ -51,14 +51,14 @@
 								{{ $blog->blog_title }} </a>
 							</th>
 							<div class="row">
-							<div class="col-sm-3"><i class="bi bi-stack"></i> {{ $blog->category }}</div>
-							@if($blog->last_date)
+								<div class="col-sm-3" style=" font-size:14px;"><i class="bi bi-stack"></i> {{ $blog->category }}</div>
 								
-							 <div class="col-sm-4"><i class="bi bi-calendar3"></i> {{ $blog->label('last_date') }} : {{ $blog->last_date}}</div>
-							@endif
-							@if($blog->location)
-							 <div class="col-sm-5"><i class="bi bi-geo-alt"></i> {{ $blog->location}}</div>
-							@endif
+								@if($blog->location)
+									<div class="col-sm-3" style=" font-size:14px;"><i class="bi bi-geo-alt"></i> {{ $blog->location}}</div>
+								@endif
+								@if($blog->last_date)
+									<div class="col-sm-6" style=" font-size:14px;"><i class="bi bi-calendar3"></i> {{ $blog->label('last_date') }} : {{ $blog->last_date}}</div>
+								@endif
 							</div><br/>
 							<td>	
 								@if($blog->image_1)
@@ -83,9 +83,8 @@
 					</div>
 				  </div>
 				</div>
+			@endforeach
 			</div>
-		@endforeach
-		
 			{{ $blogs->withQueryString()->links() }}
 		</div>
 	</div>
