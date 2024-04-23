@@ -40,9 +40,9 @@
 			</div>
 		</div><br>
 
-		@foreach($notifications as $notification) 
-			<div class="row row-cols-1 row-cols-md-3 g-4">
-				<div class="col-md-12">
+		<div class="row row-cols-1 row-cols-md-3 g-4">
+			@foreach($notifications as $notification) 
+				<div class="col-md-6">
 				   <div class="card mb-3" style="border-radius:3%;box-shadow: 0 2px 4px 0 rgba(0,0,0,0.8);">
 					<div class="card-body">
 						<tr>
@@ -61,8 +61,8 @@
 					</div>
 				  </div>
 				</div>
-			</div>
-		@endforeach
+			@endforeach
+		</div>
 	</div>
 	{{ $notifications->withQueryString()->links() }}
 @endsection
