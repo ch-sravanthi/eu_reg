@@ -51,13 +51,13 @@
 								{{ $blog->blog_title }} </a>
 							</th>
 							<div class="row">
-								<div class="col-sm-6" style=" font-size:14px;"><i class="bi bi-stack"></i> {{ $blog->category }}</div>
+								<div class="col-sm-6" style=" font-size:15px;"><i class="bi bi-stack"></i> {{ $blog->category }}</div>
 								
 								@if($blog->location)
-									<div class="col-sm-6" style=" font-size:14px;"><i class="bi bi-geo-alt"></i> {{ $blog->location}}</div>
+									<div class="col-sm-6" style=" font-size:15px;"><i class="bi bi-geo-alt"></i> {{ $blog->location}}</div>
 								@endif
 								@if($blog->last_date)
-									<div class="col-sm-6" style=" font-size:12px;"><i class="bi bi-calendar3"></i> {{ $blog->label('last_date') }} : {{ $blog->last_date}}</div>
+									<div class="col-sm-6" style=" font-size:15px;"><i class="bi bi-calendar3"></i> {{ $blog->label('last_date') }} : {{ $blog->last_date}}</div>
 								@endif
 							</div><br/>
 							<td>	
