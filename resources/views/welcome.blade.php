@@ -51,23 +51,23 @@
 								{{ $blog->blog_title }} </a>
 							</th>
 							<div class="row">
-								<div class="col-sm-3" style=" font-size:14px;"><i class="bi bi-stack"></i> {{ $blog->category }}</div>
+								<div class="col-sm-6" style=" font-size:14px;"><i class="bi bi-stack"></i> {{ $blog->category }}</div>
 								
 								@if($blog->location)
-									<div class="col-sm-3" style=" font-size:14px;"><i class="bi bi-geo-alt"></i> {{ $blog->location}}</div>
+									<div class="col-sm-6" style=" font-size:14px;"><i class="bi bi-geo-alt"></i> {{ $blog->location}}</div>
 								@endif
 								@if($blog->last_date)
-									<div class="col-sm-6" style=" font-size:14px;"><i class="bi bi-calendar3"></i> {{ $blog->label('last_date') }} : {{ $blog->last_date}}</div>
+									<div class="col-sm-6" style=" font-size:12px;"><i class="bi bi-calendar3"></i> {{ $blog->label('last_date') }} : {{ $blog->last_date}}</div>
 								@endif
 							</div><br/>
 							<td>	
 								@if($blog->image_1)
-								<img src="{{ url('viewfile/'.$blog->image_1) }}" style="background-image: url();width:40%; height:auto;border:1px solid #F8F8F8;"/>
+								<img src="{{ url('viewfile/'.$blog->image_1) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
 								@else
 									<img src="{{ asset('/images/default.png')}}" style="background-image: url();width:30%; height:auto;border:1px solid #F8F8F8;"/>
 								@endif
 								@if($blog->image_2)<br>
-									<br><img src="{{ url('viewfile/'.$blog->image_2) }}" style="background-image: url();width:40%; height:auto;border:1px solid #F8F8F8;"/>
+									<br><img src="{{ url('viewfile/'.$blog->image_2) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
 								@endif
 								<br/><br/>
 								@if($blog->description)
