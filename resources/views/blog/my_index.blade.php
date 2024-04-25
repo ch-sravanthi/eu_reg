@@ -55,14 +55,17 @@
 					<tr>
 						<th style="text-align:center;">{{ $s++ }}</th>
 						<td style="text-align:center;">		
-							@if($blog->image_1)
-								<img src="{{ url('viewfile/'.$blog->image_1) }}" style="background-image: url();width:100%; height:auto;border:1px solid #F8F8F8;"/>
-							@else
-								<img src="{{ asset('/images/default.png')}}" style="background-image: url();width:100%; height:auto;border:1px solid #F8F8F8;"/>
-							@endif
-							@if($blog->image_2)<br>
-								<br><img src="{{ url('viewfile/'.$blog->image_2) }}" style="background-image: url();width:100%; height:auto;border:1px solid #F8F8F8;"/>
-							@endif
+							<?php $img = $blog->image_1 ? url('viewfile/'.$blog->image_1) : asset('/images/default.png')?>
+								<?php $img2 = $blog->image_2 ? url('viewfile/'.$blog->image_2) : null?>
+								<a href="{{ $img }}">
+									<img src="{{ $img }}" style="width: 50%"/>
+								</a>
+								<br>
+								@if ($img2)
+									<a href="{{ $img2 }}">
+										<img src="{{ $img2 }}"  style="width: 50%"/>
+									</a>
+								@endif
 						</td>
 						<td style="text-align:justify-content-end;"> 
 							<a href="{{ url('blog/my_show/'.$blog->id) }}">
