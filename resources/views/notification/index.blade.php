@@ -47,8 +47,11 @@
 					<div class="card-body">
 						<tr>
 							<td>	
-								@if($notification->image_1)
-									<img src="{{ url('viewfile/'.$notification->image_1) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
+								<?php $img = $notification->image_1 ? url('viewfile/'.$notification->image_1) : null?>
+								@if ($img)
+									<a href="{{ $img }}">
+										<img src="{{ $img }}"  style="width: 50%"/>
+									</a>
 								@endif
 								<br/>
 								{!! hyperlinks($notification->description) !!}
