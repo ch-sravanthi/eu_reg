@@ -58,12 +58,12 @@
 							<?php $img = $blog->image_1 ? url('viewfile/'.$blog->image_1) : asset('/images/default.png')?>
 								<?php $img2 = $blog->image_2 ? url('viewfile/'.$blog->image_2) : null?>
 								<a href="{{ $img }}">
-									<img src="{{ $img }}" style="width: 50%"/>
+									<img src="{{ $img }}" style="width: 40%"/>
 								</a>
 								<br>
 								@if ($img2)
 									<a href="{{ $img2 }}">
-										<img src="{{ $img2 }}"  style="width: 50%"/>
+										<img src="{{ $img2 }}"  style="width: 40%"/>
 									</a>
 								@endif
 						</td>

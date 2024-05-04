@@ -50,7 +50,7 @@
 								<?php $img = $notification->image_1 ? url('viewfile/'.$notification->image_1) : null?>
 								@if ($img)
 									<a href="{{ $img }}">
-										<img src="{{ $img }}"  style="width: 50%"/>
+										<img src="{{ $img }}"  style="width: 40%"/>
 									</a>
 								@endif
 								<br/>
