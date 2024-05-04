@@ -27,13 +27,14 @@
 
 						<tr>
 							<th>{{ $notification->label('description') }}</th>	
-							<td colspan=7 style="width:100%;">
-								
-								{!! EasyForm::textarea('description', '', old('description', $notification->description), ['rows' => 10])!!}
+							<td colspan=3 style="width:50%;">
+								{!! EasyForm::textarea('description', '', old('description', $notification->description), ['rows' => 10])!!}<br>
+							</td>
+							<td>
 								@if($notification->image_1)
-									<img src="{{ url('viewfile/'.$notification->image_1) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
+									<img src="{{ url('viewfile/'.$notification->image_1) }}" style="background-image: url();width:70%; height:auto;border:1px solid #F8F8F8;"/>
 								@endif
-								</td>
+							</td>
 						</tr>
 						
 						<tr>
@@ -46,13 +47,13 @@
 							<td>{{ $notification->person_name }}</td>
 						
 							<th>Person Mobile No</th>	
-							<td>{{ $notification->person_mobile }}</td>
-							
-							<th>Person E-mail</th>
-							<td>{{ $notification->person_email }}</td>
+							<td colspan=5>{{ $notification->person_mobile }}</td>
 						</tr>
 						
-						<tr>
+						<tr>	
+							<th>Person E-mail</th>
+							<td>{{ $notification->person_email }}</td>
+						
 							<th>{{ $notification->label('status') }}</th>	
 							<td colspan=5>{{ $notification->status }}</td>
 						</tr>

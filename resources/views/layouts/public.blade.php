@@ -1,10 +1,10 @@
 @include('layouts.header')
 	 <style>
     html,body{
-		background: #041461;
-		background: -webkit-linear-gradient(to top, #041461, #0757aa); 
-		background: linear-gradient(to top, #041461, #0757aa);
-		
+		background: #cccccc;
+		background: -webkit-linear-gradient(to top, #cccccc, #0757aa); 
+		//background: linear-gradient(to top, #cccccc, #0757aa);
+		background-image:  url("paper.gif");default.png;
     }
 	</style>
 	@yield('content')

@@ -26,7 +26,7 @@
 					<table class="table table-bordered m-0">
 						<tr>
 							<th>{{ $blog->label('blog_title') }}</th>	
-							<td>{{ $blog->blog_title }}</td>
+								<td >{{ $blog->blog_title }}</td>
 								
 							<th>{{ $blog->label('category') }}</th>	
 							<td>{!! EasyForm::select('category', '', old('category', $blog->category), AppHelper::options('categories')) !!}</td>
@@ -40,12 +40,26 @@
 							<td>{{ $blog->last_date }}</td>
 						</tr>
 						
+						
+					</table>
+				</fieldset>
+				<br>
+				
+				<fieldset class="section">
+					<table class="table table-bordered m-0">
 						<tr>
-							<th>{{ $blog->label('description') }}</th>	
-							<td colspan=3>
-								{{ Form::textarea('description', old('description', $blog->description), ['rows' => 5,'placeholder' => 'Job Description'],['class' => 'form-control' ]) }}</td>
+							<th colspan=1>{{ $blog->label('description') }}</th>	
+							<td>
+								{!! EasyForm::textarea('description', '', old('description', $blog->description), ['rows' => 5])!!}<br>
+							</td>
+							
 						</tr>
 						
+					</table>
+				</fieldset>
+				
+				<fieldset class="section">
+					<table class="table table-bordered m-0">		
 						<tr>
 							<th>Posted On</th>	
 							<td>{{ $blog->created_at }}</td>
@@ -64,7 +78,7 @@
 						
 						<tr>
 							<th>{{ $blog->label('status') }}</th>	
-							<td colspan=3>{{ $blog->status }}</td>
+							<td>{{ $blog->status }}</td>
 						</tr>
 					</table>
 				</fieldset> 
@@ -74,18 +88,18 @@
 				<fieldset class="section">
 					<table class="table table-bordered m-0">
 						<tr>
-							<th  colspan=4>
+							<th colspan=4>
 							Job Information Attachments</th>
 						</tr>
 						<tr>
-							<td  colspan=3>
+							<td colspan=3>
 							@if($blog->image_1)
 								<img src="{{ url('viewfile/'.$blog->image_1) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
 							@endif
 							</td>
 						</tr>
 						<tr>
-							<td  colspan=3>
+							<td colspan=3>
 							@if($blog->image_1)
 								<img  src="{{ url('viewfile/'.$blog->image_2) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
 							@endif
