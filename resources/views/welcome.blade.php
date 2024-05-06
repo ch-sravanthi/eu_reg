@@ -15,7 +15,7 @@
 		return nl2br($v);
 	}
 ?>
-	<div class="container">
+<div class="container">
 		<div class="row">
 			<div class="col-lg-4 mb-3">
 				<b class = "text-dark">Jobs Posted </b>
@@ -94,5 +94,6 @@
 		{{ $blogs->withQueryString()->links() }}
 		
 	</div>
+</div>
 		
 @endsection

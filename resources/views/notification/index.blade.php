@@ -40,32 +40,43 @@
 			</div>
 		</div><br>
 
-			@foreach($notifications as $notification) 
-			<div class="row row-cols-1 row-cols-md-3 g-4">
-				<div class="col-md-12">
-				   <div class="card mb-3" style="border-radius:3%;box-shadow: 0 2px 4px 0 rgba(0,0,0,0.8);">
+		@foreach($notifications as $notification) 
+		<div class="row row-cols-1 row-cols-md-3 g-4">
+			<div class="col-md-12">
+				<div class="card mb-3" style="border-radius:3%;box-shadow: 0 2px 4px 0 rgba(0,0,0,0.8);">
 					<div class="card-body">
 						<tr>
+						<div class="row" style=" line-height: 2;">
+						@if($notification->image_1)
+							<div class="col-sm-6" >
 							<td>	
 								<?php $img = $notification->image_1 ? url('viewfile/'.$notification->image_1) : null?>
 								@if ($img)
 									<a href="{{ $img }}">
-										<img src="{{ $img }}"  style="width: 50%"/>
+										<img src="{{ $img }}"  style="width:60%"/>
 									</a>
 								@endif
 								<br/>
-								{!! hyperlinks($notification->description) !!}
+								
 							</td><br/><br/>
-							
+							</div>
+						@endif	
+							<div class="col-sm-6" >
+								@if($notification->description)
+									<i class="bi bi-chat-left-text"></i>&nbsp;
+									{!! hyperlinks($notification->description) !!}
+								@endif
+								<br><br>
 							<p style="color:grey;font-size:14px;">{!! date('d M Y', strtotime($notification->created_at)) !!} 
 							by {{ $notification->person_name }}</p>
+							</div>
 						</tr>
-					
+						</div>
 					</div>
-				  </div>
 				</div>
 			</div>
-			@endforeach
+		</div>
+		@endforeach
 	</div>
 	{{ $notifications->withQueryString()->links() }}
 @endsection
