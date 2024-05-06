@@ -39,57 +39,60 @@
 				Job Details 
 			</div>
 		</div><br>
-		<div class="table-responsive">
-			@foreach($blogs as $blog) 
-			<div class="row row-cols-1 row-cols-md-3 g-4">
-				<div class="col-md-12">
-				   <div class="card mb-3" style="border-radius:4%;  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2)">
+	<div class="table-responsive">
+		@foreach($blogs as $blog) 
+		<div class="row row-cols-1 row-cols-md-3 g-4">
+			<div class="col-md-12">
+				<div class="card mb-3" style="border-radius:4%;  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2)">
 					<div class="card-body">
 						<tr>
-							<th>
-								<a style=" font-size:22px; font-weight:500;text-transform:uppercase;" href="{{ url('blog/show/'.$blog->id) }}">
+						<div class="row" style=" line-height: 2;">
+							<a style=" font-size:22px; font-weight:500;text-transform:uppercase;" href="{{ url('blog/show/'.$blog->id) }}">
 								{{ $blog->blog_title }} </a>
-							</th>
-							<div class="row">
-								<div class="col-sm-4" style=" font-size:15px;"><i class="bi bi-stack"></i> {{ $blog->category }}</div>
+							<div class="col-sm-6" >
+								<td>	
+									<?php $img = $blog->image_1 ? url('viewfile/'.$blog->image_1) : asset('/images/default.png')?>
+									<?php $img2 = $blog->image_2 ? url('viewfile/'.$blog->image_2) : null?>
+									<a href="{{ $img }}">
+										<img src="{{ $img }}" style="width:60%"/><br><br>
+									</a>
+									@if ($img2)
+										<a href="{{ $img2 }}">
+											<img src="{{ $img2 }}"  style="width:60%"/>
+										</a>
+									@endif
+								</td>
+							</div>
+							
+							<div class="col-sm-6" >
+								<td><i class="bi bi-stack"></i> &nbsp;{{ $blog->category }}</td><br>
 								
 								@if($blog->location)
-									<div class="col-sm-4" style=" font-size:15px;"><i class="bi bi-geo-alt"></i> {{ $blog->location}}</div>
+									<td><i class="bi bi-geo-alt"></i> &nbsp;{{ $blog->location}}</td><br>
 								@endif
+								
 								@if($blog->last_date)
-									<div class="col-sm-4" style=" font-size:15px;"><i class="bi bi-calendar3"></i> {{ $blog->label('last_date') }} : {{ $blog->last_date}}</div>
+									<td><i class="bi bi-calendar3"></i> &nbsp;{{ $blog->label('last_date') }} : {{ $blog->last_date}}</td><br>
 								@endif
-							</div><br/>
-							<td>	
-								<?php $img = $blog->image_1 ? url('viewfile/'.$blog->image_1) : asset('/images/default.png')?>
-								<?php $img2 = $blog->image_2 ? url('viewfile/'.$blog->image_2) : null?>
-								<a href="{{ $img }}">
-									<img src="{{ $img }}" style="width: 40%"/>
-								</a>
-								<br>
-								@if ($img2)
-									<a href="{{ $img2 }}">
-										<img src="{{ $img2 }}"  style="width: 40%"/>
-									</a>
-								@endif
-								<br/><br/>
+							
 								@if($blog->description)
-								<i class="bi bi-chat-left-text"></i>
+								<i class="bi bi-chat-left-text"></i>&nbsp;
 								{!! hyperlinks($blog->description) !!}
 								@endif
-							</td><br/><br/>
-							
-							<p style="color:grey;font-size:14px;"> <i class="bi bi-person-circle"></i> By {{ $blog->person_name }} at {!! date('d M Y', strtotime($blog->created_at)) !!} 
-							</p>
+								<br><br>
+								
+								<p style="color:grey;font-size:14px;"> <i class="bi bi-person-circle"></i> By {{ $blog->person_name }} at {!! date('d M Y', strtotime($blog->created_at)) !!} 
+								</p>
+							</div>
 						</tr>
-					
+						</div>
 					</div>
-				  </div>
 				</div>
 			</div>
-			@endforeach
-			{{ $blogs->withQueryString()->links() }}
 		</div>
+		@endforeach
+		{{ $blogs->withQueryString()->links() }}
+		
 	</div>
 		
 @endsection
