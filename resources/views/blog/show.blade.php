@@ -64,17 +64,19 @@
 					</tr>
 					<tr>
 						<td  colspan=3>
-						@if($blog->image_1)
-							<img src="{{ url('viewfile/'.$blog->image_1) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
-						@else
-							<img src="{{ asset('/images/default.png')}}" style="background-image: url();width:20%; height:auto;border:1px solid #F8F8F8;"/>
-						@endif
-						</td>
+						
+						<?php $img = $blog->image_1 ? url('viewfile/'.$blog->image_1) : asset('/images/default.png')?>
+							<?php $img2 = $blog->image_2 ? url('viewfile/'.$blog->image_2) : null?>
+							<a href="{{ $img }}">
+								<img src="{{ $img }}" style="width:70%"/><br><br>
+							</a>
 					</tr>
 					<tr>
 						<td  colspan=3>
-						@if($blog->image_2)
-							<img  src="{{ url('viewfile/'.$blog->image_2) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
+						@if ($img2)
+							<a href="{{ $img2 }}">
+								<img src="{{ $img2 }}"  style="width:60%"/>
+							</a>
 						@endif
 						</td>
 					</tr>
