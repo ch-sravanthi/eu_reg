@@ -28,66 +28,66 @@ Route::get('blog/show/{id}', 'App\Http\Controllers\BlogController@show')->name('
 //});
 	
 //Auth::routes();
-	Route::group(['middleware'], function () {	
+Route::group(['middleware'], function () {	
 	
 
-Route::get('blog/my_show/{id}', 'App\Http\Controllers\BlogController@my_show')->name('blog.my_show');		
-Route::get('blog/my_index', 'App\Http\Controllers\BlogController@myindex')->name('blog.my_index');
-Route::get('blog/delete/{id}', 'App\Http\Controllers\BlogController@delete')->name('blog.delete');
-Route::get('blog/edit/{id}', 'App\Http\Controllers\BlogController@edit')->name('blog.edit');
-Route::post('blog/update/{id}', 'App\Http\Controllers\BlogController@update')->name('blog.update');
+	Route::get('blog/my_show/{id}', 'App\Http\Controllers\BlogController@my_show')->name('blog.my_show');		
+	Route::get('blog/my_index', 'App\Http\Controllers\BlogController@myindex')->name('blog.my_index');
+	Route::get('blog/delete/{id}', 'App\Http\Controllers\BlogController@delete')->name('blog.delete');
+	Route::get('blog/edit/{id}', 'App\Http\Controllers\BlogController@edit')->name('blog.edit');
+	Route::post('blog/update/{id}', 'App\Http\Controllers\BlogController@update')->name('blog.update');
 
-//Users//
-Route::get('user/index', 'App\Http\Controllers\UserController@index')->name('user.index');
-Route::get('user/create/{id?}', 'App\Http\Controllers\UserController@create')->name('user.create');
-Route::post('user/save/{id?}', 'App\Http\Controllers\UserController@save')->name('user.save');
-Route::get('user/delete/{id}', 'App\Http\Controllers\UserController@delete')->name('user.delete');
-Route::get('user/show/{id}', 'App\Http\Controllers\UserController@show')->name('user.show');
+	//Users//
+	Route::get('user/index', 'App\Http\Controllers\UserController@index')->name('user.index');
+	Route::get('user/create/{id?}', 'App\Http\Controllers\UserController@create')->name('user.create');
+	Route::post('user/save/{id?}', 'App\Http\Controllers\UserController@save')->name('user.save');
+	Route::get('user/delete/{id}', 'App\Http\Controllers\UserController@delete')->name('user.delete');
+	Route::get('user/show/{id}', 'App\Http\Controllers\UserController@show')->name('user.show');
 
-// Job Notification
+	// Job Notification
 
-Route::get('notification/create', 'App\Http\Controllers\NotificationController@create')->name('notification.create');
-Route::post('notification/save/{id?}', 'App\Http\Controllers\NotificationController@save')->name('notification.save');
-Route::get('notification/index', 'App\Http\Controllers\NotificationController@index')->name('notification.index');
-Route::get('notification/show/{id}', 'App\Http\Controllers\NotificationController@show')->name('notification.show');
-Route::get('notification/delete/{id}', 'App\Http\Controllers\NotificationController@delete')->name('notification.delete');
-Route::get('notification/edit/{id}', 'App\Http\Controllers\NotificationController@edit')->name('notification.edit');
-Route::post('notification/update/{id}', 'App\Http\Controllers\NotificationController@update')->name('notification.update');	
-Route::get('notification/my_index', 'App\Http\Controllers\NotificationController@my_index')->name('notification.my_index');
-
-
-
-//More Links
-
-Route::get('more_link/create', 'App\Http\Controllers\MoreLinkController@create')->name('more_link.create');
-Route::post('more_link/save/{id?}', 'App\Http\Controllers\MoreLinkController@save')->name('more_link.save');
-Route::get('more_link/index', 'App\Http\Controllers\MoreLinkController@index')->name('more_link.index');
-Route::get('more_link/delete/{id}', 'App\Http\Controllers\MoreLinkController@delete')->name('more_link.delete');
-Route::get('more_link/edit/{id}', 'App\Http\Controllers\MoreLinkController@edit')->name('more_link.edit');
-Route::post('more_link/update/{id}', 'App\Http\Controllers\MoreLinkController@update')->name('more_link.update');
-Route::get('more_link/my_index', 'App\Http\Controllers\MoreLinkController@my_index')->name('more_link.my_index');	
+	Route::get('notification/create', 'App\Http\Controllers\NotificationController@create')->name('notification.create');
+	Route::post('notification/save/{id?}', 'App\Http\Controllers\NotificationController@save')->name('notification.save');
+	Route::get('notification/index', 'App\Http\Controllers\NotificationController@index')->name('notification.index');
+	Route::get('notification/show/{id}', 'App\Http\Controllers\NotificationController@show')->name('notification.show');
+	Route::get('notification/delete/{id}', 'App\Http\Controllers\NotificationController@delete')->name('notification.delete');
+	Route::get('notification/edit/{id}', 'App\Http\Controllers\NotificationController@edit')->name('notification.edit');
+	Route::post('notification/update/{id}', 'App\Http\Controllers\NotificationController@update')->name('notification.update');	
+	Route::get('notification/my_index', 'App\Http\Controllers\NotificationController@my_index')->name('notification.my_index');
 
 
-//Login form
-Route::get('login', 'App\Http\Controllers\AuthenticateController@login')->name('authenticate.login');
-Route::post('/authenticate/authenticate', 'App\Http\Controllers\AuthenticateController@authenticate')->name('authenticate.authenticate');
-Route::get('/login/otp/{id}', 'App\Http\Controllers\AuthenticateController@loginOtp')->name('login.otp');
-Route::post('/login/verify_otp/{id}', 'App\Http\Controllers\AuthenticateController@loginVerifyOtp')->name('login.verify_otp');
-Route::get('/authenticate/logout', 'App\Http\Controllers\AuthenticateController@logout')->name('authenticate.logout');
+
+	//More Links
+
+	Route::get('more_link/create', 'App\Http\Controllers\MoreLinkController@create')->name('more_link.create');
+	Route::post('more_link/save/{id?}', 'App\Http\Controllers\MoreLinkController@save')->name('more_link.save');
+	Route::get('more_link/index', 'App\Http\Controllers\MoreLinkController@index')->name('more_link.index');
+	Route::get('more_link/delete/{id}', 'App\Http\Controllers\MoreLinkController@delete')->name('more_link.delete');
+	Route::get('more_link/edit/{id}', 'App\Http\Controllers\MoreLinkController@edit')->name('more_link.edit');
+	Route::post('more_link/update/{id}', 'App\Http\Controllers\MoreLinkController@update')->name('more_link.update');
+	Route::get('more_link/my_index', 'App\Http\Controllers\MoreLinkController@my_index')->name('more_link.my_index');	
 
 
-//Route::get('/login', [App\Http\Controllers\AuthenticateController::class, 'login'])->name('authenticate.login');
-//Route::post('/authentication/authenticte', [AuthenticateController::class, 'authenticate'])->name('authentication.authenticate');
-//Route::get('/authentication/logout', [AuthenticateController::class, 'logout'])->name('authenticate.logout');
+	//Login form
+	Route::get('login', 'App\Http\Controllers\AuthenticateController@login')->name('authenticate.login');
+	Route::post('/authenticate/authenticate', 'App\Http\Controllers\AuthenticateController@authenticate')->name('authenticate.authenticate');
+	Route::get('/login/otp/{id}', 'App\Http\Controllers\AuthenticateController@loginOtp')->name('login.otp');
+	Route::post('/login/verify_otp/{id}', 'App\Http\Controllers\AuthenticateController@loginVerifyOtp')->name('login.verify_otp');
+	Route::get('/authenticate/logout', 'App\Http\Controllers\AuthenticateController@logout')->name('authenticate.logout');
 
-//Route::get('/login/otp/{id}', [AuthenticateController::class, 'loginOtp'])->name('login.otp');
 
-//Route::post('/login/verify_otp/{id}', [AuthenticateController::class,'loginVerifyOtp'])->name('login.verify_otp');
+	//Route::get('/login', [App\Http\Controllers\AuthenticateController::class, 'login'])->name('authenticate.login');
+	//Route::post('/authentication/authenticte', [AuthenticateController::class, 'authenticate'])->name('authentication.authenticate');
+	//Route::get('/authentication/logout', [AuthenticateController::class, 'logout'])->name('authenticate.logout');
 
-Route::get('password/reset', [AuthenticateController::class,'showLinkRequestForm'])->name('password.request');
-Route::post('password/email', [AuthenticateController::class,'sendResetLinkEmail'])->name('password.email');
-Route::get('password/reset/{token}', [AuthenticateController::class,'showResetForm'])->name('password.reset');
-Route::post('password/reset', [AuthenticateController::class,'reset'])->name('password.update');
+	//Route::get('/login/otp/{id}', [AuthenticateController::class, 'loginOtp'])->name('login.otp');
+
+	//Route::post('/login/verify_otp/{id}', [AuthenticateController::class,'loginVerifyOtp'])->name('login.verify_otp');
+
+	Route::get('password/reset', [AuthenticateController::class,'showLinkRequestForm'])->name('password.request');
+	Route::post('password/email', [AuthenticateController::class,'sendResetLinkEmail'])->name('password.email');
+	Route::get('password/reset/{token}', [AuthenticateController::class,'showResetForm'])->name('password.reset');
+	Route::post('password/reset', [AuthenticateController::class,'reset'])->name('password.update');
 
 
 	
