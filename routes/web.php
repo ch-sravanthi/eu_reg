@@ -17,25 +17,26 @@ use app\Helpers;
 
 
 
-Route::get('blog/create', 'App\Http\Controllers\BlogController@create')->name('blog.create');
-Route::post('blog/save/{id?}', 'App\Http\Controllers\BlogController@save')->name('blog.save');
-//Route::get('blog/index', 'App\Http\Controllers\BlogController@index')->name('blog.index');
-Route::get('blog/show/{id}', 'App\Http\Controllers\BlogController@show')->name('blog.show');
+Route::get('jobportal/create', 'App\Http\Controllers\BlogController@create')->name('blog.create');
+Route::post('jobportal/save/{id?}', 'App\Http\Controllers\BlogController@save')->name('blog.save');
+Route::get('/jobportal', 'App\Http\Controllers\BlogController@jobportal')->name('blog.jobportal');
+Route::get('jobportal/show/{id}', 'App\Http\Controllers\BlogController@show')->name('blog.show');
 
 //Route::get('/', function () {
    // return view('welcome');	
-	Route::get('/', 'App\Http\Controllers\WelcomeController@index')->name('welcome');
+//	Route::get('/', 'App\Http\Controllers\WelcomeController@index')->name('welcome');
 //});
 	
 //Auth::routes();
 Route::group(['middleware'], function () {	
 	
-
-	Route::get('blog/my_show/{id}', 'App\Http\Controllers\BlogController@my_show')->name('blog.my_show');		
-	Route::get('blog/my_index', 'App\Http\Controllers\BlogController@myindex')->name('blog.my_index');
-	Route::get('blog/delete/{id}', 'App\Http\Controllers\BlogController@delete')->name('blog.delete');
-	Route::get('blog/edit/{id}', 'App\Http\Controllers\BlogController@edit')->name('blog.edit');
-	Route::post('blog/update/{id}', 'App\Http\Controllers\BlogController@update')->name('blog.update');
+//	Route::get('/al_reports', ['as' => 'al_reports', 'uses' => 'AlReportController@index']);
+	Route::get('jobportal/my_show/{id}', 'App\Http\Controllers\BlogController@my_show')->name('blog.my_show');		
+	Route::get('jobportal/my_index', 'App\Http\Controllers\BlogController@myindex')->name('blog.my_index');
+	Route::get('/jobportal', 'App\Http\Controllers\BlogController@jobportal')->name('blog.jobportal');
+	Route::get('jobportal/delete/{id}', 'App\Http\Controllers\BlogController@delete')->name('blog.delete');
+	Route::get('jobportal/edit/{id}', 'App\Http\Controllers\BlogController@edit')->name('blog.edit');
+	Route::post('jobportal/update/{id}', 'App\Http\Controllers\BlogController@update')->name('blog.update');
 
 	//Users//
 	Route::get('user/index', 'App\Http\Controllers\UserController@index')->name('user.index');
