@@ -15,6 +15,27 @@ use AppHelper;
 class BlogController extends Controller
 {
 	
+	public function jobportal(Request $request)
+    { 
+		$blog =new Blog;
+		$paginate = 20;
+      
+		$query = Blog::query();
+		
+		if ($request->search) {
+			$query->where(function($q) use($request){
+				$q->orwhere('blog_title', 'like', "%{$request->search}%");
+				$q->orwhere('category', 'like', "%{$request->search}%");
+				$q->orwhere('description', 'like', "%{$request->search}%");	
+				$q->orwhere('location', 'like', "%{$request->search}%");	
+			});
+		}
+		$query->where('status','Verified');
+		
+		$blogs =$query->orderBy('updated_at', 'desc')->paginate($paginate);
+		
+		return view('blog/jobportal',compact((['blogs','blog'])));
+    }
 	public function myindex(Request $request)
     {
 		$blog =new Blog;
@@ -64,7 +85,7 @@ class BlogController extends Controller
     {
         $blog = Blog::findOrFail($id);
 		$blog->delete();
-		return redirect(url('blog/my_index'));
+		return redirect(url('jobportal/my_index'));
     }
 	
 	public function show( $id)
@@ -99,7 +120,7 @@ class BlogController extends Controller
 		$blog->updated_by = Auth::user()->id;		
 		
 		$blog->save();
-		return redirect('/blog/my_index');
+		return redirect('/jobportal/my_index');
 	}
 }
 

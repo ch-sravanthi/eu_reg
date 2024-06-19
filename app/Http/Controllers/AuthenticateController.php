@@ -44,7 +44,7 @@ class AuthenticateController extends Controller
 			return redirect()->back()->withInput()->withErrors(['email' => 'Email is incorrect']);
 		}
 		Auth::login($user);
-		return redirect(url('blog/my_index'));
+		return redirect(url('jobportal/my_index'));
 	}
 		
     public function logout(Request $request)

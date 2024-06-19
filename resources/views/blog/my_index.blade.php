@@ -68,7 +68,7 @@
 								@endif
 						</td>
 						<td style="text-align:justify-content-end;"> 
-							<a href="{{ url('blog/my_show/'.$blog->id) }}">
+							<a href="{{ url('jobportal/my_show/'.$blog->id) }}">
 								{{ $blog->blog_title }}
 							</a>
 							<?php $excerpt = AppHelper::excerpt($blog->description,55)?>
@@ -83,9 +83,9 @@
 						<td>
 						<?php //var_dump(Auth::user());die();?>
 						
-							<a href="{{ url('blog/edit/'.$blog->id) }}"class="btn btn-sm btn-primary" ><i class = "bi bi-pen"></i></a>
+							<a href="{{ url('jobportal/edit/'.$blog->id) }}"class="btn btn-sm btn-primary" ><i class = "bi bi-pen"></i></a>
 						
-							<?php $route = url('blog/delete/'.$blog->id)?>
+							<?php $route = url('jobportal/delete/'.$blog->id)?>
 							<a href="#" onclick="deleteRow('{{ $route }}')" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></a>
 						
 						</td>
