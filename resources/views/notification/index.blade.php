@@ -28,7 +28,7 @@
 						<button  class="btn btn-primary btn-sm mr-2">
 							<i class="bi bi-search"></i>
 						</button>&nbsp;
-					<a class = "btn btn-sm btn-primary mr-2" href = "{{ route('notification.index') }}">Reset</a>&nbsp;
+					<a class = "btn btn-sm btn-primary mr-2" href = "{{ route('notifications') }}">Reset</a>&nbsp;
 					{!! Form::close() !!}	&nbsp;
 				</div>
 			</div>

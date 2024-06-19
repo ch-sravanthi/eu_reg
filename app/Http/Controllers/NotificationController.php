@@ -30,7 +30,7 @@ class NotificationController extends Controller
 					
 		$notifications =$query->orderBy('updated_at', 'desc')->paginate($paginate);
 		
-		return view('notification/index',compact(['notifications'],['notification']));
+		return view('notification.index',compact(['notifications'],['notification']));
     }
 	public function create($id = null)
     {

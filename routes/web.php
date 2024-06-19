@@ -49,7 +49,7 @@ Route::group(['middleware'], function () {
 
 	Route::get('notification/create', 'App\Http\Controllers\NotificationController@create')->name('notification.create');
 	Route::post('notification/save/{id?}', 'App\Http\Controllers\NotificationController@save')->name('notification.save');
-	Route::get('notification/index', 'App\Http\Controllers\NotificationController@index')->name('notification.index');
+	Route::get('/notifications', 'App\Http\Controllers\NotificationController@index')->name('notifications');
 	Route::get('notification/show/{id}', 'App\Http\Controllers\NotificationController@show')->name('notification.show');
 	Route::get('notification/delete/{id}', 'App\Http\Controllers\NotificationController@delete')->name('notification.delete');
 	Route::get('notification/edit/{id}', 'App\Http\Controllers\NotificationController@edit')->name('notification.edit');

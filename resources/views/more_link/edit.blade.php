@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')	
-	<a href="{{ route('welcome') }}">Home</a> 
+	<a href="{{ route('home') }}">Home</a> 
 @endsection
 
 @section('navs')	

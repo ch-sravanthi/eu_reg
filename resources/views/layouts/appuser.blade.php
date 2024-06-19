@@ -41,7 +41,7 @@
 				
 				<ul class="navbar-nav  mb-lg-0 ml-1">		
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{{ url('notification/index')}}"> <i class="bi bi-bell-fill"></i> Notifications</a>
+						<a class="nav-link active" aria-current="page" href="{{ url('notifications')}}"> <i class="bi bi-bell-fill"></i> Notifications</a>
 					</li>
 				</ul>
 				
