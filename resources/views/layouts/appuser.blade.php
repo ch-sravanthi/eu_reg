@@ -47,7 +47,7 @@
 				
 				<ul class="navbar-nav  mb-lg-0 ml-1">		
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{{ url('more_link/index')}}"> <i class="bi bi-link"></i> Job Links</a>
+						<a class="nav-link active" aria-current="page" href="{{ url('more_links')}}"> <i class="bi bi-link"></i> Job Links</a>
 					</li>
 				</ul>&nbsp;&nbsp;&nbsp;&nbsp;
 				

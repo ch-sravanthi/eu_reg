@@ -30,7 +30,7 @@ class MoreLinkController extends Controller
 					
 		$more_links = $query->orderBy('updated_at', 'desc')->paginate($paginate);
 		
-		return view('more_link/index',compact(['more_links'],['more_link']));
+		return view('more_link.index',compact(['more_links'],['more_link']));
     }
 	public function create($id = null)
     {

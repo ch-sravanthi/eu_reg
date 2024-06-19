@@ -62,7 +62,7 @@ Route::group(['middleware'], function () {
 
 	Route::get('more_link/create', 'App\Http\Controllers\MoreLinkController@create')->name('more_link.create');
 	Route::post('more_link/save/{id?}', 'App\Http\Controllers\MoreLinkController@save')->name('more_link.save');
-	Route::get('more_link/index', 'App\Http\Controllers\MoreLinkController@index')->name('more_link.index');
+	Route::get('/more_links', 'App\Http\Controllers\MoreLinkController@index')->name('more_links');
 	Route::get('more_link/delete/{id}', 'App\Http\Controllers\MoreLinkController@delete')->name('more_link.delete');
 	Route::get('more_link/edit/{id}', 'App\Http\Controllers\MoreLinkController@edit')->name('more_link.edit');
 	Route::post('more_link/update/{id}', 'App\Http\Controllers\MoreLinkController@update')->name('more_link.update');
