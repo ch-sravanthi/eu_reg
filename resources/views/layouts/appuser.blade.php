@@ -88,6 +88,7 @@
 			</ul>
 			@endif			
 			</div>
+		</div>
 			
 	</nav>
 	@hasSection('content')
