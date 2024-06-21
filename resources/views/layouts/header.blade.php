@@ -52,9 +52,13 @@
 		}
 		.navbar, input[type=submit],.btn {			
 			background: linear-gradient(to bottom, #182b89, #146bc5); 
-			padding-bottom:2px;
-			padding-top:2px;
+			padding-bottom:1px;
+			padding-top:1px;
 			
+		}
+		.navbar-brand {
+			padding-top: .1rem;
+			padding-bottom: .1rem;
 		}
 		input[type=submit]:hover,.btn:hover {
 			background: linear-gradient(to right, #146bc5, #182b89); 
