@@ -72,7 +72,7 @@
 								@endif
 								
 								@if($blog->last_date)
-									<td><i class="bi bi-calendar3"></i> &nbsp;{{ $blog->label('last_date') }} : {{ $blog->last_date}}</td><br>
+									<td><i class="bi bi-calendar3"></i> &nbsp;{{ $blog->label('last_date') }} : {{ date('d M Y', strtotime($blog->last_date)) }}</td><br>
 								@endif
 							
 								@if($blog->description)

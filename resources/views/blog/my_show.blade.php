@@ -36,7 +36,7 @@
 						<td>{{ $blog->location }}</td>
 							
 						<th>{{ $blog->label('last_date') }}</th>	
-						<td>{{ $blog->last_date }}</td>
+						<td>{{ date('d M Y', strtotime($blog->last_date)) }}</td>
 					</tr>
 					
 					<tr>
