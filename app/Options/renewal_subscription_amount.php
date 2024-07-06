@@ -1,0 +1,13 @@
+<?php
+return [
+	'STUDENT (ANNUAL) - Rs 150/-' => 'STUDENT (ANNUAL) - Rs 150/-',
+	'GRADUATE (ANNUAL) - Rs 300/-' => 'GRADUATE (ANNUAL) - Rs 300/-',
+	'STUDENT  (LIFE -10 YEARS) - Rs 2000/-' => 'STUDENT  (LIFE -10 YEARS) - Rs 2000/-',
+	'GRADUATE  (LIFE -10 YEARS) - Rs 2000/-' => 'GRADUATE  (LIFE -10 YEARS) - Rs  2000/-',
+	'OVERSEAS (LIFE -10 YEARS) - Rs 2000/-' => 'OVERSEAS (LIFE -10 YEARS) - Rs 2000/-',
+];
+
+
+
+
+

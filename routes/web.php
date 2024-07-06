@@ -14,13 +14,12 @@ use app\Helpers;
 |
 */
 
-
-
-
-Route::get('jobportal/create', 'App\Http\Controllers\BlogController@create')->name('blog.create');
-Route::post('jobportal/save/{id?}', 'App\Http\Controllers\BlogController@save')->name('blog.save');
-Route::get('/jobportal', 'App\Http\Controllers\BlogController@jobportal')->name('blog.jobportal');
-Route::get('jobportal/show/{id}', 'App\Http\Controllers\BlogController@show')->name('blog.show');
+	// Job Portal
+	
+	Route::get('jobportal/create', 'App\Http\Controllers\BlogController@create')->name('blog.create');
+	Route::post('jobportal/save/{id?}', 'App\Http\Controllers\BlogController@save')->name('blog.save');
+	Route::get('/jobportal', 'App\Http\Controllers\BlogController@jobportal')->name('blog.jobportal');
+	Route::get('jobportal/show/{id}', 'App\Http\Controllers\BlogController@show')->name('blog.show');
 
 //Route::get('/', function () {
    // return view('welcome');	
@@ -30,15 +29,14 @@ Route::get('jobportal/show/{id}', 'App\Http\Controllers\BlogController@show')->n
 //Auth::routes();
 Route::group(['middleware'], function () {	
 	
-//	Route::get('/al_reports', ['as' => 'al_reports', 'uses' => 'AlReportController@index']);
-	Route::get('jobportal/my_show/{id}', 'App\Http\Controllers\BlogController@my_show')->name('blog.my_show');		
 	Route::get('jobportal/my_index', 'App\Http\Controllers\BlogController@myindex')->name('blog.my_index');
 	Route::get('/jobportal', 'App\Http\Controllers\BlogController@jobportal')->name('blog.jobportal');
 	Route::get('jobportal/delete/{id}', 'App\Http\Controllers\BlogController@delete')->name('blog.delete');
 	Route::get('jobportal/edit/{id}', 'App\Http\Controllers\BlogController@edit')->name('blog.edit');
 	Route::post('jobportal/update/{id}', 'App\Http\Controllers\BlogController@update')->name('blog.update');
 
-	//Users//
+	// Users
+	
 	Route::get('user/index', 'App\Http\Controllers\UserController@index')->name('user.index');
 	Route::get('user/create/{id?}', 'App\Http\Controllers\UserController@create')->name('user.create');
 	Route::post('user/save/{id?}', 'App\Http\Controllers\UserController@save')->name('user.save');
@@ -56,8 +54,6 @@ Route::group(['middleware'], function () {
 	Route::post('notification/update/{id}', 'App\Http\Controllers\NotificationController@update')->name('notification.update');	
 	Route::get('notification/my_index', 'App\Http\Controllers\NotificationController@my_index')->name('notification.my_index');
 
-
-
 	//More Links
 
 	Route::get('more_link/create', 'App\Http\Controllers\MoreLinkController@create')->name('more_link.create');
@@ -68,10 +64,76 @@ Route::group(['middleware'], function () {
 	Route::post('more_link/update/{id}', 'App\Http\Controllers\MoreLinkController@update')->name('more_link.update');
 	Route::get('more_link/my_index', 'App\Http\Controllers\MoreLinkController@my_index')->name('more_link.my_index');	
 
+	// VV
+	
+	Route::get('vv', 'App\Http\Controllers\AuthenticateController@vv')->name('authenticate.vv');
+	
+	
+	//new_susbscription
+	
+	Route::get('new_subscriptions', 'App\Http\Controllers\NewSubscriptionController@index')->name('new_subscriptions');
+	Route::get('new_subscription/create', 'App\Http\Controllers\NewSubscriptionController@create')->name('new_subscription.create');
+	Route::post('new_subscription/save/{id?}', 'App\Http\Controllers\NewSubscriptionController@save')->name('new_subscription.save');
+	Route::get('new_subscription/delete/{id}', 'App\Http\Controllers\NewSubscriptionController@delete')->name('new_subscription.delete');
+	Route::get('new_subscription/show/{id}', 'App\Http\Controllers\NewSubscriptionController@show')->name('new_subscription.show');
+	Route::get('new_subscription/export', 'App\Http\Controllers\NewSubscriptionController@export')->name('new_subscription.export');
+	
+	//Renewal
+	
+	Route::get('renewals', 'App\Http\Controllers\RenewalController@index')->name('renewals');
+	Route::get('renewal/create', 'App\Http\Controllers\RenewalController@create')->name('renewal.create');
+	Route::post('renewal/save/{id?}', 'App\Http\Controllers\RenewalController@save')->name('renewal.save');
+	Route::get('renewal/delete/{id}', 'App\Http\Controllers\RenewalController@delete')->name('renewal.delete');
+	Route::get('renewal/show/{id}', 'App\Http\Controllers\RenewalController@show')->name('renewal.show');
+	Route::get('renewal/export', 'App\Http\Controllers\RenewalController@export')->name('renewal.export');
+
+	//Address Change
+	
+	Route::get('address_changes', 'App\Http\Controllers\AddressChangeController@index')->name('address_changes');
+	Route::get('address_change/create', 'App\Http\Controllers\AddressChangeController@create')->name('address_change.create');
+	Route::post('address_change/save/{id?}', 'App\Http\Controllers\AddressChangeController@save')->name('address_change.save');
+	Route::get('address_change/delete/{id}', 'App\Http\Controllers\AddressChangeController@delete')->name('address_change.delete');
+	
+	Route::get('address_change/view/{id}', 'App\Http\Controllers\AddressChangeController@view')->name('address_change.view');
+	Route::get('address_change/export', 'App\Http\Controllers\AddressChangeController@export')->name('address_change.export');
+
+	//complaint
+
+	Route::get('complaints', 'App\Http\Controllers\ComplaintController@index')->name('complaints');
+	Route::get('complaint/create', 'App\Http\Controllers\ComplaintController@create')->name('complaint.create');
+	Route::post('complaint/save/{id?}', 'App\Http\Controllers\ComplaintController@save')->name('complaint.save');
+	Route::get('complaint/delete/{id}', 'App\Http\Controllers\ComplaintController@delete')->name('complaint.delete');
+	Route::get('complaint/export','App\Http\Controllers\ComplaintController@export')->name('complaint.export');
+	Route::get('complaint/view/{id}', 'App\Http\Controllers\ComplaintController@view')->name('complaint.view');
+	
+	//Prayer Points
+	
+	Route::get('/prayer_points', 'App\Http\Controllers\PrayerPointController@index')->name('prayer_points');
+	Route::get('prayer_point/export','App\Http\Controllers\PrayerPointController@export')->name('prayer_point.export');
+	Route::get('prayer_point/create', 'App\Http\Controllers\PrayerPointController@create')->name('prayer_point.create');
+	Route::post('prayer_point/save/{id?}', 'App\Http\Controllers\PrayerPointController@save')->name('prayer_point.save');
+	Route::get('prayer_point/delete/{id}', 'App\Http\Controllers\PrayerPointController@delete')->name('prayer_point.delete');
+	Route::get('prayer_point/show/{id}', 'App\Http\Controllers\PrayerPointController@show')->name('prayer_point.show');
+	Route::get('prayer_point/edit/{id}', 'App\Http\Controllers\PrayerPointController@edit')->name('prayer_point.edit');
+	Route::post('prayer_point/update/{id}', 'App\Http\Controllers\PrayerPointController@update')->name('prayer_point.update');
+	Route::get('prayer_point/my_index', 'App\Http\Controllers\PrayerPointController@my_index')->name('prayer_point.my_index');	
+	
+	
+
+	// Feedback
+
+	Route::get('/feedbacks', 'App\Http\Controllers\FeedbackController@index')->name('feedbacks');
+	Route::get('feedback/create','App\Http\Controllers\FeedbackController@create')->name('feedback.create');
+	Route::post('feedback/save/{id?}', 'App\Http\Controllers\FeedbackController@save')->name('feedback.save');
+	Route::post('feedback/update/{id}', 'App\Http\Controllers\FeedbackController@update')->name('feedback.update');
+	Route::get('feedback/delete/{id}', 'App\Http\Controllers\FeedbackController@delete')->name('feedback.delete');
+	Route::get('feedback/export','App\Http\Controllers\FeedbackController@export')->name('feedback.export');
 
 	//Login form
 	Route::get('login', 'App\Http\Controllers\AuthenticateController@login')->name('authenticate.login');
+	Route::get('vv_login', 'App\Http\Controllers\AuthenticateController@vv_login')->name('authenticate.vv_login');
 	Route::post('/authenticate/authenticate', 'App\Http\Controllers\AuthenticateController@authenticate')->name('authenticate.authenticate');
+	Route::post('vv_all_in_one', 'App\Http\Controllers\AuthenticateController@vv_all_in_one')->name('vv_all_in_one');
 	Route::get('/login/otp/{id}', 'App\Http\Controllers\AuthenticateController@loginOtp')->name('login.otp');
 	Route::post('/login/verify_otp/{id}', 'App\Http\Controllers\AuthenticateController@loginVerifyOtp')->name('login.verify_otp');
 	Route::get('/authenticate/logout', 'App\Http\Controllers\AuthenticateController@logout')->name('authenticate.logout');
