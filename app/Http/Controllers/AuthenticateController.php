@@ -17,6 +17,16 @@ class AuthenticateController extends Controller
         return view('authenticate.login');
     }
  
+	public function vv_login()
+    {
+        return view('authenticate.vv_login');
+    }
+ 
+	public function vv()
+    {
+        return view('authenticate.vv');
+    }
+	
 	public function otp()
     {
 		
@@ -46,11 +56,30 @@ class AuthenticateController extends Controller
 		Auth::login($user);
 		return redirect(url('jobportal/my_index'));
 	}
+	
+	public function vv_all(Request $request)
+    {
+		 $request->validate([
+				'email' => 'required|string',
+			]); 
+		$credentials = [
+			'email' => $request->email,
+		];
+		$user = User::where('email', $request->email)->first();
+		 //echo '<pre>'; print_r($user); echo '</pre>'; die();
+		
+		if (!$user) { 
+			return redirect()->back()->withInput()->withErrors(['email' => 'Email is incorrect']);
+		}
+		Auth::login($user);
+		
+		return redirect(url('vv/all_in_one'));
+	}
 		
     public function logout(Request $request)
     {
         Auth::logout();
-        return redirect(route('authenticate.login'));
+        return redirect(route('authenticate.vv_login'));
  
     }
 	
