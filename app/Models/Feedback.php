@@ -6,6 +6,7 @@ use App\Helpers\AppHelper;
 
 class Feedback extends AppModel
 {
+	protected $table = 'feedbacks';
    
 	protected $fillable=[
 	  'rate',
