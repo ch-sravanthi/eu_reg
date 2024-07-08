@@ -2,7 +2,7 @@
 
 @section('content')	
 <div class="d-flex mb-3">
-		<nav aria-label="breadcrumb">
+	<nav aria-label="breadcrumb">
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item"><a href="{{ route('vv.all_in_one') }}">Home</a></li>
 			<li class="breadcrumb-item active" aria-current="page">Address Change Information</li>

@@ -6,6 +6,9 @@
 			padding-top: 30px;
 			font-family:sans-serif !important;
 		}
+		.navbar-brand{
+			margin-right:0px;
+		}
 		nav a{
 			color: #fff!important;
 			font-size: 16px;

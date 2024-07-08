@@ -32,7 +32,7 @@
 		line-height:2;
 		padding:1px;
 		
-		font-size:15px;
+		font-size:13px;
 	}
 	.text-dark{
 		font-size:18px;
