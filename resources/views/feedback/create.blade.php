@@ -11,7 +11,7 @@
 		@else
 			<li class="breadcrumb-item"><a href="{{ route('authenticate.vv') }}">Home</a></li>
 		@endif
-		<li class="breadcrumb-item active" aria-current="page">VV Magazine Feedback Entries :</li>
+		<li class="breadcrumb-item active" aria-current="page">VV Magazine Feedback</li>
 	  </ol>
 	</nav>
 @endsection
