@@ -49,7 +49,7 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0 d-sm-none d-md-block">
 					<li class="nav-item" style="color:#fff;">
-						<a class="nav-link active" aria-current="page" href="#" > Welcome To UESI TS Vidhyarthi Velugu </a>
+						<a class="nav-link active" aria-current="page" href="#" > Welcome To Vidhyarthi Velugu </a>
 					</li>
 				</ul>
 				
