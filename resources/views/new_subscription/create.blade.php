@@ -129,7 +129,7 @@
 							@endif
 					
 					<label class="text-dark">{{ $new_subscription->nicenames['pincode'] }} *</label>
-						{{ Form::text('pincode', old('pincode', $new_subscription->pincode), ['class' => 'form-control']) }}
+						{{ Form::number('pincode', old('pincode', $new_subscription->pincode), ['class' => 'form-control']) }}
 							@if($errors->has('pincode'))
 								<div class="text-danger">{{ $errors->first('pincode') }}</div>
 							@endif
@@ -147,7 +147,7 @@
 							@endif
 					
 					<label class="text-dark">{{ $new_subscription->nicenames['mobile_num'] }} *</label>
-					   {{ Form::text('mobile_num', old('mobile_num', $new_subscription->mobile_num), ['class' => 'form-control']) }}
+					   {{ Form::number('mobile_num', old('mobile_num', $new_subscription->mobile_num), ['class' => 'form-control']) }}
 						   @if($errors->has('mobile_num'))
 								<div class="text-danger">{{ $errors->first('mobile_num') }}</div>
 							@endif
