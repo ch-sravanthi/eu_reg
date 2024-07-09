@@ -73,7 +73,7 @@
 				
 				<ul class="navbar-nav  mb-lg-0 ml-1">
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{{url('complaints')}}"> <i class="bi bi-question-diamond-fill"></i> Complaints</a>
+						<a class="nav-link active" aria-current="page" href="{{url('complaints')}}"> <i class="bi bi-exclamation-diamond-fill"></i> Complaints</a>
 					</li>	
 				</ul>
 				
