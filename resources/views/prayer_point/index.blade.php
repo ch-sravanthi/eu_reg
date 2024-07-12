@@ -14,6 +14,16 @@
 @endsection
 
 @section('content')
+<style>
+td{
+	font-size:14px;
+}
+th{
+	font-size:15px;
+	text-align:center;
+}
+
+</style>
 	<div class="container">
 		<div class=" row ">
 			<div class="col-lg-4 mb-3">
