@@ -38,6 +38,9 @@
 			margin-top : 1px !important;
 			margin-bottom : 1px!important;
 		}
+		.breadcrumb{
+			line-height : 4 !important;
+		}
 	</style>
 	
 	<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#fff; border-bottom: 2px solid #678bbd11; font-weight: 500;">

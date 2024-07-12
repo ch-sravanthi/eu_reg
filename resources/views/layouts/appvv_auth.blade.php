@@ -37,10 +37,13 @@
 			margin-top : 1px !important;
 			margin-bottom : 1px!important;
 		}
+		.breadcrumb{
+			line-height : 3 !important;
+		}
 	</style>
 	
 	
-	<nav class="navbar navbar-expand-lg navbar-light" style="background-color:grey; border-bottom: 2px solid #678bbd11; font-weight: 500;">
+	<nav class="navbar navbar-expand-lg navbar-light" style="background-color:grey; border-bottom: 1px solid #678bbd11; font-weight: 500;"><br>
 		<div class="container-fluid">
 			<a class="navbar-brand" href="https://uesits.com/"><img class="rounded" src="{{ asset('images/vv.jpeg') }}" height="60"></a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

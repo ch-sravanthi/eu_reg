@@ -14,6 +14,16 @@
 @endsection
 
 @section('content')
+<style>
+td{
+	font-size:14px;
+}
+th{
+	font-size:15px;
+	text-align:center;
+}
+
+</style>
 	<div class="container">
 		<div class=" row ">
 			<div class="col-lg-4 mb-3">
@@ -49,6 +59,7 @@
 						<th>Name </th>
 						<th>Phone Number</th>
 						<th>Email-Id </th>
+						<th>Transaction Reference No</th>
 						<th>Old Address </th>
 						<th>New Address </th>
 						<th>Pincode </th>
@@ -64,6 +75,7 @@
 								<td>{{ $address_change->full_name }}</td>
 								<td>{{ $address_change->phone_no }}</td>
 								<td>{{ $address_change->email }}</td>
+								<td>{{ $address_change->reference_number }}</td>
 								<td>{{ $address_change->old_address }}</td>
 								<td>{{ $address_change->new_address }}</td>
 								<td>{{ $address_change->pincode }}</td>
