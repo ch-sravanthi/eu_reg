@@ -121,6 +121,13 @@
 							@if($errors->has('address'))
 								<div class="text-danger">{{ $errors->first('address') }}</div>
 							@endif
+							
+					<label>{{ $renewal->nicenames['state'] }} *</label>
+						{!! EasyForm::radio('state', '', old('state', $renewal->state), AppHelper::options('subscription_state')) !!}
+							@if($errors->has('state'))
+								<div class="text-danger">{{ $errors->first('state') }}</div>
+							@endif
+						
 					<label>{{ $renewal->nicenames['district'] }}  * </label>
 						{{ Form::select('district', AppHelper::options('districts'), old('district', $renewal->district), ['class' => 'form-control', 'onchange' => "loadOptions(this, 'category')"]) }}
 							@if($errors->has('district'))
@@ -133,12 +140,7 @@
 								<div class="text-danger">{{ $errors->first('pincode') }}</div>
 							@endif
 					
-					<label>{{ $renewal->nicenames['state'] }} *</label>
-						{!! EasyForm::radio('state', '', old('state', $renewal->state), AppHelper::options('subscription_state')) !!}
-							@if($errors->has('state'))
-								<div class="text-danger">{{ $errors->first('state') }}</div>
-							@endif
-						
+					
 					<label>{{ $renewal->nicenames['other_state'] }} </label>
 						{{ Form::text('other_state', old('other_state', $renewal->other_state), ['class' => 'form-control']) }}
 							@if($errors->has('other_state'))

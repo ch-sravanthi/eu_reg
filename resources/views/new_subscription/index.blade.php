@@ -15,6 +15,16 @@
 @endsection
 
 @section('content')
+<style>
+td{
+	font-size:14px;
+}
+th{
+	font-size:15px;
+	text-align:center;
+}
+
+</style>
 
 	<div class="container">
 		<div class=" row ">
@@ -41,13 +51,15 @@
 			<table class="table table-striped table-hover table-bordered">
 				<thead>
 					 <tr>
-						<th style="text-align:center;">S.No</th>
+						<th>S.No</th>
 						<th>Email</th>
 						<th>Name</th>
-						<th>Subscription</th>
+						<th>Subscription Type</th>
 						<th>Mobile</th>
-						<th>Address</th>
-						<th>District</th>
+						<th>Full Address </th>
+						<th>Transaction Date</th>
+						<th>Transaction Number</th>
+						<th>Amount </th>
 						<th>Created On</th>
 						<th></th>
 						
@@ -55,7 +67,6 @@
 				</thead>
 				<?php $s=1;?>
 				@foreach($new_subscriptions as $new_subscription)
-				<?php $opt = AppHelper::options('categories'); 	?>
 					<tr>
 						<th style="text-align:center;">{{ $s++ }}</th>
 						<td>
@@ -65,8 +76,18 @@
 						<td>{{ $new_subscription->full_name }}</td>
 						<td>{{ $new_subscription->type_of_subscription }}</td>
 						<td>{{ $new_subscription->mobile_num}}</td>
-						<td>{{ $new_subscription->address}} </td>
-						<td>{{ $new_subscription->district }}</td>
+						<td>{{ $new_subscription->address}},
+							{{ $new_subscription->district }},
+							{{ $new_subscription->pincode }},
+							@if($new_subscription->state)
+								{{ $new_subscription->state }} 
+							@else
+								{{ $new_subscription->other_state }}
+							@endif
+						</td>
+						<td>{{ $new_subscription->date }}</td>
+						<td>{{ $new_subscription->reference_number }}</td>
+						<td>{{ $new_subscription->amount }}</td>
 						<td>{{ date('d M Y', strtotime($new_subscription->created_at)) }}</td>
 						<td>
 							<?php $route = url('new_subscription/delete/'.$new_subscription->id)?>

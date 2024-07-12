@@ -122,6 +122,12 @@
 							@if($errors->has('address'))
 								<div class="text-danger">{{ $errors->first('address') }}</div>
 							@endif
+					<label class="text-dark">{{ $new_subscription->nicenames['state'] }} *</label>
+						{!! EasyForm::radio('state', '', old('state', $new_subscription->state), AppHelper::options('subscription_state')) !!}
+							@if($errors->has('state'))
+								<div class="text-danger">{{ $errors->first('state') }}</div>
+							@endif
+							
 					<label class="text-dark">{{ $new_subscription->nicenames['district'] }}  * </label>
 						{{ Form::select('district', AppHelper::options('districts'), old('district', $new_subscription->district), ['class' => 'form-control', 'onchange' => "loadOptions(this, 'category')"]) }}
 							@if($errors->has('district'))
@@ -134,11 +140,7 @@
 								<div class="text-danger">{{ $errors->first('pincode') }}</div>
 							@endif
 					
-					<label class="text-dark">{{ $new_subscription->nicenames['state'] }} *</label>
-						{!! EasyForm::radio('state', '', old('state', $new_subscription->state), AppHelper::options('subscription_state')) !!}
-							@if($errors->has('state'))
-								<div class="text-danger">{{ $errors->first('state') }}</div>
-							@endif
+					
 						
 					<label class="text-dark">{{ $new_subscription->nicenames['other_state'] }} </label>
 						{{ Form::text('other_state', old('other_state', $new_subscription->other_state), ['class' => 'form-control']) }}

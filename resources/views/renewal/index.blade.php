@@ -14,6 +14,16 @@
 @endsection
 
 @section('content')
+<style>
+td{
+	font-size:14px;
+}
+th{
+	font-size:15px;
+	text-align:center;
+}
+
+</style>
 
 	<div class="container">
 		<div class=" row ">
@@ -43,10 +53,12 @@
 						<th style="text-align:center;">S.No</th>
 						<th>Email</th>
 						<th>Name</th>
-						<th>Subscription</th>
+						<th>Subscription Type</th>
 						<th>Mobile</th>
-						<th>Address</th>
-						<th>District</th>
+						<th>Full Address </th>
+						<th>Transaction Date</th>
+						<th>Transaction Number</th>
+						<th>Amount </th>
 						<th>Created On</th>
 						<th></th>
 						
@@ -63,9 +75,18 @@
 						</td>
 						<td>{{ $renewal->full_name }}</td>
 						<td>{{ $renewal->type_of_subscription }}</td>
-						<td>{{ $renewal->mobile_num}}</td>
-						<td>{{ $renewal->address}} </td>
-						<td>{{ $renewal->district }}</td>
+						<td>{{ $renewal->address}},
+							{{ $renewal->district }},
+							{{ $renewal->pincode }},
+							@if($renewal->state)
+								{{ $renewal->state }} 
+							@else
+								{{ $renewal->other_state }}
+							@endif
+						</td>
+						<td>{{ $renewal->date }}</td>
+						<td>{{ $renewal->reference_number }}</td>
+						<td>{{ $renewal->amount }}</td>
 						<td>{{ date('d M Y', strtotime($renewal->created_at)) }}</td>
 						<td>
 							<?php $route = url('renewal/delete/'.$renewal->id)?>
