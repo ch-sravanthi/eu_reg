@@ -16,6 +16,7 @@ class AddressChange extends AppModel
 		'old_address',
 		'new_address',
 		'pincode',
+		'reference_number',
 	];
 	 
 	
@@ -29,6 +30,7 @@ class AddressChange extends AppModel
 				'old_address'=>'required',
 				'new_address'=>'required',
 				'pincode'=>'required',
+				'reference_number'=>'required',
 			];
 	}
 	
@@ -40,6 +42,7 @@ class AddressChange extends AppModel
 		'old_address' => 'Old Address',
 		'new_address' => 'New Address',
 		'pincode' => 'New Pincode',
+		'reference_number' => 'Transaction Reference Number',
 	];
 	
 	public function niceNames()
@@ -51,6 +54,7 @@ class AddressChange extends AppModel
 			'old_address' => 'Old Address',
 			'new_address' => 'New Address',
 			'pincode' => 'New Pincode',
+			'reference_number' => 'Reference Number',
 		];
 	}
 }

@@ -59,8 +59,15 @@
 				</div>
 				
 				<div class="col-lg-6 mb-2">
+					<label class="form-label" for="title">{{ $address_change->nicenames['reference_number'] }} *</label>
+						{{ Form::number('reference_number', old('reference_number', $address_change->reference_number), ['class' => 'form-control' ]) }}
+						
+						@if($errors->has('reference_number'))
+							<div class="text-danger">{{ $errors->first('reference_number') }}</div>
+						@endif
+						
 					<label class="form-label" for="title">{{ $address_change->nicenames['new_address'] }} *</label>
-					{!! EasyForm::textarea('new_address', '', old('new_address', $address_change->new_address), ['rows' => 6]) !!}
+					{!! EasyForm::textarea('new_address', '', old('new_address', $address_change->new_address), ['rows' => 4]) !!}
 				
 					<label class="form-label" for="title">{{ $address_change->nicenames['pincode'] }} *</label>
 					{{ Form::number('pincode', old('pincode', $address_change->pincode), ['class' => 'form-control' ]) }}
