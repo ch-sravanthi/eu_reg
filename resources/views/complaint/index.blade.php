@@ -55,11 +55,11 @@ th{
 						<thead>
 							<tr>
 								<th>S.No</th>
-								<th>NAME </th>
-								<th>PHONE NUMBER </th>
-								<th>DISTRICT</th>
-								<th>Email </th>
-								<th>COMPLAINT MESSAGE </th>
+								<th>Name</th>
+								<th>Mobile</th>
+								<th>Email</th>
+								<th>District</th>
+								<th>Complaint Message </th>
 								<th>Created On</th>
 								<th></th>
 							</tr>
@@ -71,8 +71,8 @@ th{
 									<td>{{ $i++ }}</td>
 									<td> {{ $complaint->full_name }} </td>
 									<td>{{ $complaint->phone_no }}</td>
-									<td>{{ $complaint->district }}</td>
 									<td>{{ $complaint->email }}</td>
+									<td>{{ $complaint->district }}</td>
 									<td>{{ $complaint->complaint_message }}</td>
 									<td>{!! date('d M Y', strtotime($complaint->created_at)) !!}</td>
 									<td>
