@@ -62,7 +62,7 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<b style="display: flex; align-items: center; justify-content: center;color:#1c0e91; font-size:16px; line-height:1.2;font-family: 'Roboto', sans-serif;width:100%;"> 
-				copyright @ UESI Publication Trust, Telangana Branch. All rights reserved  <img src="images/logo.png" style="width:80px;height:50px;"> 
+				Copyright @ UESI Publication Trust, Telangana Branch. All rights reserved  <img src="images/uesits_pub full.jpeg" style="width:100px;height:80px;"> 
 				<?php //echo date("Y");?> </b>
 			</div>
 		</div>
