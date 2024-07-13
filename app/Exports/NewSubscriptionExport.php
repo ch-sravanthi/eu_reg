@@ -51,6 +51,7 @@ class NewSubscriptionExport implements FromCollection, WithHeadings, WithMapping
 			$model->amount,
 			$model->date,
 			$model->reference_number,
+			$model->created_at,
 		];
     }
     public function headings(): array
@@ -68,6 +69,7 @@ class NewSubscriptionExport implements FromCollection, WithHeadings, WithMapping
 			'amount' => 'Amount',
 			'date' => 'Date',
 			'reference_number' => 'Reference Number',
+			'created_at' => 'Posted On',
         ];
     }
 	 public function styles(Worksheet $sheet)

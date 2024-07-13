@@ -35,6 +35,7 @@ class Renewal extends AppModel{
 			'other_state' => 'nullable',
 			'mobile_num' => 'required|mobile',
 			'type_of_subscription' => 'required',
+			'amount' => 'required',
 			'date' => 'required',
 			'reference_number' => 'required',
 		];

@@ -51,6 +51,7 @@ class RenewalExport implements FromCollection, WithHeadings, WithMapping, WithSt
 			$model->amount,
 			$model->date,
 			$model->reference_number,
+			$model->created_at,
 		];
     }
 	public function title(): string
@@ -73,6 +74,7 @@ class RenewalExport implements FromCollection, WithHeadings, WithMapping, WithSt
 			'amount' => 'Amount',
 			'date' => 'Date',
 			'reference_number' => 'Reference Number',
+			'created_at' => 'Posted On',
         ];
     }
 	 public function styles(Worksheet $sheet)

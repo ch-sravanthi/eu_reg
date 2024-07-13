@@ -46,6 +46,7 @@ class AddressChangeExport implements FromCollection, WithHeadings, WithMapping, 
 			$address_change->old_address,
 			$address_change->new_address,
 			$address_change->pincode,
+			$address_change->created_at,
 
 		];
     }
@@ -58,6 +59,7 @@ class AddressChangeExport implements FromCollection, WithHeadings, WithMapping, 
 			'old_address' => 'OLD ADDRESS',
 			'new_address' => 'NEW ADDRESS',
 			'pincode' => 'PINCODE',
+			'created_at' => 'Posted On',
         ];
     }
 	public function styles(Worksheet $sheet)

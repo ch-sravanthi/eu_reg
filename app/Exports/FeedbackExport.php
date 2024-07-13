@@ -43,7 +43,7 @@ class FeedbackExport implements FromCollection,WithHeadings, WithMapping, WithSt
 			$feedback->topics_themes,
 			$feedback->experience,
 			$feedback->comments,
-			
+			$feedback->created_at,
 			
 		];
     }
@@ -51,11 +51,12 @@ class FeedbackExport implements FromCollection,WithHeadings, WithMapping, WithSt
     {
         return [
 				'sno' => 'Sno',
-			  'rate'=>'Rate',
-			  'article'=>'Article',
-			  'topics_themes'=>'Theme',
-			  'experience'=>'Experience',
-			  'comments'=>'Comments',
+				'rate' => 'Rate',
+				'article' => 'Article',
+				'topics_themes' => 'Theme',
+				'experience' => 'Experience',
+				'comments' => 'Comments',
+				'created_at' => 'Posted On',
 			  
         ];
     }

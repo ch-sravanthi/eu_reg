@@ -40,7 +40,17 @@ class NewSubscriptionController extends Controller
 		return view('new_subscription.create', compact(['new_subscription']));
 	}
 	
-
+	public function create_new($id = null)
+	{
+		$new_subscription = $id ? NewSubscription::findOrFail($id) : new NewSubscription;
+		return view('new_subscription.create_new', compact(['new_subscription']));
+	}
+	
+	public function create_renew($id = null)
+	{
+		$new_subscription = $id ? NewSubscription::findOrFail($id) : new NewSubscription;
+		return view('new_subscription.create_renew', compact(['new_subscription']));
+	}
     /**
      * Show the form for creating a new resource.
      */

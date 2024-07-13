@@ -44,6 +44,7 @@ class ComplaintExport implements FromCollection, WithHeadings, WithMapping, With
 			$complaint->district,
 			$complaint->email,
 			$complaint->complaint_message,
+			$complaint->created_at,
 
 		];
     }
@@ -55,6 +56,7 @@ class ComplaintExport implements FromCollection, WithHeadings, WithMapping, With
 			'district' => 'District',
 			'email' => 'Email',
 			'complaint_message' => 'Complaint Message',
+			'created_at' => 'Posted On',
         ];
     }
 	 public function styles(Worksheet $sheet)

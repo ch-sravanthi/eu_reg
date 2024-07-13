@@ -3,7 +3,7 @@
 		html,body,.page{
 			font-size: 16px;
 			background-color: #ddd;
-			padding-top: 30px;
+			padding-top: 40px;
 			font-family:sans-serif !important;
 		}
 		.navbar-brand{
@@ -61,19 +61,13 @@
 			@if(Auth::user())
 				<ul class="navbar-nav  mb-lg-0 ml-1">
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{{url('new_subscriptions')}}"> <i class="bi bi-card-checklist"></i> New Subscription</a>
+						<a class="nav-link active" aria-current="page" href="{{url('subscriptions')}}"> <i class="bi bi-card-checklist"></i> Subscriptions</a>
 					</li>	
 				</ul>
 				
 				<ul class="navbar-nav  mb-lg-0 ml-1">
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{{url('renewals')}}"> <i class="bi bi-bell-fill"></i> Renewal</a>
-					</li>	
-				</ul>
-				
-				<ul class="navbar-nav  mb-lg-0 ml-1">
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{{url('address_changes')}}"> <i class="bi bi-newspaper"></i> Address Change</a>
+						<a class="nav-link active" aria-current="page" href="{{url('address_changes')}}"> <i class="bi bi-postcard"></i> Address Change</a>
 					</li>	
 				</ul>
 				
