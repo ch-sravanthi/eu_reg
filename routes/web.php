@@ -76,8 +76,8 @@ Route::group(['middleware'], function () {
 	
 	Route::get('subscriptions', 'App\Http\Controllers\NewSubscriptionController@index')->name('new_subscriptions');
 	Route::get('new_subscription/create', 'App\Http\Controllers\NewSubscriptionController@create')->name('new_subscription.create');
-	Route::get('subscription/create_new', 'App\Http\Controllers\NewSubscriptionController@create_new')->name('new_subscription.create_new');
-	Route::get('subscription/create_renew', 'App\Http\Controllers\NewSubscriptionController@create_renew')->name('new_subscription.create_renew');
+	Route::get('subscription/new', 'App\Http\Controllers\NewSubscriptionController@create_new')->name('new_subscription.create_new');
+	Route::get('subscription/renewal', 'App\Http\Controllers\NewSubscriptionController@create_renew')->name('new_subscription.create_renew');
 	Route::post('new_subscription/save/{id?}', 'App\Http\Controllers\NewSubscriptionController@save')->name('new_subscription.save');
 	Route::get('new_subscription/delete/{id}', 'App\Http\Controllers\NewSubscriptionController@delete')->name('new_subscription.delete');
 	Route::get('new_subscription/show/{id}', 'App\Http\Controllers\NewSubscriptionController@show')->name('new_subscription.show');

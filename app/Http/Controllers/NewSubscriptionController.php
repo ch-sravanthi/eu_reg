@@ -79,7 +79,7 @@ class NewSubscriptionController extends Controller
 		}
 		$new_subscription = NewSubscription::findOrFail($id);
 		$new_subscription->delete();
-		return redirect(url('new_subscriptions'));
+		return redirect(url('subscriptions'));
     }
 	 public function show($id)
 	{
