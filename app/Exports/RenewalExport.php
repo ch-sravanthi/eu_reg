@@ -70,7 +70,7 @@ class RenewalExport implements FromCollection, WithHeadings, WithMapping, WithSt
 			'state' => 'State',
 			'other_state' => 'Other State',
 			'mobile_num' => 'Mobile',
-			'type_of_subscription' => 'Type Of Subscription',
+			'type_of_subscription' => 'Type of Subscription',
 			'amount' => 'Amount',
 			'date' => 'Date',
 			'reference_number' => 'Reference Number',
