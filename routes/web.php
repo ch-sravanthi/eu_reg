@@ -95,7 +95,7 @@ Route::group(['middleware'], function () {
 	//VV Address Change
 	
 	Route::get('address_changes', 'App\Http\Controllers\AddressChangeController@index')->name('address_changes');
-	Route::get('address_change/create', 'App\Http\Controllers\AddressChangeController@create')->name('address_change.create');
+	Route::get('address_change/request', 'App\Http\Controllers\AddressChangeController@create')->name('address_change.create');
 	Route::post('address_change/save/{id?}', 'App\Http\Controllers\AddressChangeController@save')->name('address_change.save');
 	Route::get('address_change/delete/{id}', 'App\Http\Controllers\AddressChangeController@delete')->name('address_change.delete');
 	
@@ -105,7 +105,7 @@ Route::group(['middleware'], function () {
 	//VV Complaint
 
 	Route::get('complaints', 'App\Http\Controllers\ComplaintController@index')->name('complaints');
-	Route::get('complaint/create', 'App\Http\Controllers\ComplaintController@create')->name('complaint.create');
+	Route::get('complaint/raise', 'App\Http\Controllers\ComplaintController@create')->name('complaint.create');
 	Route::post('complaint/save/{id?}', 'App\Http\Controllers\ComplaintController@save')->name('complaint.save');
 	Route::get('complaint/delete/{id}', 'App\Http\Controllers\ComplaintController@delete')->name('complaint.delete');
 	Route::get('complaint/export','App\Http\Controllers\ComplaintController@export')->name('complaint.export');
@@ -115,7 +115,7 @@ Route::group(['middleware'], function () {
 	
 	Route::get('/prayer_points', 'App\Http\Controllers\PrayerPointController@index')->name('prayer_points');
 	Route::get('prayer_point/export','App\Http\Controllers\PrayerPointController@export')->name('prayer_point.export');
-	Route::get('prayer_point/create', 'App\Http\Controllers\PrayerPointController@create')->name('prayer_point.create');
+	Route::get('prayer_point/send', 'App\Http\Controllers\PrayerPointController@create')->name('prayer_point.create');
 	Route::post('prayer_point/save/{id?}', 'App\Http\Controllers\PrayerPointController@save')->name('prayer_point.save');
 	Route::get('prayer_point/delete/{id}', 'App\Http\Controllers\PrayerPointController@delete')->name('prayer_point.delete');
 	Route::get('prayer_point/show/{id}', 'App\Http\Controllers\PrayerPointController@show')->name('prayer_point.show');
@@ -124,7 +124,7 @@ Route::group(['middleware'], function () {
 	// VV Feedback
 
 	Route::get('/feedbacks', 'App\Http\Controllers\FeedbackController@index')->name('feedbacks');
-	Route::get('feedback/create','App\Http\Controllers\FeedbackController@create')->name('feedback.create');
+	Route::get('feedback/post','App\Http\Controllers\FeedbackController@create')->name('feedback.create');
 	Route::post('feedback/save/{id?}', 'App\Http\Controllers\FeedbackController@save')->name('feedback.save');
 	Route::get('feedback/delete/{id}', 'App\Http\Controllers\FeedbackController@delete')->name('feedback.delete');
 	Route::get('feedback/export','App\Http\Controllers\FeedbackController@export')->name('feedback.export');
