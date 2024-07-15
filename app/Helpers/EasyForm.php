@@ -195,34 +195,59 @@ class EasyForm
         return self::toRow($name, $label, rtrim($val, ', '));
 	}
 	
-    public static function viewImage($name, $label, $value, $thumbnail = true)
-	{			
-		if (Storage::has($value)) {
+     public static function viewImage($name, $label, $value, $thumbnail = true)
+	{
+		if ($value && Storage::has($value)) {
 			$class = ($thumbnail) ? 'thumbnail' : 'image';
 			$file = \Storage::get($value);
 			return self::toRow($name, $label, "<div class='{$class}' style='background-image: url("."data:image/jpeg;base64,".base64_encode($file).")'></div>");
 		}
 	}
-	
+
     public static function viewThumbnail($name, $label, $value, $thumbnail = true)
-	{			
-		if (Storage::has($value)) {
+	{
+		if ($value && Storage::has($value)) {
 			$class = ($thumbnail) ? 'thumbnail' : 'image';
 			$file = \Storage::get($value);
 			return self::toRow($name, $label, "<div class='{$class}' style='background-image: url("."data:image/jpeg;base64,".base64_encode($file).")'></div>");
 		}
 	}
-	
-    public static function viewImageFile($name, $label, $value)
-	{			
-		$link = "<a class='d-inline' href='#' data-toggle='modal' onclick='openImageViewer(\"". ApiHelper::fileUrl('viewfile/'.$value) ."\")'>View File</a>";
+
+    public static function viewImageFile($name, $label, $value, $code='')
+	{
+		$filename = !empty($code) ? $code : 'View File';
+		$exp = explode('.', $value);
+		if (isset($exp[1]) && $exp[1] == 'pdf') {
+			//return self::viewFile($name, $label, $value, $code);
+			$link = ($value && Storage::has($value)) ? "<span class='pointer d-inline text-theme' href='#' data-toggle='modal' onclick='openPdfViewer(\"". url('viewfile/'.$value.'/'.str_replace('/', '-',$code)) ."\", \"". $code ."\")'>".$filename."</span>" : '<span class="text-danger">No File</span>';
+		} else {
+			$link = ($value && Storage::has($value)) ? "<span class='pointer d-inline text-theme' href='#' data-toggle='modal' onclick='openImageViewer(\"". url('viewfile/'.$value) ."\", \"". $code ."\")'>".$filename."</span>" : '<span class="text-danger">No File</span>';
+		}
+
+		return self::toRow($name, $label, "<div>". $link ."</div>");
+	}
+
+    public static function viewFile($name, $label, $value, $placeholder = 'View File')
+	{
+		$exp = explode('.', $value);
+		$type = (isset($exp[1]) && !in_array($exp[1], ['jpg', 'jpeg', 'png', 'gif', 'pdf'])) ? 'download' : 'viewfile';
+		$link = ($value && Storage::has($value)) ? "<a href='".url($type.'/'.$value)."' target='_blank'><i class='fas fa-file-image'></i> ".$placeholder."</a>" : '<span class="text-danger">'.$placeholder.' - No File</span>';
 		return self::toRow($name, $label, "<div>". $link ."</div>");
 	}
 	
-    public static function viewFile($name, $label, $value)
-	{			
-		$link =  "<a href='".ApiHelper::fileUrl('viewfile/'.$value)."' target='_blank'><i class='fas fa-file-image'></i> View File</a>";
-		
+
+
+    public static function viewPublicFile($name, $label, $value, $code='')
+	{
+		$filename = !empty($code) ? $code : 'View File';
+		$exp = explode('.', $value);
+		if (isset($exp[1]) && $exp[1] == 'pdf') {
+			//return self::viewFile($name, $label, $value, $code);
+			$link = "<span class='pointer d-inline text-theme' href='#' data-toggle='modal' onclick='openPdfViewer(\"". url('viewpublicfile/'.$value)."\")'>".$filename."</span>" ;
+		} else {
+			$link = "<span class='pointer d-inline text-theme' href='#' data-toggle='modal' onclick='openImageViewer(\"". url('viewpublicfile/'.$value) ."\", \"". $code ."\")'>".$filename."</span>" ;
+		}
+
 		return self::toRow($name, $label, "<div>". $link ."</div>");
 	}
 	
