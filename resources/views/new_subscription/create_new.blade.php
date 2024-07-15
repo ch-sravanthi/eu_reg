@@ -12,7 +12,7 @@
 		@else
 			<li class="breadcrumb-item"><a href="{{ route('authenticate.vv') }}">Home</a></li>
 		@endif
-		<li class="breadcrumb-item active" aria-current="page">New Subscription Details </li>
+		<li class="breadcrumb-item active" aria-current="page">Subscription Details New/Renewal</li>
 	  </ol>
 	</nav>
 @endsection

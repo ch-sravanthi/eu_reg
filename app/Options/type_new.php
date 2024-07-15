@@ -1,4 +1,5 @@
 <?php
 return [
 	'NEW SUBSCRIPTION' => 'NEW SUBSCRIPTION',
+	'RENEWAL' => 'RENEWAL',
 ];

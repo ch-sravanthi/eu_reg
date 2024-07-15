@@ -25,6 +25,7 @@ class AddressChangeExport implements FromCollection, WithHeadings, WithMapping, 
 	{
 		$this->address_changes  = $address_changes;
 		$this->sno = 1;
+		$this->expiry_dt = '';
 
 	}
 
@@ -46,6 +47,7 @@ class AddressChangeExport implements FromCollection, WithHeadings, WithMapping, 
 			$address_change->old_address,
 			$address_change->new_address,
 			$address_change->pincode,
+			$address_change->expiry_dt,
 			$address_change->created_at,
 
 		];
@@ -59,6 +61,7 @@ class AddressChangeExport implements FromCollection, WithHeadings, WithMapping, 
 			'old_address' => 'OLD ADDRESS',
 			'new_address' => 'NEW ADDRESS',
 			'pincode' => 'PINCODE',
+			'expiry_dt' => 'Expiry Dt',
 			'created_at' => 'Posted On',
         ];
     }
