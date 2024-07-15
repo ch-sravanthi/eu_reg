@@ -29,7 +29,7 @@ class Blog extends AppModel{
 			'location' => 'nullable',
 			'last_date' => 'nullable',
 			'description' => 'nullable',
-			'image_1' => 'nullable|mimes:jpeg,jpg,png|max:1024',
+			'image_1' => 'nullable|mimes:pdf,jpeg,jpg,png|max:1024',
 			'image_2' => 'nullable|mimes:jpg,jpeg,png|max:1024',
 			'person_name' => 'required',
 			'person_mobile' => 'required|mobile',
