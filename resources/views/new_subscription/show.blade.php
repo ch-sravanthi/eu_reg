@@ -8,7 +8,7 @@
 	<nav aria-label="breadcrumb">
 	  <ol class="breadcrumb">
 		<li class="breadcrumb-item"><a href="{{ route('vv.all_in_one') }}">Home</a></li>
-		<li class="breadcrumb-item active" aria-current="page"><a href="{{ route('new_subscriptions') }}">VV - Subscriptions</a></li>
+		<li class="breadcrumb-item active" aria-current="page"><a href="{{ route('new_subscriptions') }}">VV - Subscription</a></li>
 		
 	  </ol>
 	</nav>

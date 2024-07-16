@@ -42,7 +42,7 @@ class AddressChange extends AppModel
 		'old_address' => 'Old Address',
 		'new_address' => 'New Address',
 		'pincode' => 'New Pincode',
-		'reference_number' => 'Transaction Reference Number',
+		'reference_number' => 'Reference Number',
 	];
 	
 	public function niceNames()

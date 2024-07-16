@@ -68,7 +68,7 @@ class NewSubscriptionController extends Controller
 		$new_subscription->fill($request->all());	
 		
 		$new_subscription->save();
-		return redirect()->back()->with('success', 'New subscription Details Saved Successfully');
+		return redirect()->back()->with('success', 'VV Subscription Details Added Successfully');
     }
 	
 	
