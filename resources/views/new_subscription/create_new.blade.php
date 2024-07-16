@@ -49,7 +49,7 @@
 
 	<div class="container">
 		<div class=" row p-4 bg-light">
-			<h2 class="card bg-primary text-white text-center p-3">Vidhyarthi Velugu New Subscription</h3>
+			<h2 class="card bg-primary text-white text-center p-3">Vidhyarthi Velugu Subscription</h3>
 		</div>
 			
 			<div class="row p-4 bg-light">
