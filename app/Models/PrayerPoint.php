@@ -45,13 +45,13 @@ class PrayerPoint extends AppModel
 		 'full_name' => 'Name',
 		 'email' => 'Email ID',
 		 'mobile' => 'Mobile Number',
-		 'eu_name' => 'EU Name',
+		 'eu_name' => 'EU/EGF Name',
 		 'responsibility' => 'You’re Responsibility in EU/EGF Committee',
 		 'region' => 'Region',
 		 'district' => 'District',
 		 'place' => 'Place',
-		 'thank_god' => 'Thank God for',
-		 'prayer' => 'Pray for',
+		 'thank_god' => 'Three Praising Points',
+		 'prayer' => 'Three Prayer Points',
 	];
 	public function niceNames()
 	{
@@ -59,13 +59,13 @@ class PrayerPoint extends AppModel
 			'full_name' => 'Name',
 			 'email' => 'Email ID',
 			 'mobile' => 'Mobile Number',
-			 'eu_name' => 'EU Name',
+			 'eu_name' => 'EU/EGF Name',
 			 'responsibility' => 'You’re Responsibility in EU/EGF Committee',
 			 'region' => 'Region',
 			 'district' => 'District',
 			 'place' => 'Place',
-			 'thank_god' => 'Thank God for',
-			 'prayer' => 'Pray for',
+			 'thank_god' => 'Three Praising Points',
+		 'prayer' => 'Three Prayer Points',
 			 ];
 	}
 	

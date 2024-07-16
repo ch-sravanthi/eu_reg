@@ -58,16 +58,16 @@ th{
 						<thead>
 							<tr>
 								<th>S.No</th>
-								<th>EU Name</th>
+								<th>Name </th>
+								<th>Mobile Number </th>
+								<th>Email ID </th>
+								<th>Responsibility in EU/EGF Committee</th>
 								<th>Region</th>
 								<th>District</th>
 								<th>Place</th>
-								<th>Thank God for</th>
-								<th>Pray for</th>
-								<th>Name </th>
-								<th> Email ID </th>
-								<th> Mobile Number </th>
-								<th> Responsibility in EU/EGF Committee</th>
+								<th>EU/EGF Name</th>
+								<th>Three Praising Points</th>
+								<th>Three Prayer Points</th>
 								<th>Created On</th>
 								<th></th>
 							</tr>
@@ -78,17 +78,19 @@ th{
 							<tr>
 								<td>{{ $r++}}</td>
 								<td>
-									<a href="{{ url('prayer_point/show/'.$prayer_point->id) }}">{{ $prayer_point->eu_name }}</a>
+									<a href="{{ url('prayer_point/show/'.$prayer_point->id) }}">
+									{{ $prayer_point->full_name }}
+									</a>
 								</td>
+								<td>{{ $prayer_point->mobile }}</td>
+								<td>{{ $prayer_point->email }}</td>
+								<td>{{ $prayer_point->responsibility }}</td>
 								<td>{{ $prayer_point->region }}</td>
 								<td>{{ $prayer_point->district }}</td>
 								<td>{{ $prayer_point->place }}</td>
+								<td>{{ $prayer_point->eu_name }}</td>
 								<td>{{ $prayer_point->thank_god }}</td>
 								<td>{{ $prayer_point->prayer }}</td>
-								<td>{{ $prayer_point->full_name }}</td>
-								<td>{{ $prayer_point->email }}</td>
-								<td>{{ $prayer_point->mobile }}</td>
-								<td>{{ $prayer_point->responsibility }}</td>
 								<td>{!! date('d M Y', strtotime($prayer_point->created_at)) !!}</td>
 								<td>
 									<?php $route = url('prayer_point/delete/'.$prayer_point->id)?>

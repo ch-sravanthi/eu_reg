@@ -38,16 +38,16 @@ class PrayerPointExport implements FromCollection,WithMapping,WithHeadings
     {
         return [
 			$this->sno++,		
-			$prayer_point->eu_name,
+			$prayer_point->full_name,
+			$prayer_point->mobile,
+			$prayer_point->email,
+			$prayer_point->responsibility,
 			$prayer_point->region,
 			$prayer_point->district,
 			$prayer_point->place,
+			$prayer_point->eu_name,
 			$prayer_point->thank_god,
 			$prayer_point->prayer,
-			$prayer_point->full_name,
-			$prayer_point->email,
-			$prayer_point->mobile,
-			$prayer_point->responsibility,
 			$prayer_point->created_at,
 			
 		];
@@ -56,16 +56,16 @@ class PrayerPointExport implements FromCollection,WithMapping,WithHeadings
     {
         return [
 				'sno' => 'Sno',
-				'eu_name' => 'EU Name',
+				'full_name' => 'Name',
+				'mobile' => 'Mobile Number',
+				'email' => 'Email ID',
+				'responsibility' => 'Your Responsibility in EU/EGF Committee',
 				'region' => 'Region',
 				'district' => 'District',
 				'place' => 'Place',
-				'thank_god' => 'Thank God for',
-				'prayer' => 'Pray for',
-				'full_name' => 'Name',
-				'email' => 'Email ID',
-				'mobile' => 'Mobile Number',
-				'responsibility' => 'Your Responsibility in EU/EGF Committee',
+				'eu_name' => 'EU Name',
+				'thank_god' => 'Three Praising Points',
+				'prayer' => 'Three Prayer Points',
 				'created_at' => 'Posted On',
 			
         ];
