@@ -8,7 +8,7 @@
 		<div class="col-lg-2 mb-2"></div>
 		<div class="col-lg-4 mb-2">
 			<div class="card bg-primary text-white" style="height:120px;">
-				<div class="card-body" style="padding-top:50px;padding-bottom:50px;">  <a style="color:white; font-size:22px; " href="{{route('new_subscription.create_new')}}">SUBSCRIPTION (New/Renewal)</a></div>
+				<div class="card-body" style="padding-top:50px;padding-bottom:50px;">  <a style="color:white; font-size:22px; " href="{{route('new_subscription.create_new')}}">SUBSCRIPTION <div class="text-gray small pt-3">(New/Renewal)</div></a></div>
 			</div>
 		</div>
 		<div class="col-lg-4 mb-2">
@@ -77,5 +77,8 @@
 		}
 		a{
 			text-decoration:none !important;
+		}
+		.small, small {
+			font-size: 16px !important;
 		}
 </style>
