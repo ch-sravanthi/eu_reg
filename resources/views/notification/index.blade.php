@@ -47,20 +47,23 @@
 					<div class="card-body">
 						<tr>
 						<div class="row" style=" line-height: 2;">
-						@if($notification->image_1)
+						
 							<div class="col-sm-6" >
 							<td>	
 								<?php $img = $notification->image_1 ? url('viewfile/'.$notification->image_1) : null?>
-								@if ($img)
-									<a href="{{ $img }}">
-										<img src="{{ $img }}"  style="width:60%"/>
-									</a>
-								@endif
-								<br/>
+							<?php $ext = pathinfo($notification->image_1, PATHINFO_EXTENSION);?>
+							@if($ext =='pdf')
+								{!! EasyForm::viewFile('image_1', '', $notification->image_1) !!}	
+							@else
+								<a href="{{ $img }}">
+									<img src="{{ $img }}"  style="width:60%"/>
+								</a>
+							@endif
+						<br/>
 								
 							</td><br/><br/>
 							</div>
-						@endif	
+						
 							<div class="col-sm-6" >
 								@if($notification->description)
 									<i class="bi bi-chat-left-text"></i>&nbsp;
@@ -79,4 +82,12 @@
 		@endforeach
 	</div>
 	{{ $notifications->withQueryString()->links() }}
+	<style>
+		 svg,.shadow-sm{
+			display:none;
+		}
+		.bg-white{
+			background-color:#d77878 !important;
+		}
+	<style>
 @endsection
