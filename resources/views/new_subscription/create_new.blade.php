@@ -55,9 +55,10 @@
 			<div class="row p-4 bg-light">
 				<text style="font-size:25px;">Subscription Details (Revised)</text>
 				
-				<div class="col-lg-3 p-2 ">
-					<img class="float-center" src="{{ asset('images/payment-scan-code.jpg') }}" width="90%">
-					<b class="text-gray small pt-3">Payment Link <a href = "https://tinyurl.com/2p94z8hz"> https://tinyurl.com/2p94z8hz</a></b>
+				<div class="col-lg-3 p-3 text-black" >Choose Mode of Payment
+					<div class=" bg-primary  p-2 text-white text-center" style = "width:70%">QR Payment</div><img class="float-center" src="{{ asset('images/payment-scan-code.jpg') }}" width="70%">
+					<br><br>
+					<a class="btn btn-primary p-2" href="https://tinyurl.com/2p94z8hz" role="button" style = "width:70%"> Make Payment</a>
 				</div>
 				
 				<div class="col-lg-1"></div>
@@ -197,6 +198,16 @@
 		</div> 
 			
 	
-	{!! Form::close() !!}		
-	
+	{!! Form::close() !!}
+<style>	
+	.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+</style>
 @endsection	
