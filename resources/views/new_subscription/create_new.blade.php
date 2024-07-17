@@ -55,7 +55,7 @@
 			<div class="row p-4 bg-light">
 				<text style="font-size:25px;">Subscription Details (Revised)</text>
 				
-				<div class="col-lg-3 p-3 text-black" >Choose Mode of Payment
+				<div class="col-lg-3 p-3" >
 					<div class=" bg-primary  p-2 text-white text-center" style = "width:70%">QR Payment</div><img class="float-center" src="{{ asset('images/payment-scan-code.jpg') }}" width="70%">
 					<br><br>
 					<a class="btn btn-primary p-2" href="https://tinyurl.com/2p94z8hz" role="button" style = "width:70%"> Make Payment</a>
@@ -200,14 +200,8 @@
 	
 	{!! Form::close() !!}
 <style>	
-	.text-block {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background-color: black;
-  color: white;
-  padding-left: 20px;
-  padding-right: 20px;
-}
+	.btn {
+		background: linear-gradient(to bottom, #182b89, #146bc5); 
+	}
 </style>
 @endsection	
