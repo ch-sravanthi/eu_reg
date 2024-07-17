@@ -58,7 +58,7 @@
 				<div class="col-lg-3 p-3" >
 					<div class=" bg-primary  p-2 text-white text-center" style = "width:70%">QR Payment</div><img class="float-center" src="{{ asset('images/payment-scan-code.jpg') }}" width="70%">
 					<br><br>
-					<a class="btn btn-primary p-2" href="https://tinyurl.com/2p94z8hz" role="button" style = "width:70%"> Make Payment</a>
+					<a class="btn btn-primary p-2" href="https://tinyurl.com/2p94z8hz" target="_blank" role="button" style = "width:70%;  border: 3px solid grey;"> Make Payment</a>
 				</div>
 				
 				<div class="col-lg-1"></div>
