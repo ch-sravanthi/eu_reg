@@ -12,7 +12,7 @@
 		@else
 			<li class="breadcrumb-item"><a href="{{ route('authenticate.vv') }}">Home</a></li>
 		@endif
-		<li class="breadcrumb-item active" aria-current="page">VV Subscription Entry (New / Renewal)</li>
+		<li class="breadcrumb-item active" aria-current="page">VV Subscription</li>
 	  </ol>
 	</nav>
 @endsection
@@ -56,7 +56,8 @@
 				<text style="font-size:25px;">Subscription Details (Revised)</text>
 				
 				<div class="col-lg-3 p-2 ">
-					<img class="float-center" src="{{ asset('images/payment-scan-code.jpg') }}" width="100%">
+					<img class="float-center" src="{{ asset('images/payment-scan-code.jpg') }}" width="90%">
+					<b class="text-gray small pt-3">Payment Link <a href = "https://tinyurl.com/2p94z8hz"> https://tinyurl.com/2p94z8hz</a></b>
 				</div>
 				
 				<div class="col-lg-1"></div>
