@@ -18,7 +18,7 @@ class BlogController extends Controller
 	public function jobportal(Request $request)
     { 
 		$blog =new Blog;
-		$paginate = 5;
+		$paginate = 10;
       
 		$query = Blog::query();
 		
