@@ -59,25 +59,34 @@
 			<fieldset class="section">
 				<table class="table table-bordered m-0">
 					<tr>
-						<th  colspan=4>
+						<th colspan=4>
 						Job Information Attachments :<text class="text-muted small"> (if any)</text></th>
 					</tr>
 					<tr>
-						<td  colspan=3>
-						
-						<?php $img = $blog->image_1 ? url('viewfile/'.$blog->image_1) : asset('/images/default.png')?>
-							<?php $img2 = $blog->image_2 ? url('viewfile/'.$blog->image_2) : null?>
+						<td colspan=3>
+						<?php $ext = pathinfo($blog->image_1, PATHINFO_EXTENSION);?>
+						@if($ext =='pdf')
+							{!! EasyForm::viewFile('image_1', $blog->label('image_1'), $blog->image_1) !!}	
+						@else	
+							<?php $img = $blog->image_1 ? url('viewfile/'.$blog->image_1) : asset('/images/default.png')?>
 							<a href="{{ $img }}">
 								<img src="{{ $img }}" style="width:70%"/><br><br>
 							</a>
+						@endif
 					</tr>
 					<tr>
-						<td  colspan=3>
-						@if ($img2)
+						<td colspan=3>
+						<?php $img2 = $blog->image_2 ? url('viewfile/'.$blog->image_2) : null?>
+						
+						<?php $ext = pathinfo($blog->image_2, PATHINFO_EXTENSION);?>
+						@if($ext =='pdf')
+							{!! EasyForm::viewFile('image_2', $blog->label('image_2'), $blog->image_2) !!}	
+						@elseif ($img2)
 							<a href="{{ $img2 }}">
 								<img src="{{ $img2 }}"  style="width:60%"/>
 							</a>
 						@endif
+						
 						</td>
 					</tr>
 				</table>

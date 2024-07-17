@@ -18,7 +18,7 @@ class BlogController extends Controller
 	public function jobportal(Request $request)
     { 
 		$blog =new Blog;
-		$paginate = 20;
+		$paginate = 5;
       
 		$query = Blog::query();
 		
@@ -39,7 +39,7 @@ class BlogController extends Controller
 	public function myindex(Request $request)
     {
 		$blog =new Blog;
-		$paginate =30;
+		$paginate =10;
       
 		$query = Blog::query();
 		if ($request->search) {

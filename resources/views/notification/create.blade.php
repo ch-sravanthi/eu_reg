@@ -46,7 +46,7 @@
 						</div>
 						
 						<div class="col-lg-6 mb-2">
-							<label>{{ $notification->nicenames['image_1'] }} (if any images like jpeg, jpg, png)</label>
+							<label>{{ $notification->nicenames['image_1'] }} (if any images like jpeg, jpg, png, pdf)</label>
 								{!! Form::file('image_1', ['class' => 'form-control']) !!}
 								@if ($errors->has('image_1'))
 								<div class="text-danger">{{ $errors->first('image_1') }}</div>

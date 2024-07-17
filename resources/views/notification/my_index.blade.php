@@ -7,6 +7,8 @@
 
 @endsection
 @section('content')	
+
+
 <?php
 	
   function hyperlinks($text) {
@@ -57,16 +59,23 @@
 				
 					<tr>
 						<th>{{ $s++ }}</th>
+						
 						<td>
+						<?php $ext = pathinfo($notification->image_1, PATHINFO_EXTENSION);
+						//var_dump($notification->image_1);die(); ?>
+						@if($ext =='pdf')
+							{!! EasyForm::viewFile('image_1', '', $notification->image_1) !!}	
+						@else
 							<?php $img = $notification->image_1 ? url('viewfile/'.$notification->image_1) : null?>
-								@if ($img)
-									<a href="{{ $img }}">
-										<img src="{{ $img }}"  style="width: 40%"/>
-									</a>
-								@endif
+								<a href="{{ $img }}">
+									<img src="{{ $img }}"  style="width: 40%"/>
+								</a>
+						@endif
 						<br/>
-							{!! hyperlinks($notification->description) !!}
+							{!! hyperlinks($notification->description) !!} - 
+							{!! EasyForm::viewImagefile('image_1', '', $notification->image_1, false) !!}
 						</td>
+						
 						
 						<td style="font-size:12px;">{!! date('d M Y', strtotime($notification->created_at)) !!} <br/>by {{ $notification->person_name }}</td>
 						<td>{{ $notification->status }}</td>

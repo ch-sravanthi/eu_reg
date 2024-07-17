@@ -77,23 +77,30 @@
 					</tr>
 					<tr>
 						<td colspan=3>
-						@if($blog->image_1)
+						<?php $ext = pathinfo($blog->image_1, PATHINFO_EXTENSION);?>
+						@if($ext =='pdf')
+							{!! EasyForm::viewFile('image_1', $blog->label('image_1'), $blog->image_1) !!}	
+						
+						@elseif($blog->image_1)
 							<img src="{{ url('viewfile/'.$blog->image_1) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
 						@else
 							<img src="{{ asset('/images/default.png')}}" style="background-image: url();width:20%; height:auto;border:1px solid #F8F8F8;"/>
 						@endif
-						<?php $ext = pathinfo($blog->image_1, PATHINFO_EXTENSION);
-						//var_dump($blog->image_1);die(); ?>
-						@if($ext =='pdf')
-							{!! EasyForm::viewFile('image_1', $blog->label('image_1'), $blog->image_1) !!}	
-						@endif
+						
 						</td>
 						
 					</tr>
 					<tr>
 						<td  colspan=3>
-						@if($blog->image_1)
-							<img  src="{{ url('viewfile/'.$blog->image_2) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
+						<?php $img2 = $blog->image_2 ? url('viewfile/'.$blog->image_2) : null?>
+						
+						<?php $ext = pathinfo($blog->image_2, PATHINFO_EXTENSION);?>
+						@if($ext =='pdf')
+							{!! EasyForm::viewFile('image_2', $blog->label('image_2'), $blog->image_2) !!}	
+						@elseif ($img2)
+							<a href="{{ $img2 }}">
+								<img src="{{ $img2 }}"  style="width:60%"/>
+							</a>
 						@endif
 						</td>
 					</tr>

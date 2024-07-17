@@ -21,7 +21,7 @@ class Notification extends AppModel{
 		return [
 			
 			'description' => 'required',
-			'image_1' => 'nullable|mimes:jpeg,jpg,png|max:1024',
+			'image_1' => 'nullable|mimes:pdf,jpeg,jpg,png|max:1024',
 			
 			'person_name' => 'required',
 			'person_mobile' => 'nullable|mobile',

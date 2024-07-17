@@ -56,16 +56,26 @@
 						<th style="text-align:center;">{{ $s++ }}</th>
 						<td style="text-align:center;">		
 							<?php $img = $blog->image_1 ? url('viewfile/'.$blog->image_1) : asset('/images/default.png')?>
-								<?php $img2 = $blog->image_2 ? url('viewfile/'.$blog->image_2) : null?>
-								<a href="{{ $img }}">
-									<img src="{{ $img }}" style="width: 40%"/>
-								</a>
-								<br>
-								@if ($img2)
-									<a href="{{ $img2 }}">
-										<img src="{{ $img2 }}"  style="width: 40%"/>
+									<?php $img2 = $blog->image_2 ? url('viewfile/'.$blog->image_2) : null?>
+									
+									<?php $ext = pathinfo($blog->image_1, PATHINFO_EXTENSION); ?>
+									@if($ext =='pdf')
+										{!! EasyForm::viewFile('image_1', '', $blog->image_1) !!}	
+									@else
+									<a href="{{ $img }}">
+										<img src="{{ $img }}" style="width:60%"/><br><br>
 									</a>
-								@endif
+									@endif
+									
+									<?php $ext = pathinfo($blog->image_2, PATHINFO_EXTENSION);?>
+									@if($ext =='pdf')
+										{!! EasyForm::viewFile('image_2', '', $blog->image_2) !!}	
+									
+									@else
+										<a href="{{ $img2 }}">
+											<img src="{{ $img2 }}"  style="width:60%"/>
+										</a>
+									@endif
 						</td>
 						<td style="text-align:justify-content-end;"> 
 							<a href="{{ url('jobportal/my_show/'.$blog->id) }}">
@@ -92,9 +102,12 @@
 					</tr>
 					
 				@endforeach
+				
 				</table>
 			</div>
 		</div>
+		<br>
+		{{ $blogs->withQueryString()->links() }}
 	</div>
 				
 	<script>
@@ -105,6 +118,14 @@
 			}
 		}
 	</script>
+	<style>
+		 svg,.shadow-sm{
+			display:none;
+		}
+		.bg-white{
+			background-color:#d77878 !important;
+		}
+	<style>
 			
 
 @endsection
