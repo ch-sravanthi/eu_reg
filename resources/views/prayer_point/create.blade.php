@@ -24,7 +24,7 @@
 	<div class="container">
 		<div class="p-2 bg-light">
 			<h2 class="card bg-success text-white text-center p-3">Vidhyarthi Velugu - Prayer Points</h2>
-			<h5 class="text-center p-1">(Share only 2 Praise & 2 Prayer Points, Transformation Stories, Articles etc... to be published in Vidhyarthi Velugu).</h5>
+			<h5 class="text-center p-1">(Share only 3 Praise & 3 Prayer Points, Transformation Stories, Articles etc... to be published in Vidhyarthi Velugu).</h5>
 			<p class="text-center">Kindly check once the Districts and Places of Hyderabad and Rangareddy Regions while sending the Prayer Points</p>
 		</div>
 			<div class="col-lg-12  text-danger">
