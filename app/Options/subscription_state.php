@@ -2,5 +2,4 @@
 return [
 	'TELANGANA' => 'TELANGANA',
 	'OTHER STATE' => 'OTHER STATE',
-	'OVERSEAS' => 'OVERSEAS',
 ];
