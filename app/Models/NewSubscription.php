@@ -32,7 +32,7 @@ class NewSubscription extends AppModel{
 			'state' => 'required',
 			'district' => 'required_if:state,TELANGANA',
 			'pincode' => 'required',
-			'other_state' => 'nullable',
+			'other_state' => 'required_if:state,OTHER STATE',
 			'mobile_num' => 'required|mobile',
 			'type_of_subscription' => 'required',
 			'amount' => 'required',
