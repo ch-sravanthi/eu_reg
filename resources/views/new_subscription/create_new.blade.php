@@ -48,11 +48,11 @@
 	{!! EasyForm::setErrors($errors) !!}
 
 	<div class="container">
-		<div class=" row p-4 bg-light">
+		<div class=" row p-2 bg-light">
 			<h2 class="card bg-primary text-white text-center p-3">Vidhyarthi Velugu Subscription</h3>
 		</div>
 			
-			<div class="row p-4 bg-light">
+			<div class="row p-2 bg-light">
 				<text style="font-size:25px;">Subscription Details (Revised)</text>
 				
 				<div class="col-lg-3 p-3" >
@@ -61,8 +61,8 @@
 					<a class="btn btn-primary p-2" href="https://tinyurl.com/2p94z8hz" target="_blank" role="button" style = "width:70%;  border: 3px solid grey;"> Make Payment</a>
 				</div>
 				
-				<div class="col-lg-1"></div>
-				<div class="col-lg-4 p-2 bg-light">
+				
+				<div class="col-lg-4 p-3 bg-light">
 					<b>UESI - TS Publication Trust<br> Account Details</b>
 					
 					<p><br>Name:  UESI Publication Trust</p>
@@ -77,23 +77,22 @@
 					<p>Address, Pincode, Phone Number,<br> Mail Id, Payment Transaction Details</p>
 				</div>
 				
-				<div class="col-lg-4 p-1 bg-light">
+				<div class="col-lg-5 p-3 bg-light">
 					<b>Annual</b>
 					<p>For Students<br>
 					Hard+Soft copy -150/-</p>
-				
 					<p>For Graduates</br>
 					 Hard+soft copy - 300/-</p>
-					<b>Life (10 Years)</b>
-					<p>For Students & Graduates<br>
-					Hard+Soft Copy - 2000/-</p>
-				
-					<b>Overseas (10 Years)</b><br>
-					<p>Soft copy - 2000/-</p>
 					
 					<b>For 3 Years</b>
 					<p>STUDENTS  - 450/- <br>
 					GRADUATES  - 900/-</p>
+					
+					<b>Life (10 Years)</b>
+					<p>For Students & Graduates<br>
+					Hard+Soft Copy - 2000/-</p>
+				
+					
 				</div>
 			
 				
