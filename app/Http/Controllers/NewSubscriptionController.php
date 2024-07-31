@@ -65,8 +65,13 @@ class NewSubscriptionController extends Controller
 				->withInput()
 				->withErrors($validator);
 		}
-		$new_subscription->fill($request->all());	
-		
+		$new_subscription->fill($request->all());
+		if($request->reference_number){		
+			$old = NewSubscription::where('id', '<>', $id)->where('reference_number', $request->reference_number)->latest()->first();
+			if($old){
+					return redirect()->back()->withInput()->with('error', 'Transacstion Reference Number Already Exists!');
+				}
+		}
 		$new_subscription->save();
 		return redirect()->back()->with('success', 'VV Subscription Details Added Successfully');
     }
