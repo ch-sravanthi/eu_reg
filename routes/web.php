@@ -129,6 +129,26 @@ Route::group(['middleware'], function () {
 	Route::get('feedback/delete/{id}', 'App\Http\Controllers\FeedbackController@delete')->name('feedback.delete');
 	Route::get('feedback/export','App\Http\Controllers\FeedbackController@export')->name('feedback.export');
 
+	
+	//VV Prayer Point pdf
+	
+	Route::get('/monthly_prayer_points', 'App\Http\Controllers\VVPrayerPointController@monthly_prayer_points')->name('vv_prayer_point.monthly_prayer_points');
+	Route::get('/vv_prayer_points', 'App\Http\Controllers\VVPrayerPointController@index')->name('vv_prayer_points');
+	Route::get('vv_prayer_point/create/{id?}', 'App\Http\Controllers\VVPrayerPointController@create')->name('vv_prayer_point.create');
+	Route::post('vv_prayer_point/save/{id?}', 'App\Http\Controllers\VVPrayerPointController@save')->name('vv_prayer_point.save');
+	Route::get('vv_prayer_point/delete/{id}', 'App\Http\Controllers\VVPrayerPointController@delete')->name('vv_prayer_point.delete');
+	Route::get('vv_prayer_point/show/{id}', 'App\Http\Controllers\VVPrayerPointController@show')->name('vv_prayer_point.show');
+	
+	//VV Magazine pdf
+	
+	Route::get('vv_magazines', 'App\Http\Controllers\VVMagazineController@index')->name('vv_magazines');
+	Route::get('vv_magazine/create', 'App\Http\Controllers\VVMagazineController@create')->name('vv_magazine.create');
+	Route::post('vv_magazine/save/{id?}', 'App\Http\Controllers\VVMagazineController@save')->name('vv_magazine.save');
+	Route::get('vv_magazine/delete/{id}', 'App\Http\Controllers\VVMagazineController@delete')->name('vv_magazine.delete');
+	Route::get('vv_magazine/show/{id}', 'App\Http\Controllers\VVMagazineController@show')->name('vv_magazine.show');
+	
+	
+	
 	//Login form
 	Route::get('login', 'App\Http\Controllers\AuthenticateController@login')->name('authenticate.login');
 	Route::get('vv_login', 'App\Http\Controllers\AuthenticateController@vv_login')->name('authenticate.vv_login');
@@ -189,6 +209,7 @@ Route::group(['middleware'], function () {
 	   $headers = ['Content-Disposition' => "inline;filename={$name}"];
        return response()->file($filepath, $headers);
     })->name('viewfile');
+	
 	
 
     Route::get('/download/{folder}/{filename}/{name?}', function ($folder, $filename, $name=null) 
