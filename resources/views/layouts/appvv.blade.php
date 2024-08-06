@@ -41,6 +41,9 @@
 		.breadcrumb{
 			line-height : 4 !important;
 		}
+		.dropdown-item{
+			padding:15px;
+		}
 	</style>
 	
 	<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#fff; border-bottom: 2px solid #678bbd11; font-weight: 500;">
@@ -60,27 +63,22 @@
 			&nbsp;
 			@if(Auth::user())
 				<ul class="navbar-nav  mb-lg-0 ml-1">
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{{url('subscriptions')}}"> <i class="bi bi-card-checklist"></i> Subscriptions</a>
-					</li>	
-				</ul>
-				
-				<ul class="navbar-nav  mb-lg-0 ml-1">
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{{url('address_changes')}}"> <i class="bi bi-postcard"></i> Address Change</a>
-					</li>	
-				</ul>
-				
-				<ul class="navbar-nav  mb-lg-0 ml-1">
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{{url('complaints')}}"> <i class="bi bi-question-diamond-fill"></i> Complaints</a>
-					</li>	
-				</ul>
-				
-				<ul class="navbar-nav  mb-lg-0 ml-1">
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{{url('feedbacks')}}"> <i class="bi bi-hand-thumbs-up-fill"></i> Feedback</a>
-					</li>	
+					<li class="nav-item dropdown">
+						<a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownFavorites" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							All in One
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownFavorites" style="background-color:#0e98e9;">
+							<li><a class="dropdown-item" href="{{url('subscriptions')}}" style="background-color:#0e98e9;"><i class="bi bi-card-checklist"></i> &nbsp;Subscriptions</a></li>
+							
+							<li><a class="dropdown-item" href="{{url('address_changes')}}" style="background-color:#0e98e9;"> <i class="bi bi-postcard"></i>&nbsp;Address Change</a></li>
+							
+							<li><a class="dropdown-item" href="{{url('complaints')}}" style="background-color:#0e98e9; "><i class="bi bi-exclamation-diamond-fill"></i>&nbsp;Complaints</a></li>
+							
+							<li><a class="dropdown-item" href="{{url('feedbacks')}}" style="background-color:#0e98e9;"><i class="bi bi-hand-thumbs-up-fill"></i>&nbsp; Feedback</a></li>
+							
+							<li><a class="dropdown-item" href="{{url('prayer_points')}}" style="background-color:#0e98e9;"><i class="bi bi-person-lines-fill"></i> &nbsp;Prayer Points</a></li>
+						</ul>
+					</li>
 				</ul>
 				
 				<ul class="navbar-nav  mb-lg-0 ml-1">
