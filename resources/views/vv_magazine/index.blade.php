@@ -43,7 +43,7 @@ th{
 					<i class="bi bi-search"></i>
 				</button>&nbsp;
 				<a class = "btn btn-sm btn-primary mr-2" href = "{{ url('vv_magazines') }}">Reset</a>&nbsp;
-				<a class = "btn btn-sm btn-primary mr-2" href = "{{ url('vv_magazine/upload') }}"> <i class="bi bi-plus-square-fill"></i></a>&nbsp;
+				<a class = "btn btn-sm btn-primary mr-2" href = "{{ url('vv_magazine/upload') }}"> <i class="bi bi-plus-square-fill"></i>Upload </a>&nbsp;
 				{!! Form::close() !!}	
 				</div>
 			</div>
