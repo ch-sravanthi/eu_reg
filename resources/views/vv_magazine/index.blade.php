@@ -37,7 +37,8 @@ th{
 				
 				{!! Form::text('name_of_the_file', request()->name_of_the_file, ['class' => ' mr-2', 'placeholder' => 'File Name']) !!}&nbsp;
 				
-				{!! Form::select('magazine_copy', AppHelper::options('vv_months'), request()->magazine_copy, ['class' => ' mr-2', 'placeholder' => ' Select Month ']) !!}
+				{!! Form::select('magazine_copy', AppHelper::options('vv_months'), request()->magazine_copy, ['class' => ' mr-2', 'placeholder' => ' Select Month ']) !!}&nbsp;
+				
 				{!! Form::select('vv_year', AppHelper::options('vv_years'), request()->vv_year, ['class' => ' mr-2', 'placeholder' => ' Select Year ']) !!}
 				&nbsp;
 				<button  class="btn btn-primary btn-sm mr-2">
