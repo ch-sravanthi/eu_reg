@@ -22,7 +22,7 @@
 			<h2 class="card bg-success text-white text-center p-3">Vidhyarthi Velugu - Monthly Magazine Copy</h2>
 		</div>
 		<div class="border my-3 p-4">
-			<div class="card card-body mx-auto w-50">	
+			<div class="card card-body mx-auto w-60">	
 				<div class="col-lg-12 mb-2">
 					<label>{{ $vv_magazine->nicenames['name_of_the_file'] }} * </label>
 					{{ Form::text('name_of_the_file', old('name_of_the_file', $vv_magazine->name_of_the_file), ['class' => 'form-control' ]) }}
