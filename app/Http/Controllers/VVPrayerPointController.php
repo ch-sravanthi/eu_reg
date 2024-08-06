@@ -37,8 +37,10 @@ class VVPrayerPointController extends Controller
 		$query->when($vv_year,function($a) use($vv_year){
 			$a->where('vv_year','like',"%$vv_year%");
 		});
-		
-		
+
+		if(!Auth::user()->role == 'Admin') {
+			return redirect()->back()->with(['error' => 'You do not have access']);
+		}
 		
 		$vv_prayer_points = $query->orderBy('created_at', 'desc')->paginate($paginate);
 		return view('vv_prayer_point/index',compact((['vv_prayer_points','vv_prayer_point'])));
@@ -64,8 +66,6 @@ class VVPrayerPointController extends Controller
 		$query->when($vv_year,function($a) use($vv_year){
 			$a->where('vv_year','like',"%$vv_year%");
 		});
-		
-		
 		
 		$vv_prayer_points = $query->orderBy('created_at', 'desc')->paginate($paginate);
 		return view('vv_prayer_point/monthly_prayer_points',compact((['vv_prayer_points','vv_prayer_point'])));

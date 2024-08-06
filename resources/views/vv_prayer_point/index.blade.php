@@ -35,9 +35,6 @@ th{
 				<div class="d-lg-flex justify-content-end" style="width: 100%; overflow-x: auto;">
 				{!! Form::open(['method' => 'get', 'class' => 'd-flex']) !!}
 				
-				{!! Form::text('name_of_the_file', request()->name_of_the_file, ['class' => ' mr-2', 'placeholder' => 'File Name']) !!}&nbsp;
-				
-				
 				{!! Form::select('vv_month', AppHelper::options('vv_months'), request()->vv_month, ['class' => ' mr-2', 'placeholder' => ' Select Month ']) !!}
 				{!! Form::select('vv_year', AppHelper::options('vv_years'), request()->vv_year, ['class' => ' mr-2', 'placeholder' => ' Select Year ']) !!}
 				
@@ -60,10 +57,8 @@ th{
 						<thead>
 							<tr>
 								<th>S.No</th>
-								<th>Name of the File</th>
+								<th>Month - Year</th>
 								<th>Prayer Points Attachment</th>
-								<th>Month</th>
-								<th>Year</th>
 								<th>Action</th>
 							</tr>
 						</thead>
@@ -72,15 +67,14 @@ th{
 						@foreach($vv_prayer_points as $vv_prayer_point)
 							<tr class="text-center">
 								<td>{{ $r++}}</td>
-								<td>{{ $vv_prayer_point->name_of_the_file }}</td>
+								<td>{{ $vv_prayer_point->vv_month }}&nbsp; - {{ $vv_prayer_point->vv_year }}</td>
 								<td>
-									<a href="{{ url('vv_prayer_point/show/'.$vv_prayer_point->id) }}">
-									{{ $vv_prayer_point->attachment_1 }}
-									</a>
+								   <?php $ext = pathinfo($vv_prayer_point->attachment_1, PATHINFO_EXTENSION); ?>
+									@if($ext == 'pdf')
+                                    {!! EasyForm::viewFile('attachment_1', '', $vv_prayer_point->attachment_1) !!}
+                               
+                                @endif
 								</td>
-								
-								<td>{{ $vv_prayer_point->vv_month }}</td>
-								<td>{{ $vv_prayer_point->vv_year }}</td>
 								<td>
 									<?php $editRoute = url('vv_prayer_point/create/'.$vv_prayer_point->id)?>
 									<a href="{{ $editRoute }}" class="btn btn-sm btn-danger"><i class="bi bi-pencil"></i></a>

@@ -72,8 +72,12 @@ class AuthenticateController extends Controller
 			return redirect()->back()->withInput()->withErrors(['email' => 'Email is incorrect']);
 		}
 		Auth::login($user);
-		
-		return redirect(url('vv/all_in_one'));
+		if(Auth::user()->role == 'Admin') {
+			return redirect(url('vv/all_in_one'));
+		}elseif(Auth::user()->role == 'Subscriber'){
+			return redirect(url('monthly_magazines'));
+			
+		}
 	}
 		
     public function logout(Request $request)

@@ -1,4 +1,4 @@
-@extends('layouts.appvv_subscriber')
+@extends('layouts.appvv')
 
 @section('title')
 	
@@ -7,14 +7,19 @@
 @section('navs')
 	<nav aria-label="breadcrumb">
 	  <ol class="breadcrumb">
-		@if(Auth::user())
-			<li class="breadcrumb-item"><a href="{{ route('vv.all_in_one') }}">Home</a></li>
+	  
+		@if(Auth::user())<?php //var_dump($user->email);die();?>
+			@if(Auth::user()->role == 'Admin')
+				<li class="breadcrumb-item"><a href="{{ route('vv.all_in_one') }}">Home</a></li>
+			@endif
 		@else
-			<li class="breadcrumb-item"><a href="{{ route('vv_prayer_point.monthly_prayer_points') }}">Home</a></li>
+			<li class="breadcrumb-item"><a href="{{ route('authenticate.vv') }}">Home</a></li>
 		@endif
 		<li class="breadcrumb-item active" aria-current="page">Monthly - Prayer Points</li>
+		
 	  </ol>
 	</nav>
+	
 @endsection
 
 @section('content')
@@ -66,13 +71,8 @@
                 <div class="card mb-3 card-equal-height" style="border-radius:4%; box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2)">
                     <div class="card-body card-body-equal-height">
                         <div class="row" style="line-height: 2;">
-                            <a style="font-size:22px; font-weight:500; text-transform:uppercase;" href="{{ url('vv_prayer_point/show/'.$vv_prayer_point->id) }}">
-                                {{ $vv_prayer_point->blog_title }}
-                            </a>
+                           
                             <div>
-								@if($vv_prayer_point->name_of_the_file)
-									<i class="bi bi-postcard-fill"></i> &nbsp;{{ $vv_prayer_point->name_of_the_file }}
-								@endif
                                  <p><i class="bi bi-calendar3"></i> &nbsp;{{ $vv_prayer_point->vv_month }} &nbsp;{{ $vv_prayer_point->vv_year }}</p>
                                 <?php $ext = pathinfo($vv_prayer_point->attachment_1, PATHINFO_EXTENSION); ?>
                                 @if($ext == 'pdf')
@@ -81,11 +81,8 @@
 										</iframe>
 									</td>-->
                                     {!! EasyForm::viewFile('attachment_1', '', $vv_prayer_point->attachment_1) !!}
-                               
                                 @endif
                             </div>
-                          
-                          
                             <p style="color:grey; font-size:14px;"><i class="bi bi-person-circle"></i>  Posted on {!! date('d M Y', strtotime($vv_prayer_point->created_at)) !!}</p>
                         </div>
                     </div>

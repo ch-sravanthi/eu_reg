@@ -3,6 +3,14 @@
 
 @section('navs')	
 	<nav aria-label="breadcrumb">
+	  <ol class="breadcrumb">
+		@if(Auth::user()->role == 'Admin')
+			<li class="breadcrumb-item"><a href="{{ route('vv.all_in_one') }}">Home</a></li>
+		@else
+			<li class="breadcrumb-item"><a href="{{ route('vv_prayer_point.monthly_prayer_points') }}">Home</a></li>
+		@endif
+		<li class="breadcrumb-item active" aria-current="page">Monthly - Prayer Points</li>
+	  </ol>
 	</nav>
 @endsection
 
@@ -15,13 +23,6 @@
 		</div>
 		<div class="border my-3 p-4">
 			<div class="card card-body mx-auto w-50">	
-				<div class="col-lg-12 mb-2">
-					<label>{{ $vv_prayer_point->nicenames['name_of_the_file'] }} * </label>
-					{{ Form::text('name_of_the_file', old('name_of_the_file', $vv_prayer_point->name_of_the_file), ['class' => 'form-control' ]) }}
-					@if($errors->has('name_of_the_file'))
-						<div class="text-danger">{{ $errors->first('name_of_the_file') }}</div>
-					@endif
-				</div>
 				<div class="col-lg-12 py-2">
 					<label>{{ $vv_prayer_point->nicenames['vv_month'] }} * </label>
 					{{ Form::select('vv_month', AppHelper::options('vv_months'), old('vv_month', $vv_prayer_point->vv_month), ['class' => 'form-control', 'onchange' => "loadOptions(this, 'vv_month')"]) }}

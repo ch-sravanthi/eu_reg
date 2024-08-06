@@ -50,54 +50,26 @@
 					<span class="navbar-toggler-icon"></span>
 				</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				@if(Auth::user()->role == 'Admin')
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0 d-sm-none d-md-block">
 					<li class="nav-item" style="color:#fff;">
-						<a class="nav-link active" aria-current="page" href="#" > Welcome To Vidhyarthi Velugu World </a> 
+						<a class="nav-link active" aria-current="page" href="#" > Welcome To Vidhyarthi Velugu Subscriber </a> 
 					</li>
 				</ul>
 				
 				<ul class="navbar-nav  mb-lg-0 ml-1">
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{{url('subscriptions')}}"> <i class="bi bi-card-checklist"></i> Subscriptions</a>
+						<a class="nav-link active" aria-current="page" href="{{ route('vv_magazine.monthly_magazines') }}"> <i class="bi bi-postcard"></i> VV Magazine</a>
 					</li>	
 				</ul>
 				
-				<ul class="navbar-nav  mb-lg-0 ml-1">
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{{url('address_changes')}}"> <i class="bi bi-postcard"></i> Address Change</a>
-					</li>	
-				</ul>
+				&nbsp;&nbsp;&nbsp;&nbsp;
 				
-				<ul class="navbar-nav  mb-lg-0 ml-1">
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{{url('complaints')}}"> <i class="bi bi-exclamation-diamond-fill"></i> Complaints</a>
-					</li>	
-				</ul>
-				
-				<ul class="navbar-nav  mb-lg-0 ml-1">
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{{url('feedbacks')}}"> <i class="bi bi-hand-thumbs-up-fill"></i> Feedback</a>
-					</li>	
-				</ul>
-			
-				<ul class="navbar-nav  mb-lg-0 ml-1">
-					<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="{{ url('prayer_points')}}"> <i class="bi bi-person-lines-fill"></i> Prayer Points</a>
-						</li>	
-				</ul>&nbsp;&nbsp;&nbsp;&nbsp;
-				
-				<ul class="navbar-nav  mb-lg-0 ml-1">
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{{ route('vv_magazines') }}"> <i class="bi bi-postcard"></i> VV Magazine</a>
-					</li>	
-				</ul>
-				@endif
 				<ul class="navbar-nav  mb-lg-0 ml-1">
 					<li class="nav-item dropdown">
 						<a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownFavorites" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 						 
 							@if(Auth::user())
+								
 								 {{ ucwords(Auth::user()->name) }}
 							@endif
 						</a>
