@@ -60,7 +60,7 @@
 						<a class="nav-link active" aria-current="page" href="#" > Welcome To Vidhyarthi Velugu World </a> 
 					</li>
 				</ul>
-				&nbsp;&nbsp;&nbsp;
+				
 				&nbsp;&nbsp;&nbsp;
 				<ul class="navbar-nav  mb-lg-0 ml-1">
 					<li class="nav-item dropdown">
@@ -80,7 +80,7 @@
 						</ul>
 					</li>
 				</ul>
-				
+				&nbsp;&nbsp;&nbsp;
 				<ul class="navbar-nav  mb-lg-0 ml-1">
 					<li class="nav-item dropdown">
 						<a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownFavorites" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -93,11 +93,9 @@
 						</ul>
 					</li>
 				</ul>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				
-				&nbsp;&nbsp;&nbsp;
 				&nbsp;&nbsp;&nbsp;
 				@endif
+				
 				<ul class="navbar-nav  mb-lg-0 ml-1">
 					<li class="nav-item dropdown">
 						<a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownFavorites" role="button" data-bs-toggle="dropdown" aria-expanded="false">
