@@ -82,12 +82,7 @@
 						<a class="nav-link active" aria-current="page" href="{{url('feedbacks')}}"> <i class="bi bi-hand-thumbs-up-fill"></i> Feedback</a>
 					</li>	
 				</ul>
-			
-				<ul class="navbar-nav  mb-lg-0 ml-1">
-					<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="{{ url('prayer_points')}}"> <i class="bi bi-person-lines-fill"></i> Prayer Points</a>
-						</li>	
-				</ul>
+				
 				<ul class="navbar-nav  mb-lg-0 ml-1">
 					<li class="nav-item dropdown">
 						<a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownFavorites" role="button" data-bs-toggle="dropdown" aria-expanded="false">

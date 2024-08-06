@@ -89,7 +89,6 @@
 						<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownFavorites" style="background-color:#0e98e9;">
 							<li><a class="dropdown-item" href="{{url('vv_magazines')}}" style="background-color:#0e98e9;"><i class="bi bi-postcard"></i>  VV Magazine</a></li>
 							
-							<li><a class="dropdown-item" href="{{url('vv_prayer_points')}}" style="background-color:#0e98e9;"><i class="bi bi-person-lines-fill"></i> VV Prayer Points</a></li>
 						</ul>
 					</li>
 				</ul>
