@@ -65,7 +65,7 @@
 				<ul class="navbar-nav  mb-lg-0 ml-1">
 					<li class="nav-item dropdown">
 						<a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownFavorites" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							Soft Copy
+							Upload Soft Copy
 						</a>
 						<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownFavorites" style="background-color:#0e98e9;">
 							<li><a class="dropdown-item" href="{{url('vv_magazines')}}" style="background-color:#0e98e9;"><i class="bi bi-postcard"></i>  VV Magazine</a></li>
