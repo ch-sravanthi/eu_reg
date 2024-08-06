@@ -17,6 +17,7 @@ return new class extends Migration
 			$table->string('cover_page')->nullable();
 			$table->string('magazine_month')->nullable();
 			$table->string('magazine_year')->nullable();
+			$table->string('prayer_copy')->nullable();
 			$table->string('magazine_copy')->nullable();
             $table->integer('updated_by')->unsigned()->nullable();
 			$table->foreign('updated_by')->references('id')->on('users');
