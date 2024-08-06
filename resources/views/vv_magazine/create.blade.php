@@ -4,10 +4,9 @@
 @section('navs')	
 	<nav aria-label="breadcrumb">
 	  <ol class="breadcrumb">
-	  @if(Auth::user())
+	  
 		@if(Auth::user()->role == 'Admin')
 			<li class="breadcrumb-item"><a href="{{ route('vv.all_in_one') }}">Home</a></li>
-		@endif
 		@else
 			<li class="breadcrumb-item"><a href="{{ route('vv_magazine.monthly_magazines') }}">Home</a></li>
 		@endif
