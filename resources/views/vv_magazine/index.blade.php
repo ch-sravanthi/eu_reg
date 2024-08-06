@@ -39,6 +39,7 @@ th{
 				
 				{!! Form::select('magazine_copy', AppHelper::options('vv_months'), request()->magazine_copy, ['class' => ' mr-2', 'placeholder' => ' Select Month ']) !!}
 				{!! Form::select('vv_year', AppHelper::options('vv_years'), request()->vv_year, ['class' => ' mr-2', 'placeholder' => ' Select Year ']) !!}
+				&nbsp;
 				<button  class="btn btn-primary btn-sm mr-2">
 					<i class="bi bi-search"></i>
 				</button>&nbsp;
