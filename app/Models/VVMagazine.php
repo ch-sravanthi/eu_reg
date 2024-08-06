@@ -32,20 +32,21 @@ class VVMagazine extends AppModel
 	
 	public $nicenames =  [
 			'name_of_the_file' => 'Title of the Cover Page',
-			'cover_page' => 'Cover Page Copy',
+			'cover_page' => 'Cover Page Image',
 			'prayer_copy' => 'Prayer Points Copy',
 			'magazine_copy' => 'Magazine Edition',
-			'magazine_month' => 'Magazine Month',
-			'magazine_year' => 'Magazine Year',
+			'magazine_month' => 'Month',
+			'magazine_year' => 'Year',
 	];
 	public function niceNames()
 	{
 		return[
 			'name_of_the_file' => 'Title of the Magazine',
+			'cover_page' => 'Cover Page Image',
 			'prayer_copy' => 'Prayer Points Copy',
 			'magazine_copy' => 'Magazine Edition',
-			'magazine_month' => 'Magazine Month',
-			'magazine_year' => 'Magazine Year',
+			'magazine_month' => 'Month',
+			'magazine_year' => 'Year',
 		];
 	}
 	

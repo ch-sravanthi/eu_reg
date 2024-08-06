@@ -4,12 +4,15 @@
 @section('navs')	
 	<nav aria-label="breadcrumb">
 	  <ol class="breadcrumb">
+	  @if(Auth::user())
 		@if(Auth::user()->role == 'Admin')
 			<li class="breadcrumb-item"><a href="{{ route('vv.all_in_one') }}">Home</a></li>
-		@else
-			<li class="breadcrumb-item"><a href="{{ route('vv_prayer_point.monthly_magazines') }}">Home</a></li>
 		@endif
-		<li class="breadcrumb-item active" aria-current="page">Monthly - Magazine Copy</li>
+		@else
+			<li class="breadcrumb-item"><a href="{{ route('vv_magazine.monthly_magazines') }}">Home</a></li>
+		@endif
+	
+		<li class="breadcrumb-item active" aria-current="page">Upload Soft Copy</li>
 	  </ol>
 	</nav>
 @endsection
@@ -19,7 +22,7 @@
 	{!! Form::open(['url' => route('vv_magazine.save', [$vv_magazine->id]), 'id' => 'idForm', 'files' => true]) !!}
 	<div class="container my-2">
 		<div class="p-2 bg-light">
-			<h2 class="card bg-success text-white text-center p-3">Vidhyarthi Velugu - Monthly Magazine Copy</h2>
+			<h2 class="card bg-success text-white text-center p-3">Vidhyarthi Velugu - Prayer Points & Magazine Copy</h2>
 		</div>
 		<div class="border my-3 p-4">
 			<div class="card card-body mx-auto w-60">	
