@@ -35,7 +35,7 @@
 			</div>
 		<div class="col-lg-4 mb-2">
 			<div class="card bg-danger text-white" style="height:120px;">
-				<div class="card-body" style="padding-top:50px;padding-bottom:50px;"> <a style="color:white; font-size:21px;" href="{{ route('vv_prayer_point.monthly_prayer_points') }}"> <i class="bi bi-eye"></i> MONTHLY PRAYER POINTS</a></div>
+				<div class="card-body" style="padding-top:50px;padding-bottom:50px;"> <a style="color:white; font-size:21px;" href="{{ route('vv_prayer_point.monthly_prayer_points') }}"> <i class="bi bi-eye"></i> Prayer Points Soft Copy</a></div>
 			</div>
 		</div>
 	</div>
