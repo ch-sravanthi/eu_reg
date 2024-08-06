@@ -60,6 +60,7 @@ th{
 								<th>S.No</th>
 								<th>Month - Year</th>
 								<th>Magazine Title</th>
+								<th>Prayer Points Copy</th>
 								<th>Magazine Copy</th>
 								<th>Action</th>
 							</tr>
@@ -73,18 +74,20 @@ th{
 								<td>
 									{{ $vv_magazine->name_of_the_file }}
 								</td>
-								<td style="width:50%;">
-									@if($vv_magazine->cover_page)
-										<img src="{{ url('viewfile/'.$vv_magazine->cover_page) }}" style="background-image: url();width:20%; height:auto;border:1px solid #F8F8F8;"/>
-									@else
-										<img src="{{ asset('/images/default_magazine.png')}}" style="background-image: url();width:20%; height:auto;border:1px solid #F8F8F8;"/>
+								<td style="width:20%;">	
+									<?php $ext = pathinfo($vv_magazine->prayer_copy, PATHINFO_EXTENSION); ?>
+									@if($ext == 'pdf')
+                                    {!! EasyForm::viewFile('prayer_copy', '', $vv_magazine->prayer_copy) !!}
 									@endif
+								</td>
+								<td style="width:30%;">
+									
+									<img src="{{ url('viewfile/'.$vv_magazine->cover_page) }}" style="background-image: url();width:20%; height:auto;border:1px solid #F8F8F8;"/>
 								
-								   <?php $ext = pathinfo($vv_magazine->magazine_copy, PATHINFO_EXTENSION); ?>
+								    <?php $ext = pathinfo($vv_magazine->magazine_copy, PATHINFO_EXTENSION); ?>
 									@if($ext == 'pdf')
                                     {!! EasyForm::viewFile('magazine_copy', '', $vv_magazine->magazine_copy) !!}
-                               
-                                @endif
+									@endif
 								</td>
 								<td>
 									<?php $editRoute = url('vv_magazine/upload/'.$vv_magazine->id)?>

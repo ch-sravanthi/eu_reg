@@ -132,11 +132,11 @@ Route::group(['middleware'], function () {
 	
 	//VV Prayer Point pdf
 	
-	Route::get('/monthly_prayer_points', 'App\Http\Controllers\VVPrayerPointController@monthly_prayer_points')->name('vv_prayer_point.monthly_prayer_points');
+	/* Route::get('/monthly_prayer_points', 'App\Http\Controllers\VVPrayerPointController@monthly_prayer_points')->name('vv_prayer_point.monthly_prayer_points');
 	Route::get('/vv_prayer_points', 'App\Http\Controllers\VVPrayerPointController@index')->name('vv_prayer_points');
 	Route::get('vv_prayer_point/upload/{id?}', 'App\Http\Controllers\VVPrayerPointController@create')->name('vv_prayer_point.create');
 	Route::post('vv_prayer_point/save/{id?}', 'App\Http\Controllers\VVPrayerPointController@save')->name('vv_prayer_point.save');
-	Route::get('vv_prayer_point/delete/{id}', 'App\Http\Controllers\VVPrayerPointController@delete')->name('vv_prayer_point.delete');
+	Route::get('vv_prayer_point/delete/{id}', 'App\Http\Controllers\VVPrayerPointController@delete')->name('vv_prayer_point.delete'); */
 	//Route::get('vv_prayer_point/show/{id}', 'App\Http\Controllers\VVPrayerPointController@show')->name('vv_prayer_point.show');
 	
 	//VV Magazine pdf

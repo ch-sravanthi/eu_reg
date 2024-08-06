@@ -63,25 +63,23 @@
                     <div class="card-body card-body-equal-height">
 					<tr>
                         <div class="row" style="line-height: 2;">
-                            <div class="col-lg-6" >
-                                {{ $vv_magazine->name_of_the_file }}<br/>
-								@if($vv_magazine->cover_page)
-									<img src="{{ url('viewfile/'.$vv_magazine->cover_page) }}" style="background-image: url();width:100%; height:auto;border:1px solid #F8F8F8;"/>
-								@else
-									<img src="{{ asset('/images/default_magazine.png')}}" style="background-image: url();width:100%; height:auto;border:1px solid #F8F8F8;"/>
-								@endif
-							</div>
-                            <div>
-                                 <p><i class="bi bi-calendar3"></i> &nbsp;{{ $vv_magazine->magazine_month }} &nbsp;{{ $vv_magazine->vv_year }}</p>
-                                <?php $ext = pathinfo($vv_magazine->magazine_copy, PATHINFO_EXTENSION); ?>
-                                @if($ext == 'pdf')
-									<!--<td colspan="2" style="width:120px; padding:2px;">	
-										<iframe class="noprint" src="{{ url('viewfile/'.$vv_magazine->magazine_copy ) }}" frameborder="0" height="180px" width="180px">
-										</iframe>
-									</td>-->
-                                    {!! EasyForm::viewFile('magazine_copy', '', $vv_magazine->magazine_copy) !!}
+                            <div> 
+								<b>Title: </b>{{ $vv_magazine->name_of_the_file }}<br/>
+								<p><i class="bi bi-calendar3"></i> 	&nbsp;
+								{{ $vv_magazine->magazine_month }} 	&nbsp;
+								{{ $vv_magazine->magazine_year }}</p>
                                
-                                @endif
+								
+								<img src="{{ url('viewfile/'.$vv_magazine->cover_page) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
+							</div>
+                            <div class="col-lg-12">
+								<b>Prayer Points Copy </b>
+								<?php $ext = pathinfo($vv_magazine->prayer_copy, PATHINFO_EXTENSION); ?>
+								{!! EasyForm::viewFile('prayer_copy', '', $vv_magazine->prayer_copy) !!}
+								
+								<b>Magazine Copy </b>
+								<?php $ext = pathinfo($vv_magazine->magazine_copy, PATHINFO_EXTENSION); ?>
+								{!! EasyForm::viewFile('magazine_copy', '', $vv_magazine->magazine_copy) !!}
                             </div>
                           
                           

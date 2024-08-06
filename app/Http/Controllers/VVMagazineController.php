@@ -84,6 +84,9 @@ class VVMagazineController extends Controller
 		if ($vv_magazine->cover_page != null && !empty($vv_magazine->cover_page) && !$request->file('cover_page')) {
 			unset($rules['cover_page']);
 		}
+		if ($vv_magazine->prayer_copy != null && !empty($vv_magazine->prayer_copy) && !$request->file('prayer_copy')) {
+			unset($rules['prayer_copy']);
+		}
 		if ($vv_magazine->magazine_copy != null && !empty($vv_magazine->magazine_copy) && !$request->file('magazine_copy')) {
 			unset($rules['magazine_copy']);
 		}
@@ -97,6 +100,9 @@ class VVMagazineController extends Controller
 		$vv_magazine->fill($request->all());
 		if ($request->file('cover_page')) {
 			$vv_magazine->cover_page = $request->file('cover_page')->store('blogs');
+		}
+		if ($request->file('prayer_copy')) {
+			$vv_magazine->prayer_copy = $request->file('prayer_copy')->store('vv_magazines');
 		}
 		if ($request->file('magazine_copy')) {
 			$vv_magazine->magazine_copy = $request->file('magazine_copy')->store('vv_magazines');
