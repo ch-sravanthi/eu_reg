@@ -134,7 +134,7 @@ Route::group(['middleware'], function () {
 	
 	Route::get('/monthly_prayer_points', 'App\Http\Controllers\VVPrayerPointController@monthly_prayer_points')->name('vv_prayer_point.monthly_prayer_points');
 	Route::get('/vv_prayer_points', 'App\Http\Controllers\VVPrayerPointController@index')->name('vv_prayer_points');
-	Route::get('vv_prayer_point/create/{id?}', 'App\Http\Controllers\VVPrayerPointController@create')->name('vv_prayer_point.create');
+	Route::get('vv_prayer_point/upload/{id?}', 'App\Http\Controllers\VVPrayerPointController@create')->name('vv_prayer_point.create');
 	Route::post('vv_prayer_point/save/{id?}', 'App\Http\Controllers\VVPrayerPointController@save')->name('vv_prayer_point.save');
 	Route::get('vv_prayer_point/delete/{id}', 'App\Http\Controllers\VVPrayerPointController@delete')->name('vv_prayer_point.delete');
 	//Route::get('vv_prayer_point/show/{id}', 'App\Http\Controllers\VVPrayerPointController@show')->name('vv_prayer_point.show');
@@ -143,7 +143,7 @@ Route::group(['middleware'], function () {
 	
 	Route::get('/monthly_magazines', 'App\Http\Controllers\VVMagazineController@monthly_magazines')->name('vv_magazine.monthly_magazines');
 	Route::get('vv_magazines', 'App\Http\Controllers\VVMagazineController@index')->name('vv_magazines');
-	Route::get('vv_magazine/create/{id?}', 'App\Http\Controllers\VVMagazineController@create')->name('vv_magazine.create');
+	Route::get('vv_magazine/upload/{id?}', 'App\Http\Controllers\VVMagazineController@create')->name('vv_magazine.create');
 	Route::post('vv_magazine/save/{id?}', 'App\Http\Controllers\VVMagazineController@save')->name('vv_magazine.save');
 	Route::get('vv_magazine/delete/{id}', 'App\Http\Controllers\VVMagazineController@delete')->name('vv_magazine.delete');
 	Route::get('vv_magazine/show/{id}', 'App\Http\Controllers\VVMagazineController@show')->name('vv_magazine.show');

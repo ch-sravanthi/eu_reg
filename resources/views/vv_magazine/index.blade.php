@@ -43,7 +43,7 @@ th{
 					<i class="bi bi-search"></i>
 				</button>&nbsp;
 				<a class = "btn btn-sm btn-primary mr-2" href = "{{ url('vv_magazines') }}">Reset</a>&nbsp;
-				<a class = "btn btn-sm btn-primary mr-2" href = "{{ url('vv_magazine/create') }}"> <i class="bi bi-plus-square-fill"></i></a>&nbsp;
+				<a class = "btn btn-sm btn-primary mr-2" href = "{{ url('vv_magazine/upload') }}"> <i class="bi bi-plus-square-fill"></i></a>&nbsp;
 				{!! Form::close() !!}	
 				</div>
 			</div>
@@ -85,7 +85,7 @@ th{
                                 @endif
 								</td>
 								<td>
-									<?php $editRoute = url('vv_magazine/create/'.$vv_magazine->id)?>
+									<?php $editRoute = url('vv_magazine/upload/'.$vv_magazine->id)?>
 									<a href="{{ $editRoute }}" class="btn btn-sm btn-danger"><i class="bi bi-pencil"></i></a>
 									<?php $route = url('vv_magazine/delete/'.$vv_magazine->id)?>
 									<a href="#" onclick="deleteRow('{{ $route }}')" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></a><br>

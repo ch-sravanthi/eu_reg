@@ -43,7 +43,7 @@ th{
 					<i class="bi bi-search"></i>
 				</button>&nbsp;
 				<a class = "btn btn-sm btn-primary mr-2" href = "{{ url('vv_prayer_points') }}">Reset</a>&nbsp;
-				
+				<a class = "btn btn-sm btn-primary mr-2" href = "{{ url('vv_prayer_point/upload') }}"> <i class="bi bi-plus-square-fill"></i></a>&nbsp;
 				
 				{!! Form::close() !!}	
 				</div>
@@ -76,8 +76,8 @@ th{
                                 @endif
 								</td>
 								<td>
-									<?php $editRoute = url('vv_prayer_point/create/'.$vv_prayer_point->id)?>
-									<a href="{{ $editRoute }}" class="btn btn-sm btn-danger"><i class="bi bi-pencil"></i></a>
+									<?php $editRoute = url('vv_prayer_point/upload/'.$vv_prayer_point->id)?>
+									<a href="{{ $editRoute }}" class="btn btn-sm btn-danger"><i class="bi bi-pencil"></i> </a>
 									<?php $route = url('vv_prayer_point/delete/'.$vv_prayer_point->id)?>
 									<a href="#" onclick="deleteRow('{{ $route }}')" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></a><br>
 								</td>
