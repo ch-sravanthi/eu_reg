@@ -38,13 +38,6 @@ input{
 						<div class="text-danger">{{ $errors->first('name_of_the_file') }}</div>
 					@endif
 				</div>
-				<div class="col-lg-6 mb-2">
-					<label>{{ $vv_magazine->nicenames['cover_page'] }} (if any images like jpeg, jpg, png)</label>
-						{!! EasyForm::file('cover_page', '', old('cover_page', $vv_magazine->cover_page))!!}
-						@if ($errors->has('cover_page'))
-						<div class="text-danger">{{ $errors->first('cover_page') }}</div>
-							@endif
-				</div>
 				<div class="col-lg-12 py-2">
 					<label>{{ $vv_magazine->nicenames['magazine_month'] }} * </label>
 					{{ Form::select('magazine_month', AppHelper::options('vv_months'), old('magazine_month', $vv_magazine->magazine_month), ['class' => 'form-control', 'onchange' => "loadOptions(this, 'magazine_month')"]) }}
@@ -59,7 +52,14 @@ input{
 						<div class="text-danger">{{ $errors->first('magazine_year') }}</div>
 					@endif
 				</div>
-			
+				
+				<div class="col-lg-12 py-4">
+					<div class="text-danger">(Only jpeg, jpg, png files Size up to 1Mb)</div>
+						{!! EasyForm::file('cover_page', $vv_magazine->label('cover_page'), old('cover_page', $vv_magazine->cover_page))!!}
+						@if ($errors->has('cover_page'))
+						<div class="text-danger">{{ $errors->first('cover_page') }}</div>
+							@endif
+				</div>
 				<div class="col-lg-12 py-2">
 					<div class="text-danger">(Only pdf file, Size up to 1Mb)</div>
 					{!! EasyForm::file('prayer_copy', 'Prayer Points Attachment', old('prayer_copy', $vv_magazine->prayer_copy))!!}
