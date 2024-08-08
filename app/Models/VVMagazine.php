@@ -33,8 +33,8 @@ class VVMagazine extends AppModel
 	public $nicenames =  [
 			'name_of_the_file' => 'Title of the Cover Page',
 			'cover_page' => 'Cover Page Image',
-			'prayer_copy' => 'Prayer Points Copy',
-			'magazine_copy' => 'Magazine Edition',
+			'prayer_copy' => 'Prayer Points',
+			'magazine_copy' => 'Magazine',
 			'magazine_month' => 'Month',
 			'magazine_year' => 'Year',
 	];
@@ -43,8 +43,8 @@ class VVMagazine extends AppModel
 		return[
 			'name_of_the_file' => 'Title of the Magazine',
 			'cover_page' => 'Cover Page Image',
-			'prayer_copy' => 'Prayer Points Copy',
-			'magazine_copy' => 'Magazine Edition',
+			'prayer_copy' => 'Prayer Points',
+			'magazine_copy' => 'Magazine ',
 			'magazine_month' => 'Month',
 			'magazine_year' => 'Year',
 		];

@@ -21,7 +21,7 @@
 	{!! Form::open(['url' => route('vv_magazine.save', [$vv_magazine->id]), 'id' => 'idForm', 'files' => true]) !!}
 	<div class="container my-2">
 		<div class="p-2 bg-light">
-			<h2 class="card bg-success text-white text-center p-3">Vidhyarthi Velugu - Prayer Points & Magazine Copy</h2>
+			<h2 class="card bg-success text-white text-center p-3">Vidhyarthi Velugu - Prayer Points & Magazie</h2>
 		</div>
 		<div class="border my-3 p-4">
 			<div class="card card-body mx-auto w-60">	
