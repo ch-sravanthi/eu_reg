@@ -18,6 +18,12 @@
 
 
 @section('content')	
+<style>
+input{
+	width:auto;
+}
+
+</style>
 	{!! Form::open(['url' => route('vv_magazine.save', [$vv_magazine->id]), 'id' => 'idForm', 'files' => true]) !!}
 	<div class="container my-2">
 		<div class="p-2 bg-light">
@@ -55,12 +61,12 @@
 				</div>
 			
 				<div class="col-lg-12 py-2">
-					<div class="text-danger">(File type as Pdf, File Size as Upto 1Mb)</div>
+					<div class="text-danger">(Only pdf file, Size up to 1Mb)</div>
 					{!! EasyForm::file('prayer_copy', 'Prayer Points Attachment', old('prayer_copy', $vv_magazine->prayer_copy))!!}
 				</div>
 				
 				<div class="col-lg-12 py-2">
-					<div class="text-danger">(File type as Pdf, File Size as Upto 5Mb)</div>
+					<div class="text-danger">(Only pdf file, Size up to 5Mb)</div>
 					{!! EasyForm::file('magazine_copy', 'Magazine Edition', old('magazine_copy', $vv_magazine->magazine_copy))!!}
 				</div>
 			</div>
