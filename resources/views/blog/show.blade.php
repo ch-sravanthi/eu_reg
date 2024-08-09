@@ -39,7 +39,11 @@
 						<td>{{ $blog->location }}</td>
 							
 						<th>{{ $blog->label('last_date') }}</th>	
-						<td>{{ date('d M Y', strtotime($blog->last_date)) }}</td>
+						<td>
+						@if($blog->last_date)
+							{{ date('d M Y', strtotime($blog->last_date)) }}
+						@endif
+						</td>
 					</tr>
 					
 					<tr>
