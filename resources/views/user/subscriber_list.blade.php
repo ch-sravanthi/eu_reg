@@ -40,6 +40,7 @@
 						<th>Mobile Number</th>
 						<th>Role</th>
 						<th>Status</th>
+						<th>Actions</th>
 						
 					 </tr>
 				</thead>
@@ -54,6 +55,11 @@
 						<td>{{ $user->mobile}}</td>
 						<td>{{ $user->role}} </td>
 						<td>{{ $user->status }}</td>
+						<td> 
+							<?php $editRoute = url('user/create/'.$user->id)?>
+									<a href="{{ $editRoute }}" class="btn btn-sm btn-danger"><i class="bi bi-pencil"></i></a>
+							<?php $route = url('user/delete/'.$user->id)?>
+								<a href="#" onclick="deleteRow('{{ $route }}')" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></a><br></td>
 						
 					</tr>
 				@endforeach

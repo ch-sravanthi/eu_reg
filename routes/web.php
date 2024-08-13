@@ -40,6 +40,7 @@ Route::group(['middleware'], function () {
 	// Users
 	
 	Route::get('user/index', 'App\Http\Controllers\UserController@index')->name('user.index');
+	Route::get('/subscribers', 'App\Http\Controllers\UserController@subscribers')->name('user.subscribers');
 	Route::get('user/create/{id?}', 'App\Http\Controllers\UserController@create')->name('user.create');
 	Route::post('user/save/{id?}', 'App\Http\Controllers\UserController@save')->name('user.save');
 	Route::get('user/delete/{id}', 'App\Http\Controllers\UserController@delete')->name('user.delete');

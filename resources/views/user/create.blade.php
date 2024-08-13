@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')	
-	<a href="{{ route('welcome') }}">Home</a> 
+	<a href="{{ route('home') }}">Home</a>
 @endsection
 
 @section('navs')	
@@ -58,7 +58,8 @@
 					</div>
 					<div class="col-lg-6">
 				       <label>{{ $user->nicenames['role'] }}</label>
-						{{ Form::select('role', [''=>'--Select Here--','Admin' => 'Admin'], old('role', $user->role),['class' => 'form-control']) }}
+					   {{ Form::select('role', AppHelper::options('roles'), old('role', $user->role), ['class' => 'form-control', 'onchange' => "loadOptions(this, 'role')"]) }}
+						
 						@if($errors->has('role'))
 								<div class="text-danger">{{ $errors->first('role') }}</div>
 							@endif

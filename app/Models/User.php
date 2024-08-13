@@ -46,7 +46,8 @@ class User extends Model implements
 		//var_dump($id);die();
 		return [
 			'name' => 'required',
-			'email' => "required|unique:users,email,{$id},id,deleted_at,NULL",
+			//'email' => "required|unique:users,email,{$id},id,deleted_at,NULL",
+			'email' => 'required|email',
 			'mobile' => 'required',
 			'role' => 'required',
 		];
