@@ -16,6 +16,10 @@
 						
 						<div class="pb-2">
 							<button class="btn btn-theme mr-3 w-100">Login</button>
+								<br/>
+								<p style="text-align:center;font-size:15px; line-height:1.2">
+									<br>"email ID Doesn't Match Please Contact - 7702471313"
+								</p>
 						</div>
 					</div>
 			</div>
