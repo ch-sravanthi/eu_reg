@@ -73,8 +73,13 @@ class VVMagazineController extends Controller
 	
 	public function create($id = null) 
 	{
-		$vv_magazine = $id ? VVMagazine::findOrFail($id) : new VVMagazine;
-        return view ('vv_magazine/create',compact(['vv_magazine']));		
+		if(Auth::user()->role == 'Subscriber') {
+			return redirect()->back()->with(['error' => 'You do not have access']);
+		}
+		else {
+			$vv_magazine = $id ? VVMagazine::findOrFail($id) : new VVMagazine;
+			return view ('vv_magazine/create',compact(['vv_magazine']));	
+		}		
     }
 	
     public function save(Request $request, $id = null)
