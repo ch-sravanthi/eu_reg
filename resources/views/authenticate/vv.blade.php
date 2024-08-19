@@ -16,25 +16,31 @@
 			</div>
 		</div>
 		<div class="col-lg-4 mb-2">
-			<div class="card bg-warning text-white" style="height:120px;">
-					<div class="card-body" style="padding-top:50px;padding-bottom:50px"> <a style="color:white; font-size:21px;" href="{{route('complaint.create')}}">COMPLAINTS </a></div>
-				</div>
+			<div class="card bg-success text-white" style="height:120px;">
+				<div class="card-body" style="padding-top:50px;padding-bottom:50px;"> <a style="color:white; font-size:21px;" href="{{ route('prayer_point.create') }}">PRAYER POINTS</a></div>
+			</div>
 		</div>
+		
 	</div>
 	
 	<div class="row text-center">
-		<div class="col-2"></div>	
+		
+		<div class="col-lg-4 mb-2">
+			<div class="card bg-warning text-white" style="height:120px;">
+				<div class="card-body" style="padding-top:50px;padding-bottom:50px"> <a style="color:white; font-size:21px;" href="{{route('complaint.create')}}">COMPLAINTS </a></div>
+			</div>
+		</div>
 		<div class="col-lg-4 mb-2">
 			<div class="card bg-dark text-white" style="height:120px;">
 				<div class="card-body" style="padding-top:50px;padding-bottom:50px;">  <a style="color:white; font-size:21px; " href="{{route('feedback.create')}}">FEEDBACK</a> </div>
 			</div>
 		</div>
 		<div class="col-lg-4 mb-2">
-				<div class="card bg-success text-white" style="height:120px;">
-					<div class="card-body" style="padding-top:50px;padding-bottom:50px;"> <a style="color:white; font-size:21px;" href="{{ route('prayer_point.create') }}">PRAYER POINTS</a></div>
-				</div>
+			<div class="card bg-danger text-white" style="height:120px;">
+				<div class="card-body" style="padding-top:50px;padding-bottom:50px;"> <a style="color:white; font-size:21px;" href="{{ route('authenticate.vv_login') }}">VIEW SOFT COPY</a></div>
 			</div>
-			<div class="col-2"></div>	
+		</div>
+				
 	</div>
 	
 			
