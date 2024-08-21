@@ -8,7 +8,7 @@
 				<h5 class="mb-3">VV Admin Panel</h5>
 				   <div class="mb-3">
 						<div class="pb-4">
-							{!! Form::email('email', old('email', ''), ['class' => 'form-control', 'placeholder' => 'Enter VV Subscription email ID']) !!}
+							{!! Form::email('email', old('email', ''), ['class' => 'form-control', 'placeholder' => 'Please Enter Your Subscribed Email id']) !!}
 							@if ($errors->has('email'))
 								<div class="text-danger">{{ $errors->first('email') }}</div>
 								<script>
@@ -23,7 +23,7 @@
 							<button class="btn btn-theme mr-3 w-100"  onclick="return validateForm()">Login</button>
 								<br/>
 								<p style="text-align:center;font-size:15px; line-height:1.2">
-									<br>"email ID Doesn't Match Please Contact - 7702471313"
+									<br>"email ID Doesn't Match Please Contact - VV Team"
 								</p>
 						</div>
 					</div>
