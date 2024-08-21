@@ -23,7 +23,7 @@
 							<button class="btn btn-theme mr-3 w-100"  onclick="return validateForm()">Login</button>
 								<br/>
 								<p style="text-align:center;font-size:15px; line-height:1.2">
-									<br>"Issue with login, Please Contact VV Team / _______"
+									<br>"Issue with login, Please Contact VV Team / 9491595765,7993397630"
 								</p>
 						</div>
 					</div>
