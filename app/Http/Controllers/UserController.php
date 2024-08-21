@@ -117,6 +117,9 @@ class UserController extends Controller
 				$q->orwhere('role', 'like', "%{$request->search}%");	
 			});
 		}
+		if(!Auth::user()) {
+			return redirect()->back()->with(['error' => 'You do not have access']);
+		}
 		$query->where('role','Subscriber');
 		$users =$query->orderBy('updated_at', 'desc')->paginate($paginate);
 		return view('user/subscriber_list',compact(['users'],['user']));
