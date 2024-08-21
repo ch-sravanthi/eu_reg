@@ -5,7 +5,7 @@
 		{!! Form::open(['url' => route('authenticate.vv_all'), 'class' => 'w-100 p-5']) !!}
 		<div class="card shadow ">
 			<div class="card-body">
-				<h5 class="mb-3">VV Admin Panel</h5>
+				<h5 class="mb-3">VV Subscriber / Admin Login</h5>
 				   <div class="mb-3">
 						<div class="pb-4">
 							{!! Form::email('email', old('email', ''), ['class' => 'form-control', 'placeholder' => 'Please Enter Your Subscribed email ID']) !!}
