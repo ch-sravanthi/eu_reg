@@ -23,7 +23,7 @@
 							<button class="btn btn-theme mr-3 w-100"  onclick="return validateForm()">Login</button>
 								<br/>
 								<p style="text-align:center;font-size:15px; line-height:1.2">
-									<br>"email ID Doesn't Match Please Contact - VV Team"
+									<br>"Issue with login, Please Contact VV Team / _______"
 								</p>
 						</div>
 					</div>
