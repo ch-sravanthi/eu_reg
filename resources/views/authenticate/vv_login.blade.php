@@ -8,7 +8,7 @@
 				<h5 class="mb-3">VV Admin Panel</h5>
 				   <div class="mb-3">
 						<div class="pb-4">
-							{!! Form::email('email', old('email', ''), ['class' => 'form-control', 'placeholder' => 'Please Enter Your Subscribed Email id']) !!}
+							{!! Form::email('email', old('email', ''), ['class' => 'form-control', 'placeholder' => 'Please Enter Your Subscribed email ID']) !!}
 							@if ($errors->has('email'))
 								<div class="text-danger">{{ $errors->first('email') }}</div>
 								<script>
