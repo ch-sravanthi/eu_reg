@@ -1,4 +1,4 @@
-@extends('layouts.appuser')
+@extends('layouts.appvv_auth')
 
 @section('title')
 	

@@ -60,7 +60,11 @@
 						<a class="nav-link active" aria-current="page" href="#" > Welcome To Vidhyarthi Velugu World </a> 
 					</li>
 				</ul>
-				
+				<ul class="navbar-nav  mb-lg-0 ml-1">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="{{ route('user.subscribers') }}"> <i class="bi bi-card-checklist"></i> Subscriber List</a>
+					</li>	
+				</ul>
 				&nbsp;&nbsp;&nbsp;
 				<ul class="navbar-nav  mb-lg-0 ml-1">
 					<li class="nav-item dropdown">
