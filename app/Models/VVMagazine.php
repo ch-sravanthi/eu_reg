@@ -24,7 +24,7 @@ class VVMagazine extends AppModel
 			'name_of_the_file' => 'nullable',
 			'cover_page' => 'nullable|mimes:jpeg,jpg,png|max:1024',
 			'prayer_copy'	=>	'nullable|mimes:pdf|max:1024',
-			'magazine_copy'	=>	'nullable|mimes:pdf|max:5120',
+			'magazine_copy'	=>	'required|mimes:pdf|max:5120',
 			'magazine_month' =>	'required',
 			'magazine_year' => 'required',
 		];
