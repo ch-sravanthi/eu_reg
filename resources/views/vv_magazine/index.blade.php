@@ -89,7 +89,7 @@ th{
 									<iframe src="{{ url('viewfile/'.$vv_magazine->magazine_copy) }}#toolbar=0" width="100%" height="400px"></iframe>
 									
 									@endif
-									<iframe src="{{ url('viewfile/'.$vv_magazine->cover_page) }}#toolbar=0" width="30%" height="300px"></iframe>
+									<iframe src="{{ url('viewfile/'.$vv_magazine->cover_page) }}#toolbar=0" width="300px" height="300px"></iframe>
 								</td>
 								<td>
 									<?php $editRoute = url('vv_magazine/upload/'.$vv_magazine->id)?>
