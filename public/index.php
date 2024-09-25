@@ -3,7 +3,6 @@ header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
 header("Access-Control-Allow-Headers: X-Requested-With, Content-Type, Authorization");
 header('X-Content-Type-Options: nosniff');
-header('X-Frame-Options: DENY');
 header('X-XSS-Protection: 1; mode=block');
 error_reporting(E_ALL);
 ini_set('display_errors', '1');	

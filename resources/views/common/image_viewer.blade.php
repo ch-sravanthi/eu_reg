@@ -33,7 +33,7 @@
 			</div>		
 			
 			<div class="d-inline ml-auto">
-				@if (Auth::user()->can('print', \App\User::class))
+				
 					<button class="btn btn-theme" onclick="printImage()">
 						<i class="fas fa-print"></i> Print
 					</button>
@@ -42,7 +42,7 @@
 						Download
 					</button>
 					&nbsp; 
-				@endif
+				
 				<button class="btn btn-theme" onclick="imageViewerDisableZoom()">
 					Reset
 				</button>

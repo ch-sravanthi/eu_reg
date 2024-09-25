@@ -57,7 +57,9 @@
 	
 <div class="table-responsive">
        
-    <div class="row row-cols-1 row-cols-md-3 g-4"> @foreach($vv_magazines as $vv_magazine)
+	@include ('common.image_viewer')
+    <div class="row row-cols-1 row-cols-md-3 g-4"> 
+		@foreach($vv_magazines as $vv_magazine)
             <div class="col-lg-4 d-flex">
                 <div class="card mb-3 card-equal-height" style="border-radius:4%; box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2)">
                     <div class="card-body card-body-equal-height">
@@ -88,8 +90,9 @@
 						</tr>
                     </div>
                 </div>
-            </div>    @endforeach
-		</div><br>
+            </div>    
+		@endforeach
+	</div><br>
        
  
 </div><br>
