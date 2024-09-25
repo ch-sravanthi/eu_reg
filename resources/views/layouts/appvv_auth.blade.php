@@ -4,7 +4,7 @@
 	<style>
 		html,body,.page{
 			font-size: 16px;
-			background-color: #ddd;
+			background-color: #fff;
 			padding-top: 40px;
 			font-family:sans-serif !important;
 		}
