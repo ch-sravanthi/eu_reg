@@ -87,6 +87,7 @@ th{
 								    <?php $ext = pathinfo($vv_magazine->magazine_copy, PATHINFO_EXTENSION); ?>
 									@if($ext == 'pdf')
 									<iframe src="{{ url('viewfile/'.$vv_magazine->magazine_copy) }}#toolbar=0" width="100%" height="600px"></iframe>
+									<iframe src="{{ url('viewfile/'.$vv_magazine->prayer_copy) }}" width="100%" height="200px"></iframe>
 									@endif
 								</td>
 								<td>
