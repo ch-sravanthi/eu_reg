@@ -81,7 +81,8 @@
 								
 								<b>Magazine Copy </b>
 								<?php $ext = pathinfo($vv_magazine->magazine_copy, PATHINFO_EXTENSION); ?>
-								{!! EasyForm::viewFile('magazine_copy', '', $vv_magazine->magazine_copy) !!}
+								
+								<iframe src="{{ url('viewfile/'.$vv_magazine->magazine_copy) }}#toolbar=0" width="100%" height="600px"></iframe>
                             </div>
                           
                           
