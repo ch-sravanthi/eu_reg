@@ -141,6 +141,7 @@ Route::group(['middleware'], function () {
 	Route::get('vv_magazine/delete/{id}', 'App\Http\Controllers\VVMagazineController@delete')->name('vv_magazine.delete');
 	Route::get('vv_magazine/show/{id}', 'App\Http\Controllers\VVMagazineController@show')->name('vv_magazine.show');
 	
+	Route::get('/viewfile/{fileName}', 'App\Http\Controllers\VVMagazineController@viewPdf')->name('pdf.view');
 	
 	
 	//Login form

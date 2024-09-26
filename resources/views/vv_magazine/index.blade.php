@@ -58,8 +58,8 @@ th{
 						<thead>
 							<tr>
 								<th>S.No</th>
-								<th>Month - Year</th>
-								<th>Magazine Title</th>
+								<th>Month - Year 
+								<br>Magazine Title</th>
 								<th>Prayer Points Copy</th>
 								<th>Magazine Copy</th>
 								<th>Action</th>
@@ -70,8 +70,7 @@ th{
 						@foreach($vv_magazines as $vv_magazine)
 							<tr class="text-center">
 								<td>{{ $r++}}</td>
-								<td>{{ $vv_magazine->magazine_month }} &nbsp;{{ $vv_magazine->magazine_year }}</td>
-								<td>
+								<td>{{ $vv_magazine->magazine_month }} &nbsp;{{ $vv_magazine->magazine_year }}<br>
 									{{ $vv_magazine->name_of_the_file }}
 								</td>
 								<td style="width:20%;">	
@@ -89,7 +88,10 @@ th{
 									<iframe src="{{ url('viewfile/'.$vv_magazine->magazine_copy) }}#toolbar=0" width="100%" height="400px"></iframe>
 									
 									@endif
-									<iframe src="{{ url('viewfile/'.$vv_magazine->cover_page) }}#toolbar=0" width="300px" height="300px"></iframe>
+									<iframe src="{{ route('pdf.view', ['fileName' => $vv_magazine->magazine_copy]) }}" width="100%" height="600px" style="border: none;">
+    Your browser does not support viewing PDFs.
+</iframe>
+									
 								</td>
 								<td>
 									<?php $editRoute = url('vv_magazine/upload/'.$vv_magazine->id)?>
@@ -114,5 +116,26 @@ th{
 				location.href = route;
 			}
 		}
+		/ Store the file name into variable
+		$file = '/path/to/the/filename.pdf';
+		$filename = 'filename.pdf';
+
+		// Header content type
+		header('Content-type: application/pdf');
+
+		header('Content-Disposition: inline; filename="' . $filename . '"');
+
+		header('Content-Transfer-Encoding: binary');
+
+		header('Accept-Ranges: bytes');
+
+		// Read the file
+		@readfile($file);
+		
+		
+		
+		document.addEventListener('contextmenu', function(e) {
+			e.preventDefault();
+			});
 	</script>
 @endsection

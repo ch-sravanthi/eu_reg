@@ -11,6 +11,7 @@ use DB;
 use App\Models\VVMagazine;
 use AppHelper;
 use Excel;
+use Illuminate\Support\Facades\Storage;
 
 
 class VVMagazineController extends Controller
@@ -133,6 +134,29 @@ class VVMagazineController extends Controller
 		$vv_magazine->delete();
 		return redirect()->back()->with('success', 'Magazine Record Deleted Successfully');
     }
+	
+	
+
+public function viewPdf($fileName)
+{
+    // Path to the file
+    $filePath = storage_path('app/public/vv_magazines/' . $fileName); // Adjust this path to your storage
+
+    if (!file_exists($filePath)) {
+        abort(404, 'File not found');
+    }
+
+    // Set the headers to display the PDF inline
+    return response()->file($filePath, [
+        'Content-Type' => 'application/pdf',
+        'Content-Disposition' => 'inline; filename="' . $fileName . '"',
+        'Cache-Control' => 'no-store, no-cache, must-revalidate, post-check=0, pre-check=0',
+        'Pragma' => 'no-cache',
+        'Expires' => '0'
+    ]);
+}
+
+
 	
    
 }
