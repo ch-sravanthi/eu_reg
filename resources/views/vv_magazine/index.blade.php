@@ -78,10 +78,9 @@ th{
 									@if($ext == 'pdf')
                                     {!! EasyForm::viewFile('prayer_copy', '', $vv_magazine->prayer_copy) !!}
 									@endif
+									<img src="{{ url('viewfile/'.$vv_magazine->cover_page) }}" style="background-image: url();width:20%; height:auto;border:1px solid #F8F8F8;"/>
 								</td>
 								<td style="width:30%;">
-									
-									<img src="{{ url('viewfile/'.$vv_magazine->cover_page) }}" style="background-image: url();width:20%; height:auto;border:1px solid #F8F8F8;"/>
 								
 								    <?php $ext = pathinfo($vv_magazine->magazine_copy, PATHINFO_EXTENSION); ?>
 									@if($ext == 'pdf')
