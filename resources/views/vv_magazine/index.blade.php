@@ -83,7 +83,11 @@ th{
 									
 									<img src="{{ url('viewfile/'.$vv_magazine->cover_page) }}" style="background-image: url();width:20%; height:auto;border:1px solid #F8F8F8;"/>
 								
-									<embed src="{{ url('viewfile/'.$vv_magazine->magazine_copy) }}" width="100%" height="600px" type="application/pdf">
+								    <?php $ext = pathinfo($vv_magazine->magazine_copy, PATHINFO_EXTENSION); ?>
+									@if($ext == 'pdf')
+										<iframe src="{{ url('viewfile/'.$vv_magazine->magazine_copy) }}#toolbar=0" width="100%" height="400px"></iframe>
+									@endif
+									
 								</td>
 								<td>
 									<?php $editRoute = url('vv_magazine/upload/'.$vv_magazine->id)?>
