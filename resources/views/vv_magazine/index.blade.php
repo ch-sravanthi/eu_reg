@@ -89,9 +89,9 @@ th{
 									
 								</td>
 								<td style="width:5%;">	
-									<?php $editRoute = url('vv_magazine/upload/'.$vv_magazine->id)?>
+									<?php $editRoute = url('vv_magazine/upload/'.$vv_magazine->id)?><br>
 									<a href="{{ $editRoute }}" class="btn btn-sm btn-danger"><i class="bi bi-pencil"></i></a>
-									<?php $route = url('vv_magazine/delete/'.$vv_magazine->id)?>
+									<?php $route = url('vv_magazine/delete/'.$vv_magazine->id)?><br><br>
 									<a href="#" onclick="deleteRow('{{ $route }}')" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></a><br>
 								</td>
 								
