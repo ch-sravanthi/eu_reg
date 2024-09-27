@@ -69,18 +69,18 @@ th{
 						<?php $r = 1; ?>
 						@foreach($vv_magazines as $vv_magazine)
 							<tr class="text-center">
-								<td>{{ $r++}}</td>
-								<td>{{ $vv_magazine->magazine_month }} &nbsp;{{ $vv_magazine->magazine_year }}<br>
+								<td style="width:2%;">{{ $r++}}</td>
+								<td style="width:10%;">	{{ $vv_magazine->magazine_month }} &nbsp;{{ $vv_magazine->magazine_year }}<br>
 									{{ $vv_magazine->name_of_the_file }}
 								</td>
-								<td style="width:20%;">	
+								<td style="width:10%;">	
 									<?php $ext = pathinfo($vv_magazine->prayer_copy, PATHINFO_EXTENSION); ?>
 									@if($ext == 'pdf')
                                     {!! EasyForm::viewFile('prayer_copy', '', $vv_magazine->prayer_copy) !!}
 									@endif
-									<img src="{{ url('viewfile/'.$vv_magazine->cover_page) }}" style="background-image: url();width:50%; height:auto;border:1px solid #F8F8F8;"/>
+									<img src="{{ url('viewfile/'.$vv_magazine->cover_page) }}" style="background-image: url();width:100%; height:auto;border:1px solid #F8F8F8;"/>
 								</td>
-								<td style="width:30%;">
+								<td style="width:50%;">
 								
 								    <?php $ext = pathinfo($vv_magazine->magazine_copy, PATHINFO_EXTENSION); ?>
 									@if($ext == 'pdf')
@@ -88,7 +88,7 @@ th{
 									@endif
 									
 								</td>
-								<td>
+								<td style="width:5%;">	
 									<?php $editRoute = url('vv_magazine/upload/'.$vv_magazine->id)?>
 									<a href="{{ $editRoute }}" class="btn btn-sm btn-danger"><i class="bi bi-pencil"></i></a>
 									<?php $route = url('vv_magazine/delete/'.$vv_magazine->id)?>
