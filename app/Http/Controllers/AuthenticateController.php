@@ -54,7 +54,12 @@ class AuthenticateController extends Controller
 			return redirect()->back()->withInput()->withErrors(['email' => 'Email is incorrect']);
 		}
 		Auth::login($user);
-		return redirect(url('jobportal/my_index'));
+		if(Auth::user()->role == 'Admin') {
+			return redirect(url('jobportal/my_index'));
+		}else{
+			return redirect()->back()->withInput()->withErrors(['email' => 'Email is incorrect']);
+		}
+		
 	}
 	
 	public function vv_all(Request $request)
