@@ -61,9 +61,10 @@
 				
 				<div class="col-lg-1"></div>
 				<div class="col-lg-4 p-2 bg-light">
-					<b>UESI Publication Trust<br> Account Details</b>
+					<b>UESI Publication Trust<br>
+					<br> Account Details</b>
 					
-					<p><br>Name:  UESI Publication Trust</p>
+					<p>Name:  UESI Publication Trust</p>
 					<b>	A/c No:  0624101037187</b>
 					<p>	Bank:  Canara Bank<br>
 						Branch:  East Marredpally, Secunderabad<br>
