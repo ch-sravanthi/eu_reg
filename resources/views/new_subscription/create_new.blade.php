@@ -63,7 +63,7 @@
 				
 				
 				<div class="col-lg-4 p-3 bg-light">
-					<b>UESI - TS Publication Trust<br> Account Details</b>
+					<b>UESI Publication Trust<br> Account Details</b>
 					
 					<p><br>Name:  UESI Publication Trust</p>
 					<b>	A/c No:  0624101037187</b>
