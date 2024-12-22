@@ -107,4 +107,12 @@ th{
 			}
 		}
 	</script>
+	<style>
+		 svg,.shadow-sm{
+			display:none;
+		}
+		.bg-white{
+			background-color:#d77878 !important;
+		}
+	<style>	
 @endsection
