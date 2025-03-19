@@ -27,7 +27,7 @@
 		}
 		.navbar, input[type=submit], .btn{
 		//	background: linear-gradient(to bottom, #bb2514, #782607);
-			background: linear-gradient(to bottom, #950589, #a34079);
+			background: linear-gradient(to bottom, #b4090e, #b4090e);
 		}
 		.btn:hover{
 			    background-color: #208962!important;
