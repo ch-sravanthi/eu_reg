@@ -56,7 +56,7 @@
 				<text style="font-size:25px;">Subscription Details (Revised)</text>
 				
 				<div class="col-lg-3 p-2 ">
-					<img class="float-center" src="{{ asset('images/payment-scan-code.jpg') }}" width="100%">
+					<img class="float-center" src="{{ asset('imagesnew_vv_scanner.jpeg') }}" width="100%">
 				</div>
 				
 				<div class="col-lg-1"></div>
