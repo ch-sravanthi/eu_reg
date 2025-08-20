@@ -119,6 +119,10 @@ class AuthenticateController extends Controller
 			
 
 	}
+	public function egf_home()
+    {
+        return view('authenticate.egf_home');
+    }
 	
  
 }
