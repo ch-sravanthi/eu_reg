@@ -142,8 +142,21 @@ Route::group(['middleware'], function () {
 	Route::get('vv_magazine/show/{id}', 'App\Http\Controllers\VVMagazineController@show')->name('vv_magazine.show');
 	Route::get('/viewfile/{fileName}', 'App\Http\Controllers\VVMagazineController@viewPdf')->name('pdf.view');
 	
+	//Egf Basic Info
+	Route::get('/egf_basic_infos', 'App\Http\Controllers\EgfBasicInfoController@index')->name('egf_basic_infos');
+	Route::get('egf_basic_info/add','App\Http\Controllers\EgfBasicInfoController@create')->name('egf_basic_info.create');
+	Route::post('egf_basic_info/save/{id?}', 'App\Http\Controllers\EgfBasicInfoController@save')->name('egf_basic_info.save');
+	Route::get('egf_basic_info/view/{id}', 'App\Http\Controllers\EgfBasicInfoController@view')->name('egf_basic_info.view');
+	Route::get('egf_basic_info/delete/{id}', 'App\Http\Controllers\EgfBasicInfoController@delete')->name('egf_basic_info.delete');
+	
 	//EGF Reports
 	Route::get('egf_home', 'App\Http\Controllers\AuthenticateController@egf_home')->name('authenticate.egf_home');
+	Route::get('/egf_reports', 'App\Http\Controllers\EgfReportController@index')->name('egf_reports');
+	Route::get('egf_report/add','App\Http\Controllers\EgfReportController@create')->name('egf_report.create');
+	Route::post('egf_report/save/{id?}', 'App\Http\Controllers\EgfReportController@save')->name('egf_report.save');
+	Route::get('egf_report/delete/{id}', 'App\Http\Controllers\EgfReportController@delete')->name('egf_report.delete');
+	Route::get('egf_report/export','App\Http\Controllers\EgfReportController@export')->name('egf_report.export');
+
 	
 	
 	//Login form
