@@ -57,7 +57,7 @@ return [
     */
 
     'from' => [
-        'address' => 'acknowledgements@zastaindia.com',
+        'address' => 'tsuesi.it@gmail.com',
         'name' => 'Acknowledgements',
     ],
 
@@ -85,8 +85,8 @@ return [
     |
     */
 
-    'username' => 'acknowledgements@zastaindia.com',
-    'password' => 'May24062',
+    'username' => 'tsuesi.it@gmail.com',
+    'password' => 'Admin@24',
 
 	 /*
     |--------------------------------------------------------------------------

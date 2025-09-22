@@ -12,20 +12,16 @@ return [
     'use_default_mail_facade_in_tests' => true,
 
     'emails'  => [
-        'acknowledgements@zastaindia.com' => [
-            'pass'          => 'Qe5zRX3z',
-            'username'      => 'acknowledgements@zastaindia.com',
-            'from_name'     => 'Acknowledgements',
-        ],
-        'praveen@zastaindia.com'  => [
-            'username'     => 'praveen@zastaindia.com',
-            'pass'     => 'G8hush@n',
-            'from_name'     => 'Praveen',
+        
+        'it.chsravanthi@gmail.com'  => [
+            'username'     => 'it.chsravanthi@gmail.com',
+            'pass'     => 'u@siPort@l',
+            'from_name'     => 'Admin',
         ],
 		'default' =>
 		  [
-			'pass'            => 'Qe5zRX3z',
-			'username'        => 'acknowledgements@zastaindia.com',
+			'pass'            => 'Admin@24',
+			'username'        => 'tsuesi.it@gmail.com',
 		  ]
     ],
 
