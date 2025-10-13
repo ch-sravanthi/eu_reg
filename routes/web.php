@@ -45,33 +45,9 @@ Route::group(['middleware'], function () {
 	Route::post('user/save/{id?}', 'App\Http\Controllers\UserController@save')->name('user.save');
 	Route::get('user/delete/{id}', 'App\Http\Controllers\UserController@delete')->name('user.delete');
 	Route::get('user/show/{id}', 'App\Http\Controllers\UserController@show')->name('user.show');
+ 
 
-	// Job Notification
-
-	Route::get('notification/create', 'App\Http\Controllers\NotificationController@create')->name('notification.create');
-	Route::post('notification/save/{id?}', 'App\Http\Controllers\NotificationController@save')->name('notification.save');
-	Route::get('/notifications', 'App\Http\Controllers\NotificationController@index')->name('notifications');
-	Route::get('notification/show/{id}', 'App\Http\Controllers\NotificationController@show')->name('notification.show');
-	Route::get('notification/delete/{id}', 'App\Http\Controllers\NotificationController@delete')->name('notification.delete');
-	Route::get('notification/edit/{id}', 'App\Http\Controllers\NotificationController@edit')->name('notification.edit');
-	Route::post('notification/update/{id}', 'App\Http\Controllers\NotificationController@update')->name('notification.update');	
-	Route::get('notification/my_index', 'App\Http\Controllers\NotificationController@my_index')->name('notification.my_index');
-
-	//More Links
-
-	Route::get('more_link/create', 'App\Http\Controllers\MoreLinkController@create')->name('more_link.create');
-	Route::post('more_link/save/{id?}', 'App\Http\Controllers\MoreLinkController@save')->name('more_link.save');
-	Route::get('/more_links', 'App\Http\Controllers\MoreLinkController@index')->name('more_links');
-	Route::get('more_link/delete/{id}', 'App\Http\Controllers\MoreLinkController@delete')->name('more_link.delete');
-	Route::get('more_link/edit/{id}', 'App\Http\Controllers\MoreLinkController@edit')->name('more_link.edit');
-	Route::post('more_link/update/{id}', 'App\Http\Controllers\MoreLinkController@update')->name('more_link.update');
-	Route::get('more_link/my_index', 'App\Http\Controllers\MoreLinkController@my_index')->name('more_link.my_index');	
-
-	// VV New Page
-	
-	Route::get('vv', 'App\Http\Controllers\AuthenticateController@vv')->name('authenticate.vv');
-	Route::get('vv/all_in_one', 'App\Http\Controllers\VVController@all_in_one')->name('vv.all_in_one');
-	
+	 
 	
 	//VV New Susbscription
 	
@@ -84,79 +60,7 @@ Route::group(['middleware'], function () {
 	Route::get('new_subscription/show/{id}', 'App\Http\Controllers\NewSubscriptionController@show')->name('new_subscription.show');
 	Route::get('new_subscription/export', 'App\Http\Controllers\NewSubscriptionController@export')->name('new_subscription.export');
 	
-	//VV Renewal
-	
-	Route::get('renewals', 'App\Http\Controllers\RenewalController@index')->name('renewals');
-	Route::get('renewal/create', 'App\Http\Controllers\RenewalController@create')->name('renewal.create');
-	Route::post('renewal/save/{id?}', 'App\Http\Controllers\RenewalController@save')->name('renewal.save');
-	Route::get('renewal/delete/{id}', 'App\Http\Controllers\RenewalController@delete')->name('renewal.delete');
-	Route::get('renewal/show/{id}', 'App\Http\Controllers\RenewalController@show')->name('renewal.show');
-	Route::get('renewal/export', 'App\Http\Controllers\RenewalController@export')->name('renewal.export');
-
-	//VV Address Change
-	
-	Route::get('address_changes', 'App\Http\Controllers\AddressChangeController@index')->name('address_changes');
-	Route::get('address_change/request', 'App\Http\Controllers\AddressChangeController@create')->name('address_change.create');
-	Route::post('address_change/save/{id?}', 'App\Http\Controllers\AddressChangeController@save')->name('address_change.save');
-	Route::get('address_change/delete/{id}', 'App\Http\Controllers\AddressChangeController@delete')->name('address_change.delete');
-	
-	Route::get('address_change/view/{id}', 'App\Http\Controllers\AddressChangeController@view')->name('address_change.view');
-	Route::get('address_change/export', 'App\Http\Controllers\AddressChangeController@export')->name('address_change.export');
-
-	//VV Complaint
-
-	Route::get('complaints', 'App\Http\Controllers\ComplaintController@index')->name('complaints');
-	Route::get('complaint/raise', 'App\Http\Controllers\ComplaintController@create')->name('complaint.create');
-	Route::post('complaint/save/{id?}', 'App\Http\Controllers\ComplaintController@save')->name('complaint.save');
-	Route::get('complaint/delete/{id}', 'App\Http\Controllers\ComplaintController@delete')->name('complaint.delete');
-	Route::get('complaint/export','App\Http\Controllers\ComplaintController@export')->name('complaint.export');
-	Route::get('complaint/view/{id}', 'App\Http\Controllers\ComplaintController@view')->name('complaint.view');
-	
-	//VV Prayer Points
-	
-	Route::get('/prayer_points', 'App\Http\Controllers\PrayerPointController@index')->name('prayer_points');
-	Route::get('prayer_point/export','App\Http\Controllers\PrayerPointController@export')->name('prayer_point.export');
-	Route::get('prayer_point/send', 'App\Http\Controllers\PrayerPointController@create')->name('prayer_point.create');
-	Route::post('prayer_point/save/{id?}', 'App\Http\Controllers\PrayerPointController@save')->name('prayer_point.save');
-	Route::get('prayer_point/delete/{id}', 'App\Http\Controllers\PrayerPointController@delete')->name('prayer_point.delete');
-	Route::get('prayer_point/show/{id}', 'App\Http\Controllers\PrayerPointController@show')->name('prayer_point.show');
-	
-
-	// VV Feedback
-
-	Route::get('/feedbacks', 'App\Http\Controllers\FeedbackController@index')->name('feedbacks');
-	Route::get('feedback/post','App\Http\Controllers\FeedbackController@create')->name('feedback.create');
-	Route::post('feedback/save/{id?}', 'App\Http\Controllers\FeedbackController@save')->name('feedback.save');
-	Route::get('feedback/delete/{id}', 'App\Http\Controllers\FeedbackController@delete')->name('feedback.delete');
-	Route::get('feedback/export','App\Http\Controllers\FeedbackController@export')->name('feedback.export');
-
-	
-	
-	//VV Magazine pdf
-	
-	Route::get('/monthly_magazines', 'App\Http\Controllers\VVMagazineController@monthly_magazines')->name('vv_magazine.monthly_magazines');
-	Route::get('vv_magazines', 'App\Http\Controllers\VVMagazineController@index')->name('vv_magazines');
-	Route::get('vv_magazine/upload/{id?}', 'App\Http\Controllers\VVMagazineController@create')->name('vv_magazine.create');
-	Route::post('vv_magazine/save/{id?}', 'App\Http\Controllers\VVMagazineController@save')->name('vv_magazine.save');
-	Route::get('vv_magazine/delete/{id}', 'App\Http\Controllers\VVMagazineController@delete')->name('vv_magazine.delete');
-	Route::get('vv_magazine/show/{id}', 'App\Http\Controllers\VVMagazineController@show')->name('vv_magazine.show');
-	Route::get('/viewfile/{fileName}', 'App\Http\Controllers\VVMagazineController@viewPdf')->name('pdf.view');
-	
-	//Egf Basic Info
-	Route::get('/egf_basic_infos', 'App\Http\Controllers\EgfBasicInfoController@index')->name('egf_basic_infos');
-	Route::get('egf_basic_info/add','App\Http\Controllers\EgfBasicInfoController@create')->name('egf_basic_info.create');
-	Route::post('egf_basic_info/save/{id?}', 'App\Http\Controllers\EgfBasicInfoController@save')->name('egf_basic_info.save');
-	Route::get('egf_basic_info/view/{id}', 'App\Http\Controllers\EgfBasicInfoController@view')->name('egf_basic_info.view');
-	Route::get('egf_basic_info/delete/{id}', 'App\Http\Controllers\EgfBasicInfoController@delete')->name('egf_basic_info.delete');
-	
-	//EGF Reports
-	Route::get('egf_home', 'App\Http\Controllers\AuthenticateController@egf_home')->name('authenticate.egf_home');
-	Route::get('/egf_reports', 'App\Http\Controllers\EgfReportController@index')->name('egf_reports');
-	Route::get('egf_report/add','App\Http\Controllers\EgfReportController@create')->name('egf_report.create');
-	Route::post('egf_report/save/{id?}', 'App\Http\Controllers\EgfReportController@save')->name('egf_report.save');
-	Route::get('egf_report/delete/{id}', 'App\Http\Controllers\EgfReportController@delete')->name('egf_report.delete');
-	Route::get('egf_report/export','App\Http\Controllers\EgfReportController@export')->name('egf_report.export');
-
+	  
 	
 	
 	//Login form
