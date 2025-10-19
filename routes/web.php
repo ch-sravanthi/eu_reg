@@ -14,7 +14,7 @@ use app\Helpers;
 |
 */
 
-	// Job Portal loca
+	// Job Portal
 	
 	Route::get('jobportal/create', 'App\Http\Controllers\BlogController@create')->name('blog.create');
 	Route::post('jobportal/save/{id?}', 'App\Http\Controllers\BlogController@save')->name('blog.save');
