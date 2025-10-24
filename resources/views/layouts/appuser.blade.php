@@ -29,47 +29,21 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="#">Welcome To UESI TS Job Portal</a>
+						<a class="nav-link active" aria-current="page" href="#">Welcome To UESI TS Cenferences</a>
 					</li>
 				</ul>
 				
 				<ul class="navbar-nav  mb-lg-0 ml-1">				
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{{ url('jobportal')}}"> <i class="bi bi-newspaper"></i> Jobs</a>
+						<a class="nav-link active" aria-current="page" href="#"> <i class="bi bi-newspaper"></i> Add</a>
 					</li>
 				</ul>
 				
-				<ul class="navbar-nav  mb-lg-0 ml-1">		
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{{ url('notifications')}}"> <i class="bi bi-bell-fill"></i> Notifications</a>
-					</li>
-				</ul>
+				 
 				
-				<ul class="navbar-nav  mb-lg-0 ml-1">		
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{{ url('more_links')}}"> <i class="bi bi-link"></i> Job Links</a>
-					</li>
-				</ul>&nbsp;&nbsp;&nbsp;&nbsp;
-				
-				<ul class="navbar-nav  mb-lg-0 ml-1">					
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{{url('jobportal/create')}}"><i class="bi bi-plus-circle"></i> Post a Job </a>
-					</li>
-				</ul>
-				
-				<ul class="navbar-nav  mb-lg-0 ml-1">
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{{url('notification/create')}}"><i class="bi bi-plus-circle"></i> Post a Notification </a>
-					</li>
-					
-				</ul>
-				@if(Auth::user())
-				<ul class="navbar-nav  mb-lg-0 ml-1">			
-					<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="{{url('more_link/create')}}"><i class="bi bi-plus-circle"></i> Post Job Links </a>
-					</li>
-				</ul>
-				@endif				
+				 
+				 
+				 		
 			&nbsp;
 			@if(Auth::user())	
 			<ul class="navbar-nav  mb-lg-0 ml-1">

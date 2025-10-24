@@ -51,7 +51,7 @@
 			transition: 0.3s;
 		}
 		.navbar, input[type=submit],.btn {			
-			background: linear-gradient(to bottom, #182b89, #146bc5); 
+			background: linear-gradient(to bottom, #4c19a9, #1aa3af);  
 			padding-bottom:1px;
 			padding-top:1px;
 			
@@ -61,7 +61,7 @@
 			padding-bottom: .1rem;
 		}
 		input[type=submit]:hover,.btn:hover {
-			background: linear-gradient(to right, #146bc5, #182b89); 
+			background: linear-gradient(to right, #1aa3af, #4c19a9); 
 		
 		}
 		input[type=submit],.btn {			

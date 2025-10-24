@@ -16,10 +16,10 @@ use app\Helpers;
 
 	// Job Portal
 	
-	Route::get('jobportal/create', 'App\Http\Controllers\BlogController@create')->name('blog.create');
-	Route::post('jobportal/save/{id?}', 'App\Http\Controllers\BlogController@save')->name('blog.save');
-	Route::get('/jobportal', 'App\Http\Controllers\BlogController@jobportal')->name('blog.jobportal');
-	Route::get('jobportal/show/{id}', 'App\Http\Controllers\BlogController@show')->name('blog.show');
+	Route::get('registration/add', 'App\Http\Controllers\ConferenceController@add')->name('conference.add');
+	Route::post('registration/save/{id?}', 'App\Http\Controllers\ConferenceController@save')->name('conference.save');
+	Route::get('/registration', 'App\Http\Controllers\ConferenceController@registration')->name('conference.registration');
+	Route::get('registration/show/{id}', 'App\Http\Controllers\ConferenceController@show')->name('conference.show');
 	
 	
 //Route::get('/', function () {
@@ -30,12 +30,12 @@ use app\Helpers;
 //Auth::routes();
 Route::group(['middleware'], function () {	
 	
-	Route::get('jobportal/my_index', 'App\Http\Controllers\BlogController@myindex')->name('blog.my_index');
-	Route::get('/jobportal', 'App\Http\Controllers\BlogController@jobportal')->name('blog.jobportal');
-	Route::get('jobportal/delete/{id}', 'App\Http\Controllers\BlogController@delete')->name('blog.delete');
-	Route::get('jobportal/edit/{id}', 'App\Http\Controllers\BlogController@edit')->name('blog.edit');
-	Route::post('jobportal/update/{id}', 'App\Http\Controllers\BlogController@update')->name('blog.update');
-	Route::get('jobportal/my_show/{id}', 'App\Http\Controllers\BlogController@my_show')->name('blog.my_show');
+	Route::get('registration/my_index', 'App\Http\Controllers\ConferenceController@myindex')->name('conference.my_index');
+	Route::get('/registration', 'App\Http\Controllers\ConferenceController@registration')->name('conference.registration');
+	Route::get('registration/delete/{id}', 'App\Http\Controllers\ConferenceController@delete')->name('conference.delete');
+	Route::get('registration/edit/{id}', 'App\Http\Controllers\ConferenceController@edit')->name('conference.edit');
+	Route::post('registration/update/{id}', 'App\Http\Controllers\ConferenceController@update')->name('conference.update');
+	Route::get('registration/my_show/{id}', 'App\Http\Controllers\ConferenceController@my_show')->name('conference.my_show');
 
 	// Users
 	
